@@ -5,4 +5,13 @@ class Post < ActiveRecord::Base
       {:controller => :posts, :action => :show}
     ]
   end
+
+  
+#  def req(uri)
+#    req_http(uri).from_xml
+#  end
+#  order = req('http://localhost/order/1')
+#  order.pay
+
+
 end
