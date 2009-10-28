@@ -9,7 +9,11 @@
   <tr>
     <td><%= link_to order.customer_name, order %></td>
 	<td><%= order_url(order) %>.xml</td>
-    <td><%= link_to 'Destroy', order, :confirm => 'Are you sure?', :method => :delete %></td>
+	<% if order.can_cancel? %>
+		<td><%= link_to 'cancel', order, :confirm => 'Are you sure?', :method => :delete %></td>
+	<% else %>
+		<td>cancelled</td>
+	<% end %>
   </tr>
 <% end %>
 </table>

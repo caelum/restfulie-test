@@ -2,6 +2,11 @@
   <b>Customer name:</b>
   <%=h @order.customer_name %>
 </p>
+<p>
+  <b>Status:</b>
+  <%=h @order.status %>
+</p>
+
 
 <table>
 <% @order.trainings.each do |training| %>
@@ -12,5 +17,4 @@
 Total price: <%= @order.total_price %>
 </p>
 
-<%= link_to 'Edit', edit_order_path(@order) %> |
 <%= link_to 'Back', orders_path %>

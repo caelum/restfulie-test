@@ -57,10 +57,11 @@ class OrdersController < ApplicationController
   # DELETE /orders/1.xml
   def destroy
     @order = Order.find(params[:id])
-    @order.destroy
+    @order.status = 'CANCELLED'
+    @order.save
 
     respond_to do |format|
-      format.html { redirect_to(orders_url) }
+      format.html { redirect_to(@order) }
       format.xml  { head :ok }
     end
   end

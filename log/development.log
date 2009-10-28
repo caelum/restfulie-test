@@ -3742,3 +3742,142 @@ Processing OrdersController#show to xml (for 127.0.0.1 at 2009-10-28 17:00:50) [
   Parameters: {"id"=>"11"}
   [4;35;1mOrder Load (0.2ms)[0m   [0mSELECT * FROM "orders" WHERE ("orders"."id" = 11) [0m
 Completed in 9ms (View: 3, DB: 0) | 200 OK [http://localhost/orders/11.xml]
+
+
+Processing OrdersController#index (for 127.0.0.1 at 2009-10-28 17:03:13) [GET]
+  [4;36;1mOrder Load (1.0ms)[0m   [0;1mSELECT * FROM "orders" [0m
+Rendering template within layouts/application
+Rendering orders/index
+Completed in 79ms (View: 67, DB: 1) | 200 OK [http://localhost/orders]
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateOrders (20091028180602)
+Migrating to CreateTrainings (20091028180753)
+Migrating to CreatePriceField (20091028182228)
+Migrating to OrderTrainingConnection (20091028184127)
+Migrating to OrderStatus (20091028190140)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mALTER TABLE "orders" ADD "status" varchar(255)[0m
+  [4;36;1mOrder Load (0.7ms)[0m   [0;1mSELECT * FROM "orders" [0m
+  [4;35;1mOrder Update (0.1ms)[0m   [0mUPDATE "orders" SET "status" = 'PENDING PAYMENT', "updated_at" = '2009-10-28 19:03:18' WHERE "id" = 1[0m
+  [4;36;1mOrder Update (0.1ms)[0m   [0;1mUPDATE "orders" SET "status" = 'PENDING PAYMENT', "updated_at" = '2009-10-28 19:03:18' WHERE "id" = 2[0m
+  [4;35;1mOrder Update (0.1ms)[0m   [0mUPDATE "orders" SET "status" = 'PENDING PAYMENT', "updated_at" = '2009-10-28 19:03:18' WHERE "id" = 3[0m
+  [4;36;1mOrder Update (0.1ms)[0m   [0;1mUPDATE "orders" SET "status" = 'PENDING PAYMENT', "updated_at" = '2009-10-28 19:03:18' WHERE "id" = 4[0m
+  [4;35;1mOrder Update (0.1ms)[0m   [0mUPDATE "orders" SET "status" = 'PENDING PAYMENT', "updated_at" = '2009-10-28 19:03:18' WHERE "id" = 5[0m
+  [4;36;1mOrder Update (0.1ms)[0m   [0;1mUPDATE "orders" SET "status" = 'PENDING PAYMENT', "updated_at" = '2009-10-28 19:03:18' WHERE "id" = 6[0m
+  [4;35;1mOrder Update (0.1ms)[0m   [0mUPDATE "orders" SET "status" = 'PENDING PAYMENT', "updated_at" = '2009-10-28 19:03:18' WHERE "id" = 7[0m
+  [4;36;1mOrder Update (0.1ms)[0m   [0;1mUPDATE "orders" SET "status" = 'PENDING PAYMENT', "updated_at" = '2009-10-28 19:03:18' WHERE "id" = 8[0m
+  [4;35;1mOrder Update (0.1ms)[0m   [0mUPDATE "orders" SET "status" = 'PENDING PAYMENT', "updated_at" = '2009-10-28 19:03:18' WHERE "id" = 9[0m
+  [4;36;1mOrder Update (0.1ms)[0m   [0;1mUPDATE "orders" SET "status" = 'PENDING PAYMENT', "updated_at" = '2009-10-28 19:03:18' WHERE "id" = 10[0m
+  [4;35;1mOrder Update (0.1ms)[0m   [0mUPDATE "orders" SET "status" = 'PENDING PAYMENT', "updated_at" = '2009-10-28 19:03:18' WHERE "id" = 11[0m
+  [4;36;1mOrder Update (0.1ms)[0m   [0;1mUPDATE "orders" SET "status" = 'PENDING PAYMENT', "updated_at" = '2009-10-28 19:03:18' WHERE "id" = 12[0m
+  [4;35;1mOrder Update (0.1ms)[0m   [0mUPDATE "orders" SET "status" = 'PENDING PAYMENT', "updated_at" = '2009-10-28 19:03:18' WHERE "id" = 13[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20091028190140')[0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("orders")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("orders_trainings")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("trainings")[0m
+
+
+Processing OrdersController#show to xml (for 127.0.0.1 at 2009-10-28 17:03:22) [GET]
+  Parameters: {"id"=>"11"}
+  [4;36;1mOrder Load (0.5ms)[0m   [0;1mSELECT * FROM "orders" WHERE ("orders"."id" = 11) [0m
+Completed in 69ms (View: 4, DB: 0) | 200 OK [http://localhost/orders/11.xml]
+
+
+Processing OrdersController#index (for 127.0.0.1 at 2009-10-28 17:03:24) [GET]
+  [4;35;1mOrder Load (0.9ms)[0m   [0mSELECT * FROM "orders" [0m
+Rendering template within layouts/application
+Rendering orders/index
+Completed in 64ms (View: 59, DB: 1) | 200 OK [http://localhost/orders]
+
+
+Processing OrdersController#destroy (for 127.0.0.1 at 2009-10-28 17:03:28) [DELETE]
+  Parameters: {"authenticity_token"=>"iOrBXl9PCpApp/7DdIsZRVvkUcZNlFaQcfFwuBcZfW0=", "id"=>"11"}
+  [4;36;1mOrder Load (0.2ms)[0m   [0;1mSELECT * FROM "orders" WHERE ("orders"."id" = 11) [0m
+  [4;35;1mOrder Update (0.4ms)[0m   [0mUPDATE "orders" SET "status" = 'CANCELLED', "updated_at" = '2009-10-28 19:03:28' WHERE "id" = 11[0m
+Redirected to http://localhost:3000/orders/11
+Completed in 16ms (DB: 1) | 302 Found [http://localhost/orders/11]
+
+
+Processing OrdersController#show (for 127.0.0.1 at 2009-10-28 17:03:28) [GET]
+  Parameters: {"id"=>"11"}
+  [4;36;1mOrder Load (0.2ms)[0m   [0;1mSELECT * FROM "orders" WHERE ("orders"."id" = 11) [0m
+Rendering template within layouts/application
+Rendering orders/show
+  [4;35;1mTraining Load (0.2ms)[0m   [0mSELECT * FROM "trainings" INNER JOIN "orders_trainings" ON "trainings".id = "orders_trainings".training_id WHERE ("orders_trainings".order_id = 11 ) [0m
+Completed in 17ms (View: 11, DB: 0) | 200 OK [http://localhost/orders/11]
+
+
+Processing OrdersController#show to xml (for 127.0.0.1 at 2009-10-28 17:03:31) [GET]
+  Parameters: {"id"=>"11"}
+  [4;36;1mOrder Load (0.2ms)[0m   [0;1mSELECT * FROM "orders" WHERE ("orders"."id" = 11) [0m
+Completed in 65ms (View: 1, DB: 0) | 200 OK [http://localhost/orders/11.xml]
+
+
+Processing OrdersController#index (for 127.0.0.1 at 2009-10-28 17:04:45) [GET]
+  [4;35;1mOrder Load (0.9ms)[0m   [0mSELECT * FROM "orders" [0m
+Rendering template within layouts/application
+Rendering orders/index
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.can_cancel) on line #12 of app/views/orders/index.html.erb:
+9:   <tr>
+10:     <td><%= link_to order.customer_name, order %></td>
+11: 	<td><%= order_url(order) %>.xml</td>
+12: 	<% if @order.can_cancel %>
+13: 		<td><%= link_to 'cancel', order, :confirm => 'Are you sure?', :method => :delete %></td>
+14: 	<% else %>
+15: 		<td>cancelled</td>
+
+    app/views/orders/index.html.erb:12
+    app/views/orders/index.html.erb:8:in `each'
+    app/views/orders/index.html.erb:8
+    app/controllers/orders_controller.rb:7:in `index'
+
+Rendered rescues/_trace (36.9ms)
+Rendered rescues/_request_and_response (1.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing OrdersController#index (for 127.0.0.1 at 2009-10-28 17:05:04) [GET]
+  [4;36;1mOrder Load (1.0ms)[0m   [0;1mSELECT * FROM "orders" [0m
+Rendering template within layouts/application
+Rendering orders/index
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.can_cancel?) on line #12 of app/views/orders/index.html.erb:
+9:   <tr>
+10:     <td><%= link_to order.customer_name, order %></td>
+11: 	<td><%= order_url(order) %>.xml</td>
+12: 	<% if @order.can_cancel? %>
+13: 		<td><%= link_to 'cancel', order, :confirm => 'Are you sure?', :method => :delete %></td>
+14: 	<% else %>
+15: 		<td>cancelled</td>
+
+    app/views/orders/index.html.erb:12
+    app/views/orders/index.html.erb:8:in `each'
+    app/views/orders/index.html.erb:8
+    app/controllers/orders_controller.rb:7:in `index'
+
+Rendered rescues/_trace (103.2ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing OrdersController#index (for 127.0.0.1 at 2009-10-28 17:05:24) [GET]
+  [4;35;1mOrder Load (0.9ms)[0m   [0mSELECT * FROM "orders" [0m
+Rendering template within layouts/application
+Rendering orders/index
+Completed in 50ms (View: 45, DB: 1) | 200 OK [http://localhost/orders]

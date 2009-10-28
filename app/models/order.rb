@@ -14,4 +14,8 @@ class Order < ActiveRecord::Base
     end
     total
   end
+  
+  def can_cancel?
+    status!='CANCELLED'
+  end
 end
