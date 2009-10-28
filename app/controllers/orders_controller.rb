@@ -41,6 +41,10 @@ class OrdersController < ApplicationController
   # POST /orders.xml
   def create
     @order = Order.new(params[:order])
+    params[:products].each do |p|
+      id = p[0]
+      @order.training << Training.find_by_id(id)
+    end
 
     respond_to do |format|
       if @order.save

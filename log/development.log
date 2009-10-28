@@ -2676,3 +2676,215 @@ ActionController::RoutingError (No route matches "/stylesheets/scaffold.css" wit
   
 
 Rendering rescues/layout (not_found)
+
+
+Processing OrdersController#create (for 127.0.0.1 at 2009-10-28 16:38:54) [POST]
+  Parameters: {"commit"=>"Create", "order"=>{"customer_name"=>"minha"}, "authenticity_token"=>"iOrBXl9PCpApp/7DdIsZRVvkUcZNlFaQcfFwuBcZfW0=", "products"=>{"1"=>"true", "3"=>"true"}}
+  [4;36;1mOrder Create (0.6ms)[0m   [0;1mINSERT INTO "orders" ("customer_name", "updated_at", "created_at") VALUES('minha', '2009-10-28 18:38:54', '2009-10-28 18:38:54')[0m
+Redirected to http://localhost:3000/orders/7
+Completed in 97ms (DB: 1) | 302 Found [http://localhost/orders]
+
+
+Processing OrdersController#show (for 127.0.0.1 at 2009-10-28 16:38:54) [GET]
+  Parameters: {"id"=>"7"}
+  [4;35;1mOrder Load (1.0ms)[0m   [0mSELECT * FROM "orders" WHERE ("orders"."id" = 7) [0m
+Rendering template within layouts/application
+Rendering orders/show
+Completed in 24ms (View: 18, DB: 1) | 200 OK [http://localhost/orders/7]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-10-28 16:38:54) [GET]
+
+ActionController::RoutingError (No route matches "/orders/javascripts/prototype.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-10-28 16:38:54) [GET]
+
+ActionController::RoutingError (No route matches "/orders/javascripts/effects.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-10-28 16:38:54) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/scaffold.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing OrdersController#create (for 127.0.0.1 at 2009-10-28 16:39:28) [POST]
+  Parameters: {"commit"=>"Create", "order"=>{"customer_name"=>"minha"}, "authenticity_token"=>"iOrBXl9PCpApp/7DdIsZRVvkUcZNlFaQcfFwuBcZfW0=", "products"=>{"1"=>"true", "3"=>"true"}}
+  [4;36;1mOrder Create (0.4ms)[0m   [0;1mINSERT INTO "orders" ("customer_name", "updated_at", "created_at") VALUES('minha', '2009-10-28 18:39:28', '2009-10-28 18:39:28')[0m
+Redirected to http://localhost:3000/orders/8
+Completed in 8ms (DB: 0) | 302 Found [http://localhost/orders]
+
+
+Processing OrdersController#show (for 127.0.0.1 at 2009-10-28 16:39:28) [GET]
+  Parameters: {"id"=>"8"}
+  [4;35;1mOrder Load (0.2ms)[0m   [0mSELECT * FROM "orders" WHERE ("orders"."id" = 8) [0m
+Rendering template within layouts/application
+Rendering orders/show
+Completed in 7ms (View: 2, DB: 0) | 200 OK [http://localhost/orders/8]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-10-28 16:39:28) [GET]
+
+ActionController::RoutingError (No route matches "/orders/javascripts/prototype.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-10-28 16:39:28) [GET]
+
+ActionController::RoutingError (No route matches "/orders/javascripts/effects.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-10-28 16:39:28) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/scaffold.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing OrdersController#create (for 127.0.0.1 at 2009-10-28 16:39:32) [POST]
+  Parameters: {"commit"=>"Create", "order"=>{"customer_name"=>"minha"}, "authenticity_token"=>"iOrBXl9PCpApp/7DdIsZRVvkUcZNlFaQcfFwuBcZfW0=", "products"=>{"1"=>"true", "3"=>"true"}}
+  [4;36;1mOrder Create (0.4ms)[0m   [0;1mINSERT INTO "orders" ("customer_name", "updated_at", "created_at") VALUES('minha', '2009-10-28 18:39:32', '2009-10-28 18:39:32')[0m
+Redirected to http://localhost:3000/orders/9
+Completed in 10ms (DB: 0) | 302 Found [http://localhost/orders]
+
+
+Processing OrdersController#show (for 127.0.0.1 at 2009-10-28 16:39:32) [GET]
+  Parameters: {"id"=>"9"}
+  [4;35;1mOrder Load (0.2ms)[0m   [0mSELECT * FROM "orders" WHERE ("orders"."id" = 9) [0m
+Rendering template within layouts/application
+Rendering orders/show
+Completed in 7ms (View: 2, DB: 0) | 200 OK [http://localhost/orders/9]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-10-28 16:39:32) [GET]
+
+ActionController::RoutingError (No route matches "/orders/javascripts/prototype.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-10-28 16:39:32) [GET]
+
+ActionController::RoutingError (No route matches "/orders/javascripts/effects.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-10-28 16:39:32) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/scaffold.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing OrdersController#create (for 127.0.0.1 at 2009-10-28 16:40:48) [POST]
+  Parameters: {"commit"=>"Create", "order"=>{"customer_name"=>"minha"}, "authenticity_token"=>"iOrBXl9PCpApp/7DdIsZRVvkUcZNlFaQcfFwuBcZfW0=", "products"=>{"1"=>"true", "3"=>"true"}}
+  [4;36;1mTraining Load (0.2ms)[0m   [0;1mSELECT * FROM "trainings" WHERE ("trainings"."id" = '1') LIMIT 1[0m
+  [4;35;1mTraining Load (0.2ms)[0m   [0mSELECT * FROM "trainings" WHERE ("trainings"."id" = '3') LIMIT 1[0m
+  [4;36;1mOrder Create (0.4ms)[0m   [0;1mINSERT INTO "orders" ("customer_name", "updated_at", "created_at") VALUES('minha', '2009-10-28 18:40:48', '2009-10-28 18:40:48')[0m
+  [4;35;1mTraining Update (0.1ms)[0m   [0mUPDATE "trainings" SET "updated_at" = '2009-10-28 18:40:48' WHERE "id" = 1[0m
+  [4;36;1mTraining Update (0.1ms)[0m   [0;1mUPDATE "trainings" SET "updated_at" = '2009-10-28 18:40:48' WHERE "id" = 3[0m
+Redirected to http://localhost:3000/orders/10
+Completed in 17ms (DB: 1) | 302 Found [http://localhost/orders]
+
+
+Processing OrdersController#show (for 127.0.0.1 at 2009-10-28 16:40:48) [GET]
+  Parameters: {"id"=>"10"}
+  [4;35;1mOrder Load (0.2ms)[0m   [0mSELECT * FROM "orders" WHERE ("orders"."id" = 10) [0m
+Rendering template within layouts/application
+Rendering orders/show
+Completed in 15ms (View: 10, DB: 0) | 200 OK [http://localhost/orders/10]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-10-28 16:40:48) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/scaffold.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateOrders (20091028180602)
+Migrating to CreateTrainings (20091028180753)
+Migrating to CreatePriceField (20091028182228)
+Migrating to OrderTrainingConnection (20091028184127)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateOrders (20091028180602)
+Migrating to CreateTrainings (20091028180753)
+Migrating to CreatePriceField (20091028182228)
+Migrating to OrderTrainingConnection (20091028184127)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateOrders (20091028180602)
+Migrating to CreateTrainings (20091028180753)
+Migrating to CreatePriceField (20091028182228)
+Migrating to OrderTrainingConnection (20091028184127)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateOrders (20091028180602)
+Migrating to CreateTrainings (20091028180753)
+Migrating to CreatePriceField (20091028182228)
+Migrating to OrderTrainingConnection (20091028184127)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateOrders (20091028180602)
+Migrating to CreateTrainings (20091028180753)
+Migrating to CreatePriceField (20091028182228)
+Migrating to OrderTrainingConnection (20091028184127)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mCREATE TABLE "orders_trainings" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20091028184127')[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("orders")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("orders_trainings")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("trainings")[0m
