@@ -7,6 +7,11 @@
     <%= f.label :customer_name %><br />
     <%= f.text_field :customer_name %>
   </p>
+	<p>
+		<% Training.all.each do |t| %>
+			<input type="checkbox" name="products[<%=t.id%>]" value="true"><%=t.name%></option>
+		<% end %>
+	</p>
   <p>
     <%= f.submit 'Create' %>
   </p>

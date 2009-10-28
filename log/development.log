@@ -1837,3 +1837,842 @@ ActionController::RoutingError (No route matches "/stylesheets/scaffold.css" wit
   
 
 Rendering rescues/layout (not_found)
+
+
+Processing TrainingsController#index (for 127.0.0.1 at 2009-10-28 16:24:32) [GET]
+  [4;36;1mTraining Load (0.6ms)[0m   [0;1mSELECT * FROM "trainings" [0m
+Rendering template within layouts/application
+Rendering trainings/index
+Completed in 38ms (View: 31, DB: 1) | 200 OK [http://localhost/trainings]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-10-28 16:24:32) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/scaffold.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-10-28 16:24:32) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/scaffold.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing OrdersController#index (for 127.0.0.1 at 2009-10-28 16:24:34) [GET]
+  [4;35;1mOrder Load (0.4ms)[0m   [0mSELECT * FROM "orders" [0m
+Rendering template within layouts/application
+Rendering orders/index
+Completed in 39ms (View: 11, DB: 0) | 200 OK [http://localhost/orders]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-10-28 16:24:34) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/scaffold.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-10-28 16:24:34) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/scaffold.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing OrdersController#new (for 127.0.0.1 at 2009-10-28 16:24:35) [GET]
+Rendering template within layouts/application
+Rendering orders/new
+Completed in 13ms (View: 9, DB: 0) | 200 OK [http://localhost/orders/new]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-10-28 16:24:35) [GET]
+
+ActionController::RoutingError (No route matches "/orders/javascripts/prototype.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-10-28 16:24:36) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/scaffold.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-10-28 16:24:36) [GET]
+
+ActionController::RoutingError (No route matches "/orders/javascripts/effects.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-10-28 16:24:36) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/scaffold.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-10-28 16:24:36) [GET]
+
+ActionController::RoutingError (No route matches "/orders/images/rails.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing OrdersController#new (for 127.0.0.1 at 2009-10-28 16:31:11) [GET]
+Rendering template within layouts/application
+Rendering orders/new
+  [4;36;1mTraining Load (0.4ms)[0m   [0;1mSELECT * FROM "trainings" [0m
+Completed in 16ms (View: 12, DB: 0) | 200 OK [http://localhost/orders/new]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-10-28 16:31:12) [GET]
+
+ActionController::RoutingError (No route matches "/orders/javascripts/prototype.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-10-28 16:31:12) [GET]
+
+ActionController::RoutingError (No route matches "/orders/javascripts/effects.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-10-28 16:31:12) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/scaffold.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-10-28 16:31:12) [GET]
+
+ActionController::RoutingError (No route matches "/orders/images/rails.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing OrdersController#new (for 127.0.0.1 at 2009-10-28 16:31:29) [GET]
+Rendering template within layouts/application
+Rendering orders/new
+  [4;35;1mTraining Load (0.3ms)[0m   [0mSELECT * FROM "trainings" [0m
+Completed in 18ms (View: 12, DB: 0) | 200 OK [http://localhost/orders/new]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-10-28 16:31:29) [GET]
+
+ActionController::RoutingError (No route matches "/orders/javascripts/prototype.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-10-28 16:31:29) [GET]
+
+ActionController::RoutingError (No route matches "/orders/javascripts/effects.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-10-28 16:31:29) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/scaffold.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-10-28 16:31:29) [GET]
+
+ActionController::RoutingError (No route matches "/orders/images/rails.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing OrdersController#new (for 127.0.0.1 at 2009-10-28 16:32:52) [GET]
+Rendering template within layouts/application
+Rendering orders/new
+  [4;36;1mTraining Load (0.5ms)[0m   [0;1mSELECT * FROM "trainings" [0m
+Completed in 18ms (View: 13, DB: 0) | 200 OK [http://localhost/orders/new]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-10-28 16:32:52) [GET]
+
+ActionController::RoutingError (No route matches "/orders/javascripts/prototype.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-10-28 16:32:52) [GET]
+
+ActionController::RoutingError (No route matches "/orders/javascripts/effects.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-10-28 16:32:53) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/scaffold.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-10-28 16:32:53) [GET]
+
+ActionController::RoutingError (No route matches "/orders/images/rails.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing OrdersController#create (for 127.0.0.1 at 2009-10-28 16:33:05) [POST]
+  Parameters: {"commit"=>"Create", "order"=>{"customer_name"=>"guilherme"}, "authenticity_token"=>"iOrBXl9PCpApp/7DdIsZRVvkUcZNlFaQcfFwuBcZfW0=", "order.products"=>"3"}
+  [4;35;1mOrder Create (0.4ms)[0m   [0mINSERT INTO "orders" ("customer_name", "updated_at", "created_at") VALUES('guilherme', '2009-10-28 18:33:05', '2009-10-28 18:33:05')[0m
+Redirected to http://localhost:3000/orders/1
+Completed in 9ms (DB: 0) | 302 Found [http://localhost/orders]
+
+
+Processing OrdersController#show (for 127.0.0.1 at 2009-10-28 16:33:05) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mOrder Load (0.2ms)[0m   [0;1mSELECT * FROM "orders" WHERE ("orders"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering orders/show
+Completed in 10ms (View: 5, DB: 0) | 200 OK [http://localhost/orders/1]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-10-28 16:33:06) [GET]
+
+ActionController::RoutingError (No route matches "/orders/javascripts/prototype.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-10-28 16:33:06) [GET]
+
+ActionController::RoutingError (No route matches "/orders/javascripts/effects.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-10-28 16:33:06) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/scaffold.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-10-28 16:33:06) [GET]
+
+ActionController::RoutingError (No route matches "/orders/images/rails.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing OrdersController#edit (for 127.0.0.1 at 2009-10-28 16:33:07) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mOrder Load (0.2ms)[0m   [0mSELECT * FROM "orders" WHERE ("orders"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering orders/edit
+Completed in 12ms (View: 8, DB: 0) | 200 OK [http://localhost/orders/1/edit]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-10-28 16:33:07) [GET]
+
+ActionController::RoutingError (No route matches "/orders/1/javascripts/prototype.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-10-28 16:33:07) [GET]
+
+ActionController::RoutingError (No route matches "/orders/1/javascripts/effects.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-10-28 16:33:07) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/scaffold.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-10-28 16:33:07) [GET]
+
+ActionController::RoutingError (No route matches "/orders/1/images/rails.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing OrdersController#index (for 127.0.0.1 at 2009-10-28 16:33:09) [GET]
+  [4;36;1mOrder Load (0.4ms)[0m   [0;1mSELECT * FROM "orders" [0m
+Rendering template within layouts/application
+Rendering orders/index
+Completed in 10ms (View: 6, DB: 0) | 200 OK [http://localhost/orders]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-10-28 16:33:09) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/scaffold.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-10-28 16:33:09) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/scaffold.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing OrdersController#new (for 127.0.0.1 at 2009-10-28 16:33:10) [GET]
+Rendering template within layouts/application
+Rendering orders/new
+  [4;35;1mTraining Load (0.3ms)[0m   [0mSELECT * FROM "trainings" [0m
+Completed in 12ms (View: 8, DB: 0) | 200 OK [http://localhost/orders/new]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-10-28 16:33:10) [GET]
+
+ActionController::RoutingError (No route matches "/orders/javascripts/prototype.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-10-28 16:33:10) [GET]
+
+ActionController::RoutingError (No route matches "/orders/javascripts/effects.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-10-28 16:33:10) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/scaffold.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-10-28 16:33:10) [GET]
+
+ActionController::RoutingError (No route matches "/orders/images/rails.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing OrdersController#new (for 127.0.0.1 at 2009-10-28 16:33:30) [GET]
+Rendering template within layouts/application
+Rendering orders/new
+  [4;36;1mTraining Load (0.3ms)[0m   [0;1mSELECT * FROM "trainings" [0m
+Completed in 21ms (View: 17, DB: 0) | 200 OK [http://localhost/orders/new]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-10-28 16:33:30) [GET]
+
+ActionController::RoutingError (No route matches "/orders/javascripts/prototype.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-10-28 16:33:30) [GET]
+
+ActionController::RoutingError (No route matches "/orders/javascripts/effects.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-10-28 16:33:30) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/scaffold.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing OrdersController#create (for 127.0.0.1 at 2009-10-28 16:33:50) [POST]
+  Parameters: {"commit"=>"Create", "order"=>{"customer_name"=>"ordem"}, "authenticity_token"=>"iOrBXl9PCpApp/7DdIsZRVvkUcZNlFaQcfFwuBcZfW0=", "order.products"=>"3"}
+  [4;35;1mOrder Create (0.4ms)[0m   [0mINSERT INTO "orders" ("customer_name", "updated_at", "created_at") VALUES('ordem', '2009-10-28 18:33:50', '2009-10-28 18:33:50')[0m
+Redirected to http://localhost:3000/orders/2
+Completed in 9ms (DB: 0) | 302 Found [http://localhost/orders]
+
+
+Processing OrdersController#show (for 127.0.0.1 at 2009-10-28 16:33:50) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mOrder Load (0.2ms)[0m   [0;1mSELECT * FROM "orders" WHERE ("orders"."id" = 2) [0m
+Rendering template within layouts/application
+Rendering orders/show
+Completed in 7ms (View: 2, DB: 0) | 200 OK [http://localhost/orders/2]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-10-28 16:33:50) [GET]
+
+ActionController::RoutingError (No route matches "/orders/javascripts/prototype.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-10-28 16:33:50) [GET]
+
+ActionController::RoutingError (No route matches "/orders/javascripts/effects.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-10-28 16:33:50) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/scaffold.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing OrdersController#index (for 127.0.0.1 at 2009-10-28 16:34:01) [GET]
+  [4;35;1mOrder Load (0.4ms)[0m   [0mSELECT * FROM "orders" [0m
+Rendering template within layouts/application
+Rendering orders/index
+Completed in 13ms (View: 9, DB: 0) | 200 OK [http://localhost/orders]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-10-28 16:34:01) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/scaffold.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-10-28 16:34:01) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/scaffold.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing OrdersController#new (for 127.0.0.1 at 2009-10-28 16:34:02) [GET]
+Rendering template within layouts/application
+Rendering orders/new
+  [4;36;1mTraining Load (0.3ms)[0m   [0;1mSELECT * FROM "trainings" [0m
+Completed in 13ms (View: 8, DB: 0) | 200 OK [http://localhost/orders/new]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-10-28 16:34:02) [GET]
+
+ActionController::RoutingError (No route matches "/orders/javascripts/prototype.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-10-28 16:34:02) [GET]
+
+ActionController::RoutingError (No route matches "/orders/javascripts/effects.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-10-28 16:34:02) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/scaffold.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing OrdersController#create (for 127.0.0.1 at 2009-10-28 16:34:05) [POST]
+  Parameters: {"commit"=>"Create", "order"=>{"customer_name"=>"aaa"}, "authenticity_token"=>"iOrBXl9PCpApp/7DdIsZRVvkUcZNlFaQcfFwuBcZfW0=", "order.products"=>"3"}
+  [4;35;1mOrder Create (0.3ms)[0m   [0mINSERT INTO "orders" ("customer_name", "updated_at", "created_at") VALUES('aaa', '2009-10-28 18:34:05', '2009-10-28 18:34:05')[0m
+Redirected to http://localhost:3000/orders/3
+Completed in 65ms (DB: 0) | 302 Found [http://localhost/orders]
+
+
+Processing OrdersController#show (for 127.0.0.1 at 2009-10-28 16:34:05) [GET]
+  Parameters: {"id"=>"3"}
+  [4;36;1mOrder Load (0.2ms)[0m   [0;1mSELECT * FROM "orders" WHERE ("orders"."id" = 3) [0m
+Rendering template within layouts/application
+Rendering orders/show
+Completed in 8ms (View: 2, DB: 0) | 200 OK [http://localhost/orders/3]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-10-28 16:34:05) [GET]
+
+ActionController::RoutingError (No route matches "/orders/javascripts/prototype.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-10-28 16:34:05) [GET]
+
+ActionController::RoutingError (No route matches "/orders/javascripts/effects.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-10-28 16:34:05) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/scaffold.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing OrdersController#new (for 127.0.0.1 at 2009-10-28 16:36:12) [GET]
+Rendering template within layouts/application
+Rendering orders/new
+  [4;35;1mTraining Load (0.3ms)[0m   [0mSELECT * FROM "trainings" [0m
+Completed in 16ms (View: 12, DB: 0) | 200 OK [http://localhost/orders/new]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-10-28 16:36:12) [GET]
+
+ActionController::RoutingError (No route matches "/orders/javascripts/prototype.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-10-28 16:36:12) [GET]
+
+ActionController::RoutingError (No route matches "/orders/javascripts/effects.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-10-28 16:36:12) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/scaffold.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing OrdersController#new (for 127.0.0.1 at 2009-10-28 16:36:13) [GET]
+Rendering template within layouts/application
+Rendering orders/new
+  [4;36;1mTraining Load (0.3ms)[0m   [0;1mSELECT * FROM "trainings" [0m
+Completed in 14ms (View: 9, DB: 0) | 200 OK [http://localhost/orders/new]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-10-28 16:36:13) [GET]
+
+ActionController::RoutingError (No route matches "/orders/javascripts/prototype.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-10-28 16:36:13) [GET]
+
+ActionController::RoutingError (No route matches "/orders/javascripts/effects.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-10-28 16:36:13) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/scaffold.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing OrdersController#new (for 127.0.0.1 at 2009-10-28 16:36:19) [GET]
+Rendering template within layouts/application
+Rendering orders/new
+  [4;35;1mTraining Load (0.4ms)[0m   [0mSELECT * FROM "trainings" [0m
+Completed in 76ms (View: 71, DB: 0) | 200 OK [http://localhost/orders/new]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-10-28 16:36:19) [GET]
+
+ActionController::RoutingError (No route matches "/orders/javascripts/prototype.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-10-28 16:36:19) [GET]
+
+ActionController::RoutingError (No route matches "/orders/javascripts/effects.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-10-28 16:36:19) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/scaffold.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing OrdersController#create (for 127.0.0.1 at 2009-10-28 16:36:22) [POST]
+  Parameters: {"commit"=>"Create", "order"=>{"customer_name"=>"asdf"}, "authenticity_token"=>"iOrBXl9PCpApp/7DdIsZRVvkUcZNlFaQcfFwuBcZfW0=", "order.products"=>"3"}
+  [4;36;1mOrder Create (0.3ms)[0m   [0;1mINSERT INTO "orders" ("customer_name", "updated_at", "created_at") VALUES('asdf', '2009-10-28 18:36:22', '2009-10-28 18:36:22')[0m
+Redirected to http://localhost:3000/orders/4
+Completed in 9ms (DB: 0) | 302 Found [http://localhost/orders]
+
+
+Processing OrdersController#show (for 127.0.0.1 at 2009-10-28 16:36:22) [GET]
+  Parameters: {"id"=>"4"}
+  [4;35;1mOrder Load (0.2ms)[0m   [0mSELECT * FROM "orders" WHERE ("orders"."id" = 4) [0m
+Rendering template within layouts/application
+Rendering orders/show
+Completed in 8ms (View: 2, DB: 0) | 200 OK [http://localhost/orders/4]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-10-28 16:36:23) [GET]
+
+ActionController::RoutingError (No route matches "/orders/javascripts/prototype.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-10-28 16:36:23) [GET]
+
+ActionController::RoutingError (No route matches "/orders/javascripts/effects.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-10-28 16:36:23) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/scaffold.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing OrdersController#index (for 127.0.0.1 at 2009-10-28 16:36:48) [GET]
+  [4;36;1mOrder Load (0.6ms)[0m   [0;1mSELECT * FROM "orders" [0m
+Rendering template within layouts/application
+Rendering orders/index
+Completed in 20ms (View: 15, DB: 1) | 200 OK [http://localhost/orders]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-10-28 16:36:48) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/scaffold.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-10-28 16:36:48) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/scaffold.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing OrdersController#new (for 127.0.0.1 at 2009-10-28 16:36:49) [GET]
+Rendering template within layouts/application
+Rendering orders/new
+  [4;35;1mTraining Load (0.3ms)[0m   [0mSELECT * FROM "trainings" [0m
+Completed in 12ms (View: 8, DB: 0) | 200 OK [http://localhost/orders/new]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-10-28 16:36:49) [GET]
+
+ActionController::RoutingError (No route matches "/orders/javascripts/prototype.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-10-28 16:36:49) [GET]
+
+ActionController::RoutingError (No route matches "/orders/javascripts/effects.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-10-28 16:36:49) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/scaffold.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing OrdersController#create (for 127.0.0.1 at 2009-10-28 16:36:56) [POST]
+  Parameters: {"commit"=>"Create", "order"=>{"customer_name"=>"minha ordem"}, "authenticity_token"=>"iOrBXl9PCpApp/7DdIsZRVvkUcZNlFaQcfFwuBcZfW0=", "order.products"=>"3"}
+  [4;36;1mOrder Create (0.3ms)[0m   [0;1mINSERT INTO "orders" ("customer_name", "updated_at", "created_at") VALUES('minha ordem', '2009-10-28 18:36:56', '2009-10-28 18:36:56')[0m
+Redirected to http://localhost:3000/orders/5
+Completed in 9ms (DB: 0) | 302 Found [http://localhost/orders]
+
+
+Processing OrdersController#show (for 127.0.0.1 at 2009-10-28 16:36:56) [GET]
+  Parameters: {"id"=>"5"}
+  [4;35;1mOrder Load (0.2ms)[0m   [0mSELECT * FROM "orders" WHERE ("orders"."id" = 5) [0m
+Rendering template within layouts/application
+Rendering orders/show
+Completed in 7ms (View: 2, DB: 0) | 200 OK [http://localhost/orders/5]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-10-28 16:36:56) [GET]
+
+ActionController::RoutingError (No route matches "/orders/javascripts/prototype.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-10-28 16:36:56) [GET]
+
+ActionController::RoutingError (No route matches "/orders/javascripts/effects.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-10-28 16:36:56) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/scaffold.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing OrdersController#index (for 127.0.0.1 at 2009-10-28 16:37:29) [GET]
+  [4;36;1mOrder Load (0.5ms)[0m   [0;1mSELECT * FROM "orders" [0m
+Rendering template within layouts/application
+Rendering orders/index
+Completed in 22ms (View: 18, DB: 1) | 200 OK [http://localhost/orders]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-10-28 16:37:29) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/scaffold.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-10-28 16:37:29) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/scaffold.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing OrdersController#new (for 127.0.0.1 at 2009-10-28 16:37:30) [GET]
+Rendering template within layouts/application
+Rendering orders/new
+  [4;35;1mTraining Load (0.3ms)[0m   [0mSELECT * FROM "trainings" [0m
+Completed in 18ms (View: 12, DB: 0) | 200 OK [http://localhost/orders/new]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-10-28 16:37:30) [GET]
+
+ActionController::RoutingError (No route matches "/orders/javascripts/prototype.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-10-28 16:37:30) [GET]
+
+ActionController::RoutingError (No route matches "/orders/javascripts/effects.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-10-28 16:37:30) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/scaffold.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing OrdersController#create (for 127.0.0.1 at 2009-10-28 16:37:35) [POST]
+  Parameters: {"commit"=>"Create", "order"=>{"customer_name"=>"minha"}, "authenticity_token"=>"iOrBXl9PCpApp/7DdIsZRVvkUcZNlFaQcfFwuBcZfW0=", "products"=>{"1"=>"true", "3"=>"true"}}
+  [4;36;1mOrder Create (0.3ms)[0m   [0;1mINSERT INTO "orders" ("customer_name", "updated_at", "created_at") VALUES('minha', '2009-10-28 18:37:35', '2009-10-28 18:37:35')[0m
+Redirected to http://localhost:3000/orders/6
+Completed in 11ms (DB: 0) | 302 Found [http://localhost/orders]
+
+
+Processing OrdersController#show (for 127.0.0.1 at 2009-10-28 16:37:36) [GET]
+  Parameters: {"id"=>"6"}
+  [4;35;1mOrder Load (0.2ms)[0m   [0mSELECT * FROM "orders" WHERE ("orders"."id" = 6) [0m
+Rendering template within layouts/application
+Rendering orders/show
+Completed in 8ms (View: 2, DB: 0) | 200 OK [http://localhost/orders/6]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-10-28 16:37:36) [GET]
+
+ActionController::RoutingError (No route matches "/orders/javascripts/prototype.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-10-28 16:37:36) [GET]
+
+ActionController::RoutingError (No route matches "/orders/javascripts/effects.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-10-28 16:37:36) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/scaffold.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
