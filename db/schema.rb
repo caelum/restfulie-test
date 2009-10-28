@@ -17,9 +17,9 @@ ActiveRecord::Schema.define(:version => 20091028184127) do
     t.datetime "updated_at"
   end
 
-  create_table "orders_trainings", :force => true do |t|
-    t.datetime "created_at"
-    t.datetime "updated_at"
+  create_table "orders_trainings", :id => false, :force => true do |t|
+    t.integer "training_id"
+    t.integer "order_id"
   end
 
   create_table "trainings", :force => true do |t|

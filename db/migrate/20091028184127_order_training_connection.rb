@@ -1,9 +1,8 @@
 class OrderTrainingConnection < ActiveRecord::Migration
   def self.up
-    create_table :orders_trainings, :force => true do |t|
-      t.int :training_id
-      t.int :order_id
-      t.timestamps
+    create_table :orders_trainings, :force => true, :id => false do |t|
+      t.integer :training_id
+      t.integer :order_id
     end
   end
 

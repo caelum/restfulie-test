@@ -2888,3 +2888,469 @@ Migrating to OrderTrainingConnection (20091028184127)
   [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("orders")[0m
   [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("orders_trainings")[0m
   [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("trainings")[0m
+
+
+Processing OrdersController#index (for 127.0.0.1 at 2009-10-28 16:43:55) [GET]
+  [4;36;1mOrder Load (1.0ms)[0m   [0;1mSELECT * FROM "orders" [0m
+Rendering template within layouts/application
+Rendering orders/index
+Completed in 69ms (View: 58, DB: 1) | 200 OK [http://localhost/orders]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-10-28 16:43:55) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/scaffold.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing OrdersController#new (for 127.0.0.1 at 2009-10-28 16:43:57) [GET]
+Rendering template within layouts/application
+Rendering orders/new
+  [4;35;1mTraining Load (0.4ms)[0m   [0mSELECT * FROM "trainings" [0m
+Completed in 18ms (View: 13, DB: 0) | 200 OK [http://localhost/orders/new]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-10-28 16:43:57) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/scaffold.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing OrdersController#create (for 127.0.0.1 at 2009-10-28 16:44:02) [POST]
+  Parameters: {"commit"=>"Create", "order"=>{"customer_name"=>"ajsiojaso"}, "authenticity_token"=>"iOrBXl9PCpApp/7DdIsZRVvkUcZNlFaQcfFwuBcZfW0=", "products"=>{"2"=>"true", "3"=>"true"}}
+  [4;36;1mTraining Load (0.2ms)[0m   [0;1mSELECT * FROM "trainings" WHERE ("trainings"."id" = '2') LIMIT 1[0m
+  [4;35;1mTraining Load (0.2ms)[0m   [0mSELECT * FROM "trainings" WHERE ("trainings"."id" = '3') LIMIT 1[0m
+  [4;36;1mOrder Create (0.4ms)[0m   [0;1mINSERT INTO "orders" ("customer_name", "updated_at", "created_at") VALUES('ajsiojaso', '2009-10-28 18:44:02', '2009-10-28 18:44:02')[0m
+  [4;35;1mTraining Update (0.2ms)[0m   [0mUPDATE "trainings" SET "updated_at" = '2009-10-28 18:44:02' WHERE "id" = 2[0m
+  [4;36;1mTraining Update (0.1ms)[0m   [0;1mUPDATE "trainings" SET "updated_at" = '2009-10-28 18:44:02' WHERE "id" = 3[0m
+Redirected to http://localhost:3000/orders/11
+Completed in 17ms (DB: 1) | 302 Found [http://localhost/orders]
+
+
+Processing OrdersController#show (for 127.0.0.1 at 2009-10-28 16:44:02) [GET]
+  Parameters: {"id"=>"11"}
+  [4;35;1mOrder Load (0.2ms)[0m   [0mSELECT * FROM "orders" WHERE ("orders"."id" = 11) [0m
+Rendering template within layouts/application
+Rendering orders/show
+Completed in 69ms (View: 64, DB: 0) | 200 OK [http://localhost/orders/11]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-10-28 16:44:02) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/scaffold.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to OrderTrainingConnection (20091028184127)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mDROP TABLE "orders_trainings"[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mDELETE FROM schema_migrations WHERE version = '20091028184127'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("orders")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("trainings")[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateOrders (20091028180602)
+Migrating to CreateTrainings (20091028180753)
+Migrating to CreatePriceField (20091028182228)
+Migrating to OrderTrainingConnection (20091028184127)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSQLite3::SQLException: near ")": syntax error: CREATE TABLE "orders_trainings" () [0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateOrders (20091028180602)
+Migrating to CreateTrainings (20091028180753)
+Migrating to CreatePriceField (20091028182228)
+Migrating to OrderTrainingConnection (20091028184127)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mCREATE TABLE "orders_trainings" ("training_id" integer, "order_id" integer) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20091028184127')[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("orders")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("orders_trainings")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("trainings")[0m
+
+
+Processing OrdersController#index (for 127.0.0.1 at 2009-10-28 16:47:18) [GET]
+  [4;36;1mOrder Load (1.1ms)[0m   [0;1mSELECT * FROM "orders" [0m
+Rendering template within layouts/application
+Rendering orders/index
+Completed in 91ms (View: 61, DB: 1) | 200 OK [http://localhost/orders]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-10-28 16:47:18) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/scaffold.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing OrdersController#new (for 127.0.0.1 at 2009-10-28 16:47:20) [GET]
+Rendering template within layouts/application
+Rendering orders/new
+  [4;35;1mTraining Load (0.3ms)[0m   [0mSELECT * FROM "trainings" [0m
+Completed in 18ms (View: 13, DB: 0) | 200 OK [http://localhost/orders/new]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-10-28 16:47:20) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/scaffold.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing OrdersController#create (for 127.0.0.1 at 2009-10-28 16:47:24) [POST]
+  Parameters: {"commit"=>"Create", "order"=>{"customer_name"=>"zoa"}, "authenticity_token"=>"iOrBXl9PCpApp/7DdIsZRVvkUcZNlFaQcfFwuBcZfW0=", "products"=>{"1"=>"true", "2"=>"true"}}
+  [4;36;1mTraining Load (0.2ms)[0m   [0;1mSELECT * FROM "trainings" WHERE ("trainings"."id" = '1') LIMIT 1[0m
+  [4;35;1mTraining Load (0.2ms)[0m   [0mSELECT * FROM "trainings" WHERE ("trainings"."id" = '2') LIMIT 1[0m
+  [4;36;1mOrder Create (0.4ms)[0m   [0;1mINSERT INTO "orders" ("customer_name", "updated_at", "created_at") VALUES('zoa', '2009-10-28 18:47:24', '2009-10-28 18:47:24')[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mINSERT INTO "orders_trainings" ("order_id", "training_id") VALUES (12, 1)[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mINSERT INTO "orders_trainings" ("order_id", "training_id") VALUES (12, 2)[0m
+Redirected to http://localhost:3000/orders/12
+Completed in 16ms (DB: 1) | 302 Found [http://localhost/orders]
+
+
+Processing OrdersController#show (for 127.0.0.1 at 2009-10-28 16:47:24) [GET]
+  Parameters: {"id"=>"12"}
+  [4;35;1mOrder Load (0.2ms)[0m   [0mSELECT * FROM "orders" WHERE ("orders"."id" = 12) [0m
+Rendering template within layouts/application
+Rendering orders/show
+Completed in 70ms (View: 65, DB: 0) | 200 OK [http://localhost/orders/12]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-10-28 16:47:25) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/scaffold.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing OrdersController#show (for 127.0.0.1 at 2009-10-28 16:48:50) [GET]
+  Parameters: {"id"=>"12"}
+  [4;36;1mOrder Load (0.2ms)[0m   [0;1mSELECT * FROM "orders" WHERE ("orders"."id" = 12) [0m
+Rendering template within layouts/application
+Rendering orders/show
+
+ActionView::TemplateError (undefined method `trainings' for #<Order:0x25fa404>) on line #7 of app/views/orders/show.html.erb:
+4: </p>
+5: 
+6: <table>
+7: <% @order.trainings.each do |training| %>
+8: 	<tr><td><%=training.name%></td><td><%=training.price%></td></tr>
+9: <% end%>
+10: </table>
+
+    app/views/orders/show.html.erb:7
+    app/controllers/orders_controller.rb:18:in `show'
+
+Rendered rescues/_trace (36.7ms)
+Rendered rescues/_request_and_response (1.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing OrdersController#show (for 127.0.0.1 at 2009-10-28 16:49:03) [GET]
+  Parameters: {"id"=>"12"}
+  [4;35;1mOrder Load (0.2ms)[0m   [0mSELECT * FROM "orders" WHERE ("orders"."id" = 12) [0m
+Rendering template within layouts/application
+Rendering orders/show
+
+ActionView::TemplateError (undefined method `trainings' for #<Order:0x2475b60>) on line #7 of app/views/orders/show.html.erb:
+4: </p>
+5: 
+6: <table>
+7: <% @order.trainings.each do |training| %>
+8: 	<tr><td><%=training.name%></td><td><%=training.price%></td></tr>
+9: <% end%>
+10: </table>
+
+    app/views/orders/show.html.erb:7
+    app/controllers/orders_controller.rb:18:in `show'
+
+Rendered rescues/_trace (96.8ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing OrdersController#show (for 127.0.0.1 at 2009-10-28 16:49:14) [GET]
+  Parameters: {"id"=>"12"}
+  [4;36;1mOrder Load (0.2ms)[0m   [0;1mSELECT * FROM "orders" WHERE ("orders"."id" = 12) [0m
+Rendering template within layouts/application
+Rendering orders/show
+ERROR: compiling _run_erb_app47views47orders47show46html46erb RAISED compile error
+/Users/guilherme/Documents/ruby/restfulie-test/app/views/orders/show.html.erb:15: syntax error, unexpected kENSURE, expecting $end
+Function body:           def _run_erb_app47views47orders47show46html46erb(local_assigns)
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ; @output_buffer.concat "<p>\n"
+@output_buffer.concat "  <b>Customer name:</b>\n"
+@output_buffer.concat "  "; @output_buffer.concat((h @order.customer_name ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "</p>\n"
+@output_buffer.concat "\n"
+@output_buffer.concat "<table>\n"
+ @order#trainings.each do |training| ; @output_buffer.concat "\n"
+@output_buffer.concat "\t<tr><td>"; @output_buffer.concat((training.name).to_s); @output_buffer.concat "</td><td>"; @output_buffer.concat((training.price).to_s); @output_buffer.concat "</td></tr>\n"
+ end; @output_buffer.concat "\n"
+@output_buffer.concat "</table>\n"
+@output_buffer.concat "Total price: "; @output_buffer.concat(( @order.total_price ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "\n"
+@output_buffer.concat(( link_to 'Edit', edit_order_path(@order) ).to_s); @output_buffer.concat " |\n"
+@output_buffer.concat(( link_to 'Back', orders_path ).to_s); @output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: /Users/guilherme/Documents/ruby/restfulie-test/app/views/orders/show.html.erb:15:in `compile!'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_view/renderable.rb:61:in `compile'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_view/renderable.rb:28:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_view/template.rb:199:in `render_template'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_view/base.rb:260:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_view/base.rb:343:in `_render_with_layout'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_view/base.rb:257:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:1250:in `render_for_file'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:951:in `render_without_benchmark'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:51:in `render'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:10:in `realtime'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:51:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/mime_responds.rb:135:in `send'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/mime_responds.rb:135:in `custom'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/mime_responds.rb:179:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/mime_responds.rb:179:in `respond'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/mime_responds.rb:173:in `each'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/mime_responds.rb:173:in `respond'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/mime_responds.rb:107:in `respond_to'
+/Users/guilherme/Documents/ruby/restfulie-test/app/controllers/orders_controller.rb:18:in `show'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:1331:in `send'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:1331:in `perform_action_without_filters'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/filters.rb:617:in `call_filters'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:10:in `realtime'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/flash.rb:146:in `perform_action'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:532:in `send'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:532:in `process_without_filters'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/filters.rb:606:in `process'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:391:in `process'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:386:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/routing/route_set.rb:437:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:87:in `dispatch'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:121:in `_call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:130:in `build_middleware_stack'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:29:in `call'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:29:in `call'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:9:in `cache'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:28:in `call'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/head.rb:9:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/methodoverride.rb:24:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/params_parser.rb:15:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/session/cookie_store.rb:93:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/failsafe.rb:26:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/lock.rb:11:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/lock.rb:11:in `synchronize'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/lock.rb:11:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:114:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/reloader.rb:34:in `run'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:108:in `call'
+/Library/Ruby/Gems/1.8/gems/rails-2.3.4/lib/rails/rack/static.rb:31:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/urlmap.rb:46:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/urlmap.rb:40:in `each'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/urlmap.rb:40:in `call'
+/Library/Ruby/Gems/1.8/gems/rails-2.3.4/lib/rails/rack/log_tailer.rb:17:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/content_length.rb:13:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/chunked.rb:15:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/handler/mongrel.rb:61:in `process'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/handler/mongrel.rb:34:in `run'
+/Library/Ruby/Gems/1.8/gems/rails-2.3.4/lib/commands/server.rb:111
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+script/server:3
+
+ActionView::TemplateError (compile error
+/Users/guilherme/Documents/ruby/restfulie-test/app/views/orders/show.html.erb:15: syntax error, unexpected kENSURE, expecting $end) on line #15 of app/views/orders/show.html.erb:
+12: 
+13: <%= link_to 'Edit', edit_order_path(@order) %> |
+14: <%= link_to 'Back', orders_path %>
+
+    app/views/orders/show.html.erb:15:in `compile!'
+    app/controllers/orders_controller.rb:18:in `show'
+
+Rendered rescues/_trace (34.9ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing OrdersController#show (for 127.0.0.1 at 2009-10-28 16:50:03) [GET]
+  Parameters: {"id"=>"12"}
+  [4;35;1mOrder Load (0.2ms)[0m   [0mSELECT * FROM "orders" WHERE ("orders"."id" = 12) [0m
+Rendering template within layouts/application
+Rendering orders/show
+  [4;36;1mTraining Load (0.3ms)[0m   [0;1mSELECT * FROM "trainings" INNER JOIN "orders_trainings" ON "trainings".id = "orders_trainings".training_id WHERE ("orders_trainings".order_id = 12 ) [0m
+Completed in 16ms (View: 11, DB: 0) | 200 OK [http://localhost/orders/12]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-10-28 16:50:03) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/scaffold.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing OrdersController#index (for 127.0.0.1 at 2009-10-28 16:50:05) [GET]
+  [4;35;1mOrder Load (0.8ms)[0m   [0mSELECT * FROM "orders" [0m
+Rendering template within layouts/application
+Rendering orders/index
+Completed in 44ms (View: 39, DB: 1) | 200 OK [http://localhost/orders]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-10-28 16:50:05) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/scaffold.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing OrdersController#new (for 127.0.0.1 at 2009-10-28 16:50:07) [GET]
+Rendering template within layouts/application
+Rendering orders/new
+  [4;36;1mTraining Load (0.3ms)[0m   [0;1mSELECT * FROM "trainings" [0m
+Completed in 14ms (View: 9, DB: 0) | 200 OK [http://localhost/orders/new]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-10-28 16:50:07) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/scaffold.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing OrdersController#create (for 127.0.0.1 at 2009-10-28 16:50:10) [POST]
+  Parameters: {"commit"=>"Create", "order"=>{"customer_name"=>"aleleua"}, "authenticity_token"=>"iOrBXl9PCpApp/7DdIsZRVvkUcZNlFaQcfFwuBcZfW0=", "products"=>{"1"=>"true"}}
+
+NoMethodError (undefined method `training' for #<Order:0x257f998>):
+  app/controllers/orders_controller.rb:46:in `create'
+  app/controllers/orders_controller.rb:44:in `each'
+  app/controllers/orders_controller.rb:44:in `create'
+
+Rendered rescues/_trace (26.1ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing OrdersController#create (for 127.0.0.1 at 2009-10-28 16:50:33) [POST]
+  Parameters: {"commit"=>"Create", "order"=>{"customer_name"=>"aleleua"}, "authenticity_token"=>"iOrBXl9PCpApp/7DdIsZRVvkUcZNlFaQcfFwuBcZfW0=", "products"=>{"1"=>"true"}}
+  [4;35;1mTraining Load (0.2ms)[0m   [0mSELECT * FROM "trainings" WHERE ("trainings"."id" = '1') LIMIT 1[0m
+  [4;36;1mOrder Create (0.4ms)[0m   [0;1mINSERT INTO "orders" ("customer_name", "updated_at", "created_at") VALUES('aleleua', '2009-10-28 18:50:33', '2009-10-28 18:50:33')[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mINSERT INTO "orders_trainings" ("order_id", "training_id") VALUES (13, 1)[0m
+Redirected to http://localhost:3000/orders/13
+Completed in 18ms (DB: 1) | 302 Found [http://localhost/orders]
+
+
+Processing OrdersController#show (for 127.0.0.1 at 2009-10-28 16:50:33) [GET]
+  Parameters: {"id"=>"13"}
+  [4;36;1mOrder Load (0.2ms)[0m   [0;1mSELECT * FROM "orders" WHERE ("orders"."id" = 13) [0m
+Rendering template within layouts/application
+Rendering orders/show
+  [4;35;1mTraining Load (0.3ms)[0m   [0mSELECT * FROM "trainings" INNER JOIN "orders_trainings" ON "trainings".id = "orders_trainings".training_id WHERE ("orders_trainings".order_id = 13 ) [0m
+Completed in 17ms (View: 12, DB: 0) | 200 OK [http://localhost/orders/13]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-10-28 16:50:33) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/scaffold.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing OrdersController#index (for 127.0.0.1 at 2009-10-28 16:51:06) [GET]
+  [4;36;1mOrder Load (0.8ms)[0m   [0;1mSELECT * FROM "orders" [0m
+Rendering template within layouts/application
+Rendering orders/index
+Completed in 48ms (View: 43, DB: 1) | 200 OK [http://localhost/orders]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-10-28 16:51:06) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/scaffold.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing OrdersController#index (for 127.0.0.1 at 2009-10-28 16:51:14) [GET]
+  [4;35;1mOrder Load (0.9ms)[0m   [0mSELECT * FROM "orders" [0m
+Rendering template within layouts/application
+Rendering orders/index
+Completed in 51ms (View: 45, DB: 1) | 200 OK [http://localhost/orders]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-10-28 16:51:14) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/scaffold.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)

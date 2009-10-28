@@ -3,6 +3,14 @@
   <%=h @order.customer_name %>
 </p>
 
+<table>
+<% @order.trainings.each do |training| %>
+	<tr><td><%=training.name%></td><td><%=training.price%></td></tr>
+<% end%>
+</table>
+<p>
+Total price: <%= @order.total_price %>
+</p>
 
 <%= link_to 'Edit', edit_order_path(@order) %> |
 <%= link_to 'Back', orders_path %>

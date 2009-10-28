@@ -32,18 +32,13 @@ class OrdersController < ApplicationController
     end
   end
 
-  # GET /orders/1/edit
-  def edit
-    @order = Order.find(params[:id])
-  end
-
   # POST /orders
   # POST /orders.xml
   def create
     @order = Order.new(params[:order])
     params[:products].each do |p|
       id = p[0]
-      @order.training << Training.find_by_id(id)
+      @order.trainings << Training.find_by_id(id)
     end
 
     respond_to do |format|
@@ -53,23 +48,6 @@ class OrdersController < ApplicationController
         format.xml  { render :xml => @order, :status => :created, :location => @order }
       else
         format.html { render :action => "new" }
-        format.xml  { render :xml => @order.errors, :status => :unprocessable_entity }
-      end
-    end
-  end
-
-  # PUT /orders/1
-  # PUT /orders/1.xml
-  def update
-    @order = Order.find(params[:id])
-
-    respond_to do |format|
-      if @order.update_attributes(params[:order])
-        flash[:notice] = 'Order was successfully updated.'
-        format.html { redirect_to(@order) }
-        format.xml  { head :ok }
-      else
-        format.html { render :action => "edit" }
         format.xml  { render :xml => @order.errors, :status => :unprocessable_entity }
       end
     end
