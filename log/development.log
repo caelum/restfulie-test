@@ -3354,3 +3354,370 @@ ActionController::RoutingError (No route matches "/stylesheets/scaffold.css" wit
   
 
 Rendering rescues/layout (not_found)
+
+
+Processing WelcomeController#welcome (for 127.0.0.1 at 2009-10-28 16:52:03) [GET]
+Rendering template within layouts/application
+Rendering welcome/welcome
+Completed in 27ms (View: 26, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-10-28 16:52:03) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/scaffold.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing WelcomeController#welcome (for 127.0.0.1 at 2009-10-28 16:52:03) [GET]
+Rendering template within layouts/application
+Rendering welcome/welcome
+Completed in 3ms (View: 1, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-10-28 16:52:04) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/scaffold.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing OrdersController#index (for 127.0.0.1 at 2009-10-28 16:52:07) [GET]
+  [4;36;1mOrder Load (1.0ms)[0m   [0;1mSELECT * FROM "orders" [0m
+Rendering template within layouts/application
+Rendering orders/index
+Completed in 58ms (View: 47, DB: 1) | 200 OK [http://localhost/orders]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-10-28 16:52:07) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/scaffold.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing OrdersController#new (for 127.0.0.1 at 2009-10-28 16:52:23) [GET]
+Rendering template within layouts/application
+Rendering orders/new
+  [4;35;1mTraining Load (0.4ms)[0m   [0mSELECT * FROM "trainings" [0m
+Completed in 76ms (View: 70, DB: 0) | 200 OK [http://localhost/orders/new]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-10-28 16:52:23) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/scaffold.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing OrdersController#index (for 127.0.0.1 at 2009-10-28 16:53:34) [GET]
+  [4;36;1mOrder Load (1.0ms)[0m   [0;1mSELECT * FROM "orders" [0m
+Rendering template within layouts/application
+Rendering orders/index
+Completed in 77ms (View: 66, DB: 1) | 200 OK [http://localhost/orders]
+
+
+Processing OrdersController#new (for 127.0.0.1 at 2009-10-28 16:53:35) [GET]
+Rendering template within layouts/application
+Rendering orders/new
+  [4;35;1mTraining Load (0.3ms)[0m   [0mSELECT * FROM "trainings" [0m
+Completed in 18ms (View: 13, DB: 0) | 200 OK [http://localhost/orders/new]
+
+
+Processing OrdersController#index (for 127.0.0.1 at 2009-10-28 16:53:39) [GET]
+  [4;36;1mOrder Load (0.8ms)[0m   [0;1mSELECT * FROM "orders" [0m
+Rendering template within layouts/application
+Rendering orders/index
+Completed in 46ms (View: 41, DB: 1) | 200 OK [http://localhost/orders]
+
+
+Processing OrdersController#new (for 127.0.0.1 at 2009-10-28 16:53:41) [GET]
+Rendering template within layouts/application
+Rendering orders/new
+  [4;35;1mTraining Load (0.3ms)[0m   [0mSELECT * FROM "trainings" [0m
+Completed in 14ms (View: 9, DB: 0) | 200 OK [http://localhost/orders/new]
+
+
+Processing OrdersController#index (for 127.0.0.1 at 2009-10-28 16:54:20) [GET]
+  [4;36;1mOrder Load (0.9ms)[0m   [0;1mSELECT * FROM "orders" [0m
+Rendering template within layouts/application
+Rendering orders/index
+
+ActionView::TemplateError (undefined method `show_path' for #<ActionView::Base:0x22174b8>) on line #13 of app/views/orders/index.html.erb:
+10:     <td><%=h order.customer_name %></td>
+11:     <td><%= link_to 'Show', order %></td>
+12:     <td><%= link_to 'Destroy', order, :confirm => 'Are you sure?', :method => :delete %></td>
+13: <td><%= url_for(:show) %></td>
+14:   </tr>
+15: <% end %>
+16: </table>
+
+    app/views/orders/index.html.erb:13
+    app/views/orders/index.html.erb:8:in `each'
+    app/views/orders/index.html.erb:8
+    app/controllers/orders_controller.rb:7:in `index'
+
+Rendered rescues/_trace (38.0ms)
+Rendered rescues/_request_and_response (1.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing OrdersController#index (for 127.0.0.1 at 2009-10-28 16:54:41) [GET]
+  [4;35;1mOrder Load (0.9ms)[0m   [0mSELECT * FROM "orders" [0m
+Rendering template within layouts/application
+Rendering orders/index
+
+ActionView::TemplateError (No route matches {:action=>"show"}) on line #13 of app/views/orders/index.html.erb:
+10:     <td><%=h order.customer_name %></td>
+11:     <td><%= link_to 'Show', order %></td>
+12:     <td><%= link_to 'Destroy', order, :confirm => 'Are you sure?', :method => :delete %></td>
+13: <td><%= url_for(:action=>:show) %></td>
+14:   </tr>
+15: <% end %>
+16: </table>
+
+    app/views/orders/index.html.erb:13
+    app/views/orders/index.html.erb:8:in `each'
+    app/views/orders/index.html.erb:8
+    app/controllers/orders_controller.rb:7:in `index'
+
+Rendered rescues/_trace (101.2ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing OrdersController#index (for 127.0.0.1 at 2009-10-28 16:55:57) [GET]
+  [4;36;1mOrder Load (0.8ms)[0m   [0;1mSELECT * FROM "orders" [0m
+Rendering template within layouts/application
+Rendering orders/index
+
+ActionView::TemplateError (No route matches {:action=>"show", :controller=>"order"}) on line #13 of app/views/orders/index.html.erb:
+10:     <td><%=h order.customer_name %></td>
+11:     <td><%= link_to 'Show', order %></td>
+12:     <td><%= link_to 'Destroy', order, :confirm => 'Are you sure?', :method => :delete %></td>
+13: <td><%= url_for(:controller => 'order', :action=>'show' ) %></td>
+14:   </tr>
+15: <% end %>
+16: </table>
+
+    app/views/orders/index.html.erb:13
+    app/views/orders/index.html.erb:8:in `each'
+    app/views/orders/index.html.erb:8
+    app/controllers/orders_controller.rb:7:in `index'
+
+Rendered rescues/_trace (38.2ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing OrdersController#index (for 127.0.0.1 at 2009-10-28 16:55:59) [GET]
+  [4;35;1mOrder Load (0.9ms)[0m   [0mSELECT * FROM "orders" [0m
+Rendering template within layouts/application
+Rendering orders/index
+
+ActionView::TemplateError (No route matches {:action=>"show", :controller=>"order"}) on line #13 of app/views/orders/index.html.erb:
+10:     <td><%=h order.customer_name %></td>
+11:     <td><%= link_to 'Show', order %></td>
+12:     <td><%= link_to 'Destroy', order, :confirm => 'Are you sure?', :method => :delete %></td>
+13: <td><%= url_for(:controller => 'order', :action=>'show' ) %></td>
+14:   </tr>
+15: <% end %>
+16: </table>
+
+    app/views/orders/index.html.erb:13
+    app/views/orders/index.html.erb:8:in `each'
+    app/views/orders/index.html.erb:8
+    app/controllers/orders_controller.rb:7:in `index'
+
+Rendered rescues/_trace (98.7ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing OrdersController#index (for 127.0.0.1 at 2009-10-28 16:56:28) [GET]
+  [4;36;1mOrder Load (0.8ms)[0m   [0;1mSELECT * FROM "orders" [0m
+Rendering template within layouts/application
+Rendering orders/index
+
+ActionView::TemplateError (No route matches {:action=>"show", :controller=>"orders"}) on line #13 of app/views/orders/index.html.erb:
+10:     <td><%=h order.customer_name %></td>
+11:     <td><%= link_to 'Show', order %></td>
+12:     <td><%= link_to 'Destroy', order, :confirm => 'Are you sure?', :method => :delete %></td>
+13: <td><%= url_for(:controller => 'orders', :action=>'show' ) %></td>
+14:   </tr>
+15: <% end %>
+16: </table>
+
+    app/views/orders/index.html.erb:13
+    app/views/orders/index.html.erb:8:in `each'
+    app/views/orders/index.html.erb:8
+    app/controllers/orders_controller.rb:7:in `index'
+
+Rendered rescues/_trace (38.7ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing OrdersController#index (for 127.0.0.1 at 2009-10-28 16:58:19) [GET]
+  [4;35;1mOrder Load (1.5ms)[0m   [0mSELECT * FROM "orders" [0m
+Rendering template within layouts/application
+Rendering orders/index
+Completed in 117ms (View: 112, DB: 1) | 200 OK [http://localhost/orders]
+
+
+Processing OrdersController#index (for 127.0.0.1 at 2009-10-28 16:58:35) [GET]
+  [4;36;1mOrder Load (0.8ms)[0m   [0;1mSELECT * FROM "orders" [0m
+Rendering template within layouts/application
+Rendering orders/index
+Completed in 57ms (View: 52, DB: 1) | 200 OK [http://localhost/orders]
+
+
+Processing OrdersController#index (for 127.0.0.1 at 2009-10-28 16:59:02) [GET]
+  [4;35;1mOrder Load (0.8ms)[0m   [0mSELECT * FROM "orders" [0m
+Rendering template within layouts/application
+Rendering orders/index
+ERROR: compiling _run_erb_app47views47orders47index46html46erb RAISED compile error
+/Users/guilherme/Documents/ruby/restfulie-test/app/views/orders/index.html.erb:12: syntax error, unexpected ',', expecting ')'
+..., :confirm => 'Are you sure?', :method => :delete ).to_s); @...
+                              ^
+Function body:           def _run_erb_app47views47orders47index46html46erb(local_assigns)
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ; @output_buffer.concat "<h1>Listing orders</h1>\n"
+@output_buffer.concat "\n"
+@output_buffer.concat "<table>\n"
+@output_buffer.concat "  <tr>\n"
+@output_buffer.concat "    <th>Customer name</th>\n"
+@output_buffer.concat "  </tr>\n"
+@output_buffer.concat "\n"
+ @orders.each do |order| ; @output_buffer.concat "\n"
+@output_buffer.concat "  <tr>\n"
+@output_buffer.concat "    <td>"; @output_buffer.concat(( link_to <%=h order.customer_name ).to_s); @output_buffer.concat ", order %></td>\n"
+@output_buffer.concat "\t<td>"; @output_buffer.concat(( order_url(order) ).to_s); @output_buffer.concat ".xml</td>\n"
+@output_buffer.concat "    <td>"; @output_buffer.concat(( link_to 'Destroy', order, :confirm => 'Are you sure?', :method => :delete ).to_s); @output_buffer.concat "</td>\n"
+@output_buffer.concat "  </tr>\n"
+ end ; @output_buffer.concat "\n"
+@output_buffer.concat "</table>\n"
+@output_buffer.concat "\n"
+@output_buffer.concat "<br />\n"
+@output_buffer.concat "\n"
+@output_buffer.concat(( link_to 'New order', new_order_path ).to_s); @output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: /Users/guilherme/Documents/ruby/restfulie-test/app/views/orders/index.html.erb:22:in `compile!'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_view/renderable.rb:61:in `compile'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_view/renderable.rb:28:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_view/template.rb:199:in `render_template'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_view/base.rb:260:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_view/base.rb:343:in `_render_with_layout'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_view/base.rb:257:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:1250:in `render_for_file'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:951:in `render_without_benchmark'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:51:in `render'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:10:in `realtime'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:51:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/mime_responds.rb:135:in `send'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/mime_responds.rb:135:in `custom'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/mime_responds.rb:179:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/mime_responds.rb:179:in `respond'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/mime_responds.rb:173:in `each'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/mime_responds.rb:173:in `respond'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/mime_responds.rb:107:in `respond_to'
+/Users/guilherme/Documents/ruby/restfulie-test/app/controllers/orders_controller.rb:7:in `index'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:1331:in `send'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:1331:in `perform_action_without_filters'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/filters.rb:617:in `call_filters'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:10:in `realtime'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/flash.rb:146:in `perform_action'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:532:in `send'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:532:in `process_without_filters'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/filters.rb:606:in `process'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:391:in `process'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/base.rb:386:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/routing/route_set.rb:437:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:87:in `dispatch'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:121:in `_call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:130:in `build_middleware_stack'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:29:in `call'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:29:in `call'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:9:in `cache'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:28:in `call'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/head.rb:9:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/methodoverride.rb:24:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/params_parser.rb:15:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/session/cookie_store.rb:93:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/failsafe.rb:26:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/lock.rb:11:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/lock.rb:11:in `synchronize'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/lock.rb:11:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:114:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/reloader.rb:34:in `run'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:108:in `call'
+/Library/Ruby/Gems/1.8/gems/rails-2.3.4/lib/rails/rack/static.rb:31:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/urlmap.rb:46:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/urlmap.rb:40:in `each'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/urlmap.rb:40:in `call'
+/Library/Ruby/Gems/1.8/gems/rails-2.3.4/lib/rails/rack/log_tailer.rb:17:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/content_length.rb:13:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/chunked.rb:15:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/handler/mongrel.rb:61:in `process'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+/Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/handler/mongrel.rb:34:in `run'
+/Library/Ruby/Gems/1.8/gems/rails-2.3.4/lib/commands/server.rb:111
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+script/server:3
+
+ActionView::TemplateError (compile error
+/Users/guilherme/Documents/ruby/restfulie-test/app/views/orders/index.html.erb:12: syntax error, unexpected ',', expecting ')'
+..., :confirm => 'Are you sure?', :method => :delete ).to_s); @...
+                              ^) on line #12 of app/views/orders/index.html.erb:
+9:   <tr>
+10:     <td><%= link_to <%=h order.customer_name %>, order %></td>
+11: 	<td><%= order_url(order) %>.xml</td>
+12:     <td><%= link_to 'Destroy', order, :confirm => 'Are you sure?', :method => :delete %></td>
+13:   </tr>
+14: <% end %>
+15: </table>
+
+    app/views/orders/index.html.erb:22:in `compile!'
+    app/controllers/orders_controller.rb:7:in `index'
+
+Rendered rescues/_trace (35.1ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing OrdersController#index (for 127.0.0.1 at 2009-10-28 16:59:08) [GET]
+  [4;36;1mOrder Load (0.8ms)[0m   [0;1mSELECT * FROM "orders" [0m
+Rendering template within layouts/application
+Rendering orders/index
+Completed in 52ms (View: 47, DB: 1) | 200 OK [http://localhost/orders]
+
+
+Processing OrdersController#show to xml (for 127.0.0.1 at 2009-10-28 16:59:24) [GET]
+  Parameters: {"id"=>"11"}
+  [4;35;1mOrder Load (0.2ms)[0m   [0mSELECT * FROM "orders" WHERE ("orders"."id" = 11) [0m
+Completed in 152ms (View: 78, DB: 0) | 200 OK [http://localhost/orders/11.xml]

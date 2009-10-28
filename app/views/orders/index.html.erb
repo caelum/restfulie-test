@@ -7,8 +7,8 @@
 
 <% @orders.each do |order| %>
   <tr>
-    <td><%=h order.customer_name %></td>
-    <td><%= link_to 'Show', order %></td>
+    <td><%= link_to order.customer_name, order %></td>
+	<td><%= order_url(order) %>.xml</td>
     <td><%= link_to 'Destroy', order, :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
 <% end %>
