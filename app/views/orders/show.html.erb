@@ -1,0 +1,8 @@
+<p>
+  <b>Customer name:</b>
+  <%=h @order.customer_name %>
+</p>
+
+
+<%= link_to 'Edit', edit_order_path(@order) %> |
+<%= link_to 'Back', orders_path %>

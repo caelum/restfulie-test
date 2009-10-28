@@ -1,0 +1,1168 @@
+  [4;36;1mSQL (0.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (19.3ms)[0m   [0mselect sqlite_version(*)[0m
+  [4;36;1mSQL (2.9ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (1.7ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreatePosts (20091021113532)
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCREATE TABLE "posts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20091021113532')[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("posts")[0m
+
+
+Processing PostsController#index (for 127.0.0.1 at 2009-10-21 09:36:11) [GET]
+  [4;36;1mPost Load (0.4ms)[0m   [0;1mSELECT * FROM "posts" [0m
+Rendering template within layouts/posts
+Rendering posts/index
+Completed in 55ms (View: 51, DB: 0) | 200 OK [http://localhost/posts]
+
+
+Processing PostsController#new (for 127.0.0.1 at 2009-10-21 09:36:13) [GET]
+Rendering template within layouts/posts
+Rendering posts/new
+Completed in 11ms (View: 8, DB: 0) | 200 OK [http://localhost/posts/new]
+
+
+Processing PostsController#create (for 127.0.0.1 at 2009-10-21 09:36:15) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"iynKlz592S2Fd/OLfHagiW1SHIfFPOmy7EkXb7odzKc=", "post"=>{"name"=>"chocolate"}}
+  [4;35;1mPost Create (0.4ms)[0m   [0mINSERT INTO "posts" ("name", "updated_at", "created_at") VALUES('chocolate', '2009-10-21 11:36:15', '2009-10-21 11:36:15')[0m
+Redirected to http://localhost:3000/posts/1
+Completed in 9ms (DB: 0) | 302 Found [http://localhost/posts]
+
+
+Processing PostsController#show (for 127.0.0.1 at 2009-10-21 09:36:15) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mPost Load (0.2ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+Rendering template within layouts/posts
+Rendering posts/show
+Completed in 10ms (View: 6, DB: 0) | 200 OK [http://localhost/posts/1]
+
+
+Processing PostsController#show to json (for 127.0.0.1 at 2009-10-21 09:36:25) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mPost Load (0.4ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+Completed in 5ms (View: 1, DB: 0) | 406 Not Acceptable [http://localhost/posts/1.json]
+
+
+Processing PostsController#show to json (for 127.0.0.1 at 2009-10-21 09:36:41) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mPost Load (0.2ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+Completed in 5ms (View: 1, DB: 0) | 406 Not Acceptable [http://localhost/posts/1.json]
+
+
+Processing PostsController#show (for 127.0.0.1 at 2009-10-21 09:37:00) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mPost Load (0.2ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+Rendering template within layouts/posts
+Rendering posts/show
+Completed in 137ms (View: 133, DB: 0) | 200 OK [http://localhost/posts/1]
+
+
+Processing PostsController#show (for 127.0.0.1 at 2009-10-21 09:38:02) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mPost Load (0.2ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+Rendering template within layouts/posts
+Rendering posts/show
+Completed in 8ms (View: 3, DB: 0) | 200 OK [http://localhost/posts/1]
+
+
+Processing PostsController#show (for 127.0.0.1 at 2009-10-21 09:38:30) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mPost Load (0.2ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+Rendering template within layouts/posts
+Rendering posts/show
+Completed in 11ms (View: 6, DB: 0) | 200 OK [http://localhost/posts/1]
+
+
+Processing PostsController#show (for 127.0.0.1 at 2009-10-21 09:40:19) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mPost Load (0.2ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+Rendering template within layouts/posts
+Rendering posts/show
+
+ActionView::TemplateError (undefined method `url_for' for #<Post:0x25f768c>) on line #5 of app/views/posts/show.html.erb:
+2:   <b>Name:</b>
+3:   <%=h @post.name %>
+4: </p>
+5: <%= @post.to_json(:methods=>['actions']) %>
+6: 
+7: <%= link_to 'Edit', edit_post_path(@post) %> |
+8: <%= link_to 'Back', posts_path %>
+
+    app/models/post.rb:3:in `actions'
+    config/environment.rb:45:in `to_json'
+    app/views/posts/show.html.erb:5
+    app/controllers/posts_controller.rb:18:in `show'
+
+Rendered rescues/_trace (41.9ms)
+Rendered rescues/_request_and_response (1.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing PostsController#show (for 127.0.0.1 at 2009-10-21 09:41:02) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mPost Load (0.2ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+Rendering template within layouts/posts
+Rendering posts/show
+
+ActionView::TemplateError (Missing host to link to! Please provide :host parameter or set default_url_options[:host]) on line #5 of app/views/posts/show.html.erb:
+2:   <b>Name:</b>
+3:   <%=h @post.name %>
+4: </p>
+5: <%= @post.to_json(:methods=>['actions']) %>
+6: 
+7: <%= link_to 'Edit', edit_post_path(@post) %> |
+8: <%= link_to 'Back', posts_path %>
+
+    app/models/post.rb:4:in `actions'
+    config/environment.rb:45:in `to_json'
+    app/views/posts/show.html.erb:5
+    app/controllers/posts_controller.rb:18:in `show'
+
+Rendered rescues/_trace (102.9ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing PostsController#show (for 127.0.0.1 at 2009-10-21 09:41:08) [GET]
+  Parameters: {"id"=>"1"}
+
+TypeError (wrong argument type Class (expected Module)):
+  app/models/post.rb:2:in `include'
+  app/models/post.rb:2
+  app/controllers/posts_controller.rb:16:in `show'
+
+Rendered rescues/_trace (33.8ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing PostsController#show (for 127.0.0.1 at 2009-10-21 09:42:23) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mPost Load (0.2ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+Rendering template within layouts/posts
+Rendering posts/show
+Completed in 12ms (View: 6, DB: 0) | 200 OK [http://localhost/posts/1]
+
+
+Processing PostsController#show (for 127.0.0.1 at 2009-10-21 09:42:56) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mPost Load (0.2ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+Rendering template within layouts/posts
+Rendering posts/show
+
+ActionView::TemplateError (undefined local variable or method `status' for #<Post:0x2496310>) on line #5 of app/views/posts/show.html.erb:
+2:   <b>Name:</b>
+3:   <%=h @post.name %>
+4: </p>
+5: <%= @post.to_json(:methods=>['actions']) %>
+6: <%= @post.to_xml(:methods=>['actions']) %>
+7: 
+8: <%= link_to 'Edit', edit_post_path(@post) %> |
+
+    app/models/post.rb:3:in `actions'
+    config/environment.rb:45:in `to_json'
+    app/views/posts/show.html.erb:5
+    app/controllers/posts_controller.rb:18:in `show'
+
+Rendered rescues/_trace (100.2ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing PostsController#show (for 127.0.0.1 at 2009-10-21 09:43:02) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mPost Load (0.2ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+Rendering template within layouts/posts
+Rendering posts/show
+
+ActionView::TemplateError (undefined method `url_for' for #<Post:0x25cb03c>) on line #5 of app/views/posts/show.html.erb:
+2:   <b>Name:</b>
+3:   <%=h @post.name %>
+4: </p>
+5: <%= @post.to_json(:methods=>['actions']) %>
+6: <%= @post.to_xml(:methods=>['actions']) %>
+7: 
+8: <%= link_to 'Edit', edit_post_path(@post) %> |
+
+    app/models/post.rb:3:in `actions'
+    config/environment.rb:45:in `to_json'
+    app/views/posts/show.html.erb:5
+    app/controllers/posts_controller.rb:18:in `show'
+
+Rendered rescues/_trace (43.1ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing PostsController#show (for 127.0.0.1 at 2009-10-21 09:43:09) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mPost Load (0.2ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+Rendering template within layouts/posts
+Rendering posts/show
+Completed in 8ms (View: 3, DB: 0) | 200 OK [http://localhost/posts/1]
+
+
+Processing PostsController#show (for 127.0.0.1 at 2009-10-21 09:48:19) [GET]
+  Parameters: {"id"=>"1"}
+
+SyntaxError (/Users/guilherme/Documents/ruby/restfulie-test/app/models/post.rb:5: class/module name must be CONSTANT):
+  app/controllers/posts_controller.rb:16:in `show'
+
+Rendered rescues/_trace (92.6ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing PostsController#show (for 127.0.0.1 at 2009-10-21 09:48:33) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mPost Load (0.2ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+Rendering template within layouts/posts
+Rendering posts/show
+Completed in 12ms (View: 7, DB: 0) | 200 OK [http://localhost/posts/1]
+
+
+Processing PostsController#show (for 127.0.0.1 at 2009-10-21 09:49:26) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mPost Load (0.2ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+Rendering template within layouts/posts
+Rendering posts/show
+
+ActionView::TemplateError (undefined method `to_xml' for #<Post::Atom_link:0x2597ed0>) on line #6 of app/views/posts/show.html.erb:
+3:   <%=h @post.name %>
+4: </p>
+5: <%= @post.to_json(:methods=>['actions']) %>
+6: <%= @post.to_xml(:methods=>['actions_to_xml']) %>
+7: 
+8: <%= link_to 'Edit', edit_post_path(@post) %> |
+9: <%= link_to 'Back', posts_path %>
+
+    app/models/post.rb:14:in `actions_to_xml'
+    app/models/post.rb:13:in `map'
+    app/models/post.rb:13:in `actions_to_xml'
+    builder (2.1.2) lib/builder/xmlbase.rb:134:in `call'
+    builder (2.1.2) lib/builder/xmlbase.rb:134:in `_nested_structures'
+    builder (2.1.2) lib/builder/xmlbase.rb:58:in `method_missing'
+    builder (2.1.2) lib/builder/xmlbase.rb:31:in `tag!'
+    app/views/posts/show.html.erb:6
+    app/controllers/posts_controller.rb:18:in `show'
+
+Rendered rescues/_trace (46.4ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing PostsController#show (for 127.0.0.1 at 2009-10-21 09:50:24) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mPost Load (0.2ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+Rendering template within layouts/posts
+Rendering posts/show
+Completed in 8ms (View: 3, DB: 0) | 200 OK [http://localhost/posts/1]
+
+
+Processing PostsController#show (for 127.0.0.1 at 2009-10-21 09:51:55) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mPost Load (0.2ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+Rendering template within layouts/posts
+Rendering posts/show
+Completed in 11ms (View: 7, DB: 0) | 200 OK [http://localhost/posts/1]
+
+
+Processing PostsController#show (for 127.0.0.1 at 2009-10-21 09:55:00) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mPost Load (0.2ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+Rendering template within layouts/posts
+Rendering posts/show
+
+ActionView::TemplateError (undefined method `to_xml' for #<String:0x2641390>) on line #6 of app/views/posts/show.html.erb:
+3:   <%=h @post.name %>
+4: </p>
+5: <%= @post.to_json(:methods=>['actions']) %>
+6: <%= @post.to_xml(:methods=>['actions_to_xml'], :skip_types => true) %>
+7: 
+8: <%= link_to 'Edit', edit_post_path(@post) %> |
+9: <%= link_to 'Back', posts_path %>
+
+    app/models/post.rb:21:in `to_xml'
+    app/views/posts/show.html.erb:6
+    app/controllers/posts_controller.rb:18:in `show'
+
+Rendered rescues/_trace (38.0ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing PostsController#show (for 127.0.0.1 at 2009-10-21 09:55:23) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mPost Load (0.2ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+Rendering template within layouts/posts
+Rendering posts/show
+
+ActionView::TemplateError (undefined method `to_xml' for #<String:0x24d0790>) on line #6 of app/views/posts/show.html.erb:
+3:   <%=h @post.name %>
+4: </p>
+5: <%= @post.to_json(:methods=>['actions']) %>
+6: <%= @post.to_xml(:skip_types => true) %>
+7: 
+8: <%= link_to 'Edit', edit_post_path(@post) %> |
+9: <%= link_to 'Back', posts_path %>
+
+    app/models/post.rb:21:in `to_xml'
+    app/views/posts/show.html.erb:6
+    app/controllers/posts_controller.rb:18:in `show'
+
+Rendered rescues/_trace (41.5ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing PostsController#show (for 127.0.0.1 at 2009-10-21 09:55:32) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mPost Load (0.2ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+Rendering template within layouts/posts
+Rendering posts/show
+
+ActionView::TemplateError (undefined method `to_xml' for #<String:0x262bfe0>) on line #6 of app/views/posts/show.html.erb:
+3:   <%=h @post.name %>
+4: </p>
+5: <%= @post.to_json(:methods=>['actions']) %>
+6: <%= @post.to_xml() %>
+7: 
+8: <%= link_to 'Edit', edit_post_path(@post) %> |
+9: <%= link_to 'Back', posts_path %>
+
+    app/models/post.rb:21:in `to_xml'
+    app/views/posts/show.html.erb:6
+    app/controllers/posts_controller.rb:18:in `show'
+
+Rendered rescues/_trace (39.5ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing PostsController#show (for 127.0.0.1 at 2009-10-21 09:55:43) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mPost Load (0.2ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+Rendering template within layouts/posts
+Rendering posts/show
+
+ActionView::TemplateError (undefined local variable or method `options' for #<Post:0x24c6448>) on line #6 of app/views/posts/show.html.erb:
+3:   <%=h @post.name %>
+4: </p>
+5: <%= @post.to_json(:methods=>['actions']) %>
+6: <%= @post.to_xml() %>
+7: 
+8: <%= link_to 'Edit', edit_post_path(@post) %> |
+9: <%= link_to 'Back', posts_path %>
+
+    app/models/post.rb:21:in `to_xml'
+    app/views/posts/show.html.erb:6
+    app/controllers/posts_controller.rb:18:in `show'
+
+Rendered rescues/_trace (37.1ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing PostsController#show (for 127.0.0.1 at 2009-10-21 09:55:46) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mPost Load (0.2ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+Rendering template within layouts/posts
+Rendering posts/show
+
+ActionView::TemplateError (undefined method `to_xml' for #<String:0x2635e8c>) on line #6 of app/views/posts/show.html.erb:
+3:   <%=h @post.name %>
+4: </p>
+5: <%= @post.to_json(:methods=>['actions']) %>
+6: <%= @post.to_xml() %>
+7: 
+8: <%= link_to 'Edit', edit_post_path(@post) %> |
+9: <%= link_to 'Back', posts_path %>
+
+    app/models/post.rb:21:in `to_xml'
+    app/views/posts/show.html.erb:6
+    app/controllers/posts_controller.rb:18:in `show'
+
+Rendered rescues/_trace (37.8ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing PostsController#show (for 127.0.0.1 at 2009-10-21 09:56:22) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mPost Load (0.2ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+Rendering template within layouts/posts
+Rendering posts/show
+Completed in 11ms (View: 6, DB: 0) | 200 OK [http://localhost/posts/1]
+
+
+Processing PostsController#show (for 127.0.0.1 at 2009-10-21 09:57:02) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mPost Load (0.2ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+Rendering template within layouts/posts
+Rendering posts/show
+Completed in 11ms (View: 7, DB: 0) | 200 OK [http://localhost/posts/1]
+
+
+Processing PostsController#show (for 127.0.0.1 at 2009-10-21 09:57:46) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mPost Load (0.2ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+Rendering template within layouts/posts
+Rendering posts/show
+Completed in 8ms (View: 3, DB: 0) | 200 OK [http://localhost/posts/1]
+
+
+Processing PostsController#show (for 127.0.0.1 at 2009-10-21 09:58:03) [GET]
+  Parameters: {"id"=>"1"}
+
+SyntaxError (/Users/guilherme/Documents/ruby/restfulie-test/app/models/post.rb:8: syntax error, unexpected '=', expecting tASSOC
+        xml.link :rel => a[:rel], :href = a[:href]
+                                         ^):
+  app/controllers/posts_controller.rb:16:in `show'
+
+Rendered rescues/_trace (91.4ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing PostsController#show (for 127.0.0.1 at 2009-10-21 09:58:08) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mPost Load (0.2ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+Rendering template within layouts/posts
+Rendering posts/show
+Completed in 8ms (View: 4, DB: 0) | 200 OK [http://localhost/posts/1]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2009-10-22 09:29:46) [GET]
+  [4;36;1mPost Load (0.7ms)[0m   [0;1mSELECT * FROM "posts" [0m
+Rendering template within layouts/posts
+Rendering posts/index
+Completed in 126ms (View: 120, DB: 1) | 200 OK [http://localhost/posts]
+
+
+Processing PostsController#show (for 127.0.0.1 at 2009-10-22 09:29:48) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mPost Load (0.2ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+Rendering template within layouts/posts
+Rendering posts/show
+Completed in 9ms (View: 5, DB: 0) | 200 OK [http://localhost/posts/1]
+
+
+Processing PostsController#show to json (for 127.0.0.1 at 2009-10-22 09:29:50) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mPost Load (0.2ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+Completed in 5ms (View: 1, DB: 0) | 406 Not Acceptable [http://localhost/posts/1.json]
+
+
+Processing PostsController#show to xml (for 127.0.0.1 at 2009-10-22 09:30:16) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mPost Load (0.2ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+
+NameError (undefined local variable or method `actions' for #<Post:0x24c721c>):
+  builder (2.1.2) lib/builder/xmlbase.rb:134:in `call'
+  builder (2.1.2) lib/builder/xmlbase.rb:134:in `_nested_structures'
+  builder (2.1.2) lib/builder/xmlbase.rb:58:in `method_missing'
+  builder (2.1.2) lib/builder/xmlbase.rb:31:in `tag!'
+  app/controllers/posts_controller.rb:20:in `show'
+  app/controllers/posts_controller.rb:18:in `show'
+
+Rendered rescues/_trace (96.6ms)
+Rendered rescues/_request_and_response (1.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing PostsController#show to xml (for 127.0.0.1 at 2009-10-22 09:31:32) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mPost Load (0.2ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+
+NameError (undefined local variable or method `actions' for #<Post:0x260da18>):
+  builder (2.1.2) lib/builder/xmlbase.rb:134:in `call'
+  builder (2.1.2) lib/builder/xmlbase.rb:134:in `_nested_structures'
+  builder (2.1.2) lib/builder/xmlbase.rb:58:in `method_missing'
+  builder (2.1.2) lib/builder/xmlbase.rb:31:in `tag!'
+  app/controllers/posts_controller.rb:20:in `show'
+  app/controllers/posts_controller.rb:18:in `show'
+
+Rendered rescues/_trace (36.5ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing PostsController#show to xml (for 127.0.0.1 at 2009-10-22 09:31:55) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mPost Load (0.2ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+Completed in 48ms (View: 43, DB: 0) | 200 OK [http://localhost/posts/1.xml]
+
+
+Processing PostsController#show to xml (for 127.0.0.1 at 2009-10-22 09:32:59) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mPost Load (0.2ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+Completed in 47ms (View: 42, DB: 0) | 200 OK [http://localhost/posts/1.xml]
+
+
+Processing PostsController#show to xml (for 127.0.0.1 at 2009-10-22 09:34:01) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mPost Load (0.2ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+Completed in 7ms (View: 2, DB: 0) | 200 OK [http://localhost/posts/1.xml]
+
+
+Processing PostsController#show to xml (for 127.0.0.1 at 2009-10-22 09:34:04) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mPost Load (0.2ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+Completed in 48ms (View: 43, DB: 0) | 200 OK [http://localhost/posts/1.xml]
+
+
+Processing PostsController#show to xml (for 127.0.0.1 at 2009-10-22 09:34:33) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mPost Load (0.2ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+Completed in 47ms (View: 42, DB: 0) | 200 OK [http://localhost/posts/1.xml]
+
+
+Processing PostsController#show to xml (for 127.0.0.1 at 2009-10-22 09:35:51) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mPost Load (0.2ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+
+ActionView::MissingTemplate (Missing template posts/show.erb in view path app/views):
+  
+
+Rendering rescues/layout (internal_server_error)
+
+
+Processing PostsController#show to xml (for 127.0.0.1 at 2009-10-22 09:38:04) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mPost Load (0.2ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+Completed in 48ms (View: 3, DB: 0) | 200 OK [http://localhost/posts/1.xml]
+
+
+Processing PostsController#show to xml (for 127.0.0.1 at 2009-10-22 09:38:52) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mPost Load (0.2ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+Completed in 47ms (View: 3, DB: 0) | 200 OK [http://localhost/posts/1.xml]
+
+
+Processing PostsController#show to xml (for 127.0.0.1 at 2009-10-22 09:39:15) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mPost Load (0.2ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+Completed in 47ms (View: 3, DB: 0) | 200 OK [http://localhost/posts/1.xml]
+
+
+Processing PostsController#show to xml (for 127.0.0.1 at 2009-10-22 09:39:36) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mPost Load (0.2ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+
+NoMethodError (undefined method `[]' for :action:Symbol):
+  builder (2.1.2) lib/builder/xmlbase.rb:134:in `call'
+  builder (2.1.2) lib/builder/xmlbase.rb:134:in `_nested_structures'
+  builder (2.1.2) lib/builder/xmlbase.rb:58:in `method_missing'
+  builder (2.1.2) lib/builder/xmlbase.rb:31:in `tag!'
+  app/controllers/posts_controller.rb:21:in `show'
+  app/controllers/posts_controller.rb:19:in `show'
+
+Rendered rescues/_trace (34.6ms)
+Rendered rescues/_request_and_response (1.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing PostsController#show to xml (for 127.0.0.1 at 2009-10-22 09:39:48) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mPost Load (0.2ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+Completed in 47ms (View: 3, DB: 0) | 200 OK [http://localhost/posts/1.xml]
+
+
+Processing PostsController#show to xml (for 127.0.0.1 at 2009-10-22 09:41:44) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mPost Load (0.3ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+Completed in 48ms (View: 3, DB: 0) | 200 OK [http://localhost/posts/1.xml]
+
+
+Processing PostsController#show to xml (for 127.0.0.1 at 2009-10-22 09:42:13) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mPost Load (0.2ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+Completed in 47ms (View: 3, DB: 0) | 200 OK [http://localhost/posts/1.xml]
+
+
+Processing PostsController#show to xml (for 127.0.0.1 at 2009-10-22 09:43:55) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mPost Load (0.2ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+Completed in 48ms (View: 3, DB: 0) | 200 OK [http://localhost/posts/1.xml]
+
+
+Processing PostsController#show to xml (for 127.0.0.1 at 2009-10-22 09:45:27) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mPost Load (0.2ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+Completed in 49ms (View: 3, DB: 0) | 200 OK [http://localhost/posts/1.xml]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2009-10-28 13:16:28) [GET]
+  [4;36;1mPost Load (0.8ms)[0m   [0;1mSELECT * FROM "posts" [0m
+Rendering template within layouts/posts
+Rendering posts/index
+Completed in 142ms (View: 125, DB: 1) | 200 OK [http://localhost/posts]
+
+
+Processing PostsController#show (for 127.0.0.1 at 2009-10-28 13:16:31) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mPost Load (0.2ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+Rendering template within layouts/posts
+Rendering posts/show
+Completed in 128ms (View: 123, DB: 0) | 200 OK [http://localhost/posts/1]
+
+
+Processing PostsController#show (for 127.0.0.1 at 2009-10-28 13:19:39) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mPost Load (0.2ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+Rendering template within layouts/posts
+Rendering posts/show
+Completed in 11ms (View: 7, DB: 0) | 200 OK [http://localhost/posts/1]
+
+
+Processing PostsController#show (for 127.0.0.1 at 2009-10-28 13:20:02) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mPost Load (0.2ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+Rendering template within layouts/posts
+Rendering posts/show
+Completed in 7ms (View: 3, DB: 0) | 200 OK [http://localhost/posts/1]
+
+
+Processing PostsController#show (for 127.0.0.1 at 2009-10-28 13:20:09) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mPost Load (0.2ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+Rendering template within layouts/posts
+Rendering posts/show
+
+ActionView::TemplateError (undefined method `responds_to?' for #<Post:0x25cdb84>) on line #6 of app/views/posts/show.html.erb:
+3:   <%=h @post.name %>
+4: </p>
+5: 
+6: <%= @post.to_xml %>
+7: 
+8: <%= link_to 'Edit', edit_post_path(@post) %> |
+9: <%= link_to 'Back', posts_path %>
+
+    app/views/posts/show.html.erb:6
+    app/controllers/posts_controller.rb:19:in `show'
+
+Rendered rescues/_trace (37.4ms)
+Rendered rescues/_request_and_response (1.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing PostsController#show (for 127.0.0.1 at 2009-10-28 13:20:39) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mPost Load (0.2ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+Rendering template within layouts/posts
+Rendering posts/show
+
+ActionView::TemplateError (undefined method `url_for' for :posts:Symbol) on line #6 of app/views/posts/show.html.erb:
+3:   <%=h @post.name %>
+4: </p>
+5: 
+6: <%= @post.to_xml %>
+7: 
+8: <%= link_to 'Edit', edit_post_path(@post) %> |
+9: <%= link_to 'Back', posts_path %>
+
+    builder (2.1.2) lib/builder/xmlbase.rb:134:in `call'
+    builder (2.1.2) lib/builder/xmlbase.rb:134:in `_nested_structures'
+    builder (2.1.2) lib/builder/xmlbase.rb:58:in `method_missing'
+    builder (2.1.2) lib/builder/xmlbase.rb:31:in `tag!'
+    app/views/posts/show.html.erb:6
+    app/controllers/posts_controller.rb:19:in `show'
+
+Rendered rescues/_trace (44.2ms)
+Rendered rescues/_request_and_response (1.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing PostsController#show (for 127.0.0.1 at 2009-10-28 13:22:34) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mPost Load (0.2ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+Rendering template within layouts/posts
+Rendering posts/show
+Completed in 25ms (View: 20, DB: 0) | 200 OK [http://localhost/posts/1]
+
+
+Processing PostsController#show to xml (for 127.0.0.1 at 2009-10-28 13:22:38) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mPost Load (0.2ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+Completed in 46ms (View: 1, DB: 0) | 200 OK [http://localhost/posts/1.xml]
+
+
+Processing PostsController#show to xml (for 127.0.0.1 at 2009-10-28 13:25:58) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mPost Load (0.2ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+Completed in 50ms (View: 3, DB: 0) | 200 OK [http://localhost/posts/1.xml]
+
+
+Processing PostsController#show to xml (for 127.0.0.1 at 2009-10-28 13:28:39) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mPost Load (0.2ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+Completed in 50ms (View: 3, DB: 0) | 200 OK [http://localhost/posts/1.xml]
+
+
+Processing PostsController#show to xml (for 127.0.0.1 at 2009-10-28 13:29:35) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mPost Load (0.2ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+Completed in 50ms (View: 3, DB: 0) | 200 OK [http://localhost/posts/1.xml]
+
+
+Processing PostsController#show to xml (for 127.0.0.1 at 2009-10-28 13:31:07) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mPost Load (0.2ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+Completed in 48ms (View: 3, DB: 0) | 200 OK [http://localhost/posts/1.xml]
+
+
+Processing PostsController#show to xml (for 127.0.0.1 at 2009-10-28 13:31:23) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mPost Load (0.2ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+Completed in 49ms (View: 3, DB: 0) | 200 OK [http://localhost/posts/1.xml]
+
+
+Processing PostsController#show to xml (for 127.0.0.1 at 2009-10-28 13:32:16) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mPost Load (0.2ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+Completed in 48ms (View: 3, DB: 0) | 200 OK [http://localhost/posts/1.xml]
+
+
+Processing PostsController#show to xml (for 127.0.0.1 at 2009-10-28 13:34:07) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mPost Load (0.2ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+
+NameError (undefined local variable or method `following_states' for #<Post:0x25a71a0>):
+  builder (2.1.2) lib/builder/xmlbase.rb:134:in `call'
+  builder (2.1.2) lib/builder/xmlbase.rb:134:in `_nested_structures'
+  builder (2.1.2) lib/builder/xmlbase.rb:58:in `method_missing'
+  builder (2.1.2) lib/builder/xmlbase.rb:31:in `tag!'
+  app/controllers/posts_controller.rb:21:in `show'
+  app/controllers/posts_controller.rb:19:in `show'
+
+Rendered rescues/_trace (34.3ms)
+Rendered rescues/_request_and_response (1.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing PostsController#show to xml (for 127.0.0.1 at 2009-10-28 13:34:43) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mPost Load (0.2ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+
+NoMethodError (undefined method `respond_to' for #<Post:0x25a71dc>):
+  builder (2.1.2) lib/builder/xmlbase.rb:134:in `call'
+  builder (2.1.2) lib/builder/xmlbase.rb:134:in `_nested_structures'
+  builder (2.1.2) lib/builder/xmlbase.rb:58:in `method_missing'
+  builder (2.1.2) lib/builder/xmlbase.rb:31:in `tag!'
+  app/controllers/posts_controller.rb:21:in `show'
+  app/controllers/posts_controller.rb:19:in `show'
+
+Rendered rescues/_trace (33.8ms)
+Rendered rescues/_request_and_response (1.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing PostsController#show to xml (for 127.0.0.1 at 2009-10-28 13:34:50) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mPost Load (0.2ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+Completed in 47ms (View: 3, DB: 0) | 200 OK [http://localhost/posts/1.xml]
+
+
+Processing PostsController#show to xml (for 127.0.0.1 at 2009-10-28 13:44:22) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mSQL (0.4ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+NoMethodError (undefined method `req' for #<Class:0x24cd2e8>):
+  app/models/post.rb:12
+  app/controllers/posts_controller.rb:17:in `show'
+
+Rendered rescues/_trace (31.5ms)
+Rendered rescues/_request_and_response (1.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing PostsController#show to xml (for 127.0.0.1 at 2009-10-28 13:44:31) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mPost Load (0.2ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+Completed in 7ms (View: 1, DB: 0) | 200 OK [http://localhost/posts/1.xml]
+
+
+Processing PostsController#show to xml (for 127.0.0.1 at 2009-10-28 13:48:10) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mPost Load (0.2ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+Completed in 8ms (View: 1, DB: 0) | 200 OK [http://localhost/posts/1.xml]
+
+
+Processing PostsController#show to xml (for 127.0.0.1 at 2009-10-28 13:48:37) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mPost Load (0.2ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+Completed in 7ms (View: 1, DB: 0) | 200 OK [http://localhost/posts/1.xml]
+
+
+Processing PostsController#show to xml (for 127.0.0.1 at 2009-10-28 13:49:54) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mPost Load (0.2ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+Completed in 66ms (View: 1, DB: 0) | 200 OK [http://localhost/posts/1.xml]
+
+
+Processing PostsController#show to xml (for 127.0.0.1 at 2009-10-28 13:49:57) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mPost Load (0.2ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+Completed in 8ms (View: 1, DB: 0) | 200 OK [http://localhost/posts/1.xml]
+
+
+Processing PostsController#show to xml (for 127.0.0.1 at 2009-10-28 13:50:23) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mPost Load (0.2ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+Completed in 9ms (View: 1, DB: 0) | 200 OK [http://localhost/posts/1.xml]
+
+
+Processing PostsController#show to xml (for 127.0.0.1 at 2009-10-28 13:50:57) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mPost Load (0.2ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+Completed in 9ms (View: 1, DB: 0) | 200 OK [http://localhost/posts/1.xml]
+  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+
+Processing PostsController#show to xml (for 127.0.0.1 at 2009-10-28 13:53:45) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mPost Load (0.2ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+Completed in 7ms (View: 1, DB: 0) | 200 OK [http://localhost/posts/1.xml]
+  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+
+Processing PostsController#show to xml (for 127.0.0.1 at 2009-10-28 13:54:16) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mPost Load (0.2ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+Completed in 6ms (View: 1, DB: 0) | 200 OK [http://localhost/posts/1.xml]
+
+
+Processing PostsController#show to xml (for 127.0.0.1 at 2009-10-28 13:55:22) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mPost Load (0.2ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+Completed in 8ms (View: 1, DB: 0) | 200 OK [http://localhost/posts/1.xml]
+
+
+Processing PostsController#show to xml (for 127.0.0.1 at 2009-10-28 13:55:59) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mPost Load (0.4ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+Completed in 8ms (View: 1, DB: 0) | 200 OK [http://localhost/posts/1.xml]
+
+
+Processing PostsController#show to xml (for 127.0.0.1 at 2009-10-28 13:56:50) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mPost Load (0.2ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+Completed in 7ms (View: 1, DB: 0) | 200 OK [http://localhost/posts/1.xml]
+
+
+Processing PostsController#show to xml (for 127.0.0.1 at 2009-10-28 13:57:29) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mPost Load (0.2ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+Completed in 8ms (View: 1, DB: 0) | 200 OK [http://localhost/posts/1.xml]
+
+
+Processing PostsController#show to xml (for 127.0.0.1 at 2009-10-28 13:59:54) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mPost Load (0.2ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+Completed in 7ms (View: 1, DB: 0) | 200 OK [http://localhost/posts/1.xml]
+
+
+Processing PostsController#show to xml (for 127.0.0.1 at 2009-10-28 14:02:44) [GET]
+  Parameters: {"id"=>"1"}
+
+NameError (undefined local variable or method `rel' for Linkinho:Class):
+  app/models/post.rb:2
+  app/controllers/posts_controller.rb:17:in `show'
+
+Rendered rescues/_trace (88.9ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing PostsController#show to xml (for 127.0.0.1 at 2009-10-28 14:03:46) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mPost Load (0.2ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+Completed in 7ms (View: 1, DB: 0) | 200 OK [http://localhost/posts/1.xml]
+
+
+Processing PostsController#show to xml (for 127.0.0.1 at 2009-10-28 14:05:04) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mPost Load (0.2ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+Completed in 7ms (View: 1, DB: 0) | 200 OK [http://localhost/posts/1.xml]
+
+
+Processing PostsController#show to xml (for 127.0.0.1 at 2009-10-28 14:06:11) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mPost Load (0.2ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+Completed in 6ms (View: 1, DB: 0) | 200 OK [http://localhost/posts/1.xml]
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+
+Processing PostsController#show to xml (for 127.0.0.1 at 2009-10-28 14:07:10) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mPost Load (0.2ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+Completed in 8ms (View: 1, DB: 0) | 200 OK [http://localhost/posts/1.xml]
+
+
+Processing PostsController#show to xml (for 127.0.0.1 at 2009-10-28 14:08:11) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mPost Load (0.2ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+Completed in 6ms (View: 1, DB: 0) | 200 OK [http://localhost/posts/1.xml]
+
+
+Processing PostsController#show to xml (for 127.0.0.1 at 2009-10-28 14:08:45) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mPost Load (0.2ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+Completed in 8ms (View: 1, DB: 0) | 200 OK [http://localhost/posts/1.xml]
+WARNING: Can't mass-assign these protected attributes: id
+WARNING: Can't mass-assign these protected attributes: id
+  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+
+Processing PostsController#show to xml (for 127.0.0.1 at 2009-10-28 14:31:01) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mPost Load (0.2ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+Completed in 8ms (View: 1, DB: 0) | 200 OK [http://localhost/posts/1.xml]
+WARNING: Can't mass-assign these protected attributes: id
+
+
+Processing PostsController#show to xml (for 127.0.0.1 at 2009-10-28 14:31:51) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mPost Load (0.5ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+Completed in 9ms (View: 1, DB: 0) | 200 OK [http://localhost/posts/1.xml]
+WARNING: Can't mass-assign these protected attributes: id
+
+
+Processing PostsController#show to xml (for 127.0.0.1 at 2009-10-28 14:32:40) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mPost Load (0.2ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+Completed in 7ms (View: 1, DB: 0) | 200 OK [http://localhost/posts/1.xml]
+  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+
+Processing PostsController#show to xml (for 127.0.0.1 at 2009-10-28 14:33:02) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mPost Load (0.2ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+Completed in 7ms (View: 1, DB: 0) | 200 OK [http://localhost/posts/1.xml]
+WARNING: Can't mass-assign these protected attributes: id
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+
+Processing PostsController#show to xml (for 127.0.0.1 at 2009-10-28 14:33:17) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mPost Load (0.2ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+Completed in 7ms (View: 1, DB: 0) | 200 OK [http://localhost/posts/1.xml]
+WARNING: Can't mass-assign these protected attributes: id
+
+
+Processing PostsController#show to xml (for 127.0.0.1 at 2009-10-28 14:34:15) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mPost Load (0.2ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+Completed in 8ms (View: 1, DB: 0) | 200 OK [http://localhost/posts/1.xml]
+WARNING: Can't mass-assign these protected attributes: id
+
+
+Processing PostsController#show to xml (for 127.0.0.1 at 2009-10-28 14:34:40) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mPost Load (0.2ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+Completed in 8ms (View: 1, DB: 0) | 200 OK [http://localhost/posts/1.xml]
+WARNING: Can't mass-assign these protected attributes: id
+
+
+Processing PostsController#show to xml (for 127.0.0.1 at 2009-10-28 14:35:49) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mPost Load (0.2ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+Completed in 7ms (View: 1, DB: 0) | 200 OK [http://localhost/posts/1.xml]
+WARNING: Can't mass-assign these protected attributes: id
+
+
+Processing PostsController#show to xml (for 127.0.0.1 at 2009-10-28 14:36:02) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mPost Load (0.2ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+Completed in 7ms (View: 1, DB: 0) | 200 OK [http://localhost/posts/1.xml]
+WARNING: Can't mass-assign these protected attributes: id
+WARNING: Can't mass-assign these protected attributes: id
+
+
+Processing PostsController#show to xml (for 127.0.0.1 at 2009-10-28 14:36:30) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mPost Load (0.2ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+Completed in 7ms (View: 1, DB: 0) | 200 OK [http://localhost/posts/1.xml]
+WARNING: Can't mass-assign these protected attributes: id
+
+
+Processing PostsController#show to xml (for 127.0.0.1 at 2009-10-28 14:37:30) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mPost Load (0.2ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+Completed in 7ms (View: 1, DB: 0) | 200 OK [http://localhost/posts/1.xml]
+WARNING: Can't mass-assign these protected attributes: id
+
+
+Processing PostsController#show to xml (for 127.0.0.1 at 2009-10-28 14:38:53) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mPost Load (0.2ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+Completed in 7ms (View: 1, DB: 0) | 200 OK [http://localhost/posts/1.xml]
+WARNING: Can't mass-assign these protected attributes: id
+
+
+Processing PostsController#show to xml (for 127.0.0.1 at 2009-10-28 14:39:22) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mPost Load (0.2ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+Completed in 8ms (View: 1, DB: 0) | 200 OK [http://localhost/posts/1.xml]
+WARNING: Can't mass-assign these protected attributes: id
+
+
+Processing PostsController#show to xml (for 127.0.0.1 at 2009-10-28 14:43:09) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mPost Load (0.2ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+Completed in 7ms (View: 1, DB: 0) | 200 OK [http://localhost/posts/1.xml]
+WARNING: Can't mass-assign these protected attributes: id
+
+
+Processing PostsController#show to xml (for 127.0.0.1 at 2009-10-28 14:46:14) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mPost Load (0.2ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+Completed in 6ms (View: 1, DB: 0) | 200 OK [http://localhost/posts/1.xml]
+WARNING: Can't mass-assign these protected attributes: id
+
+
+Processing PostsController#show to xml (for 127.0.0.1 at 2009-10-28 14:47:13) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mPost Load (0.2ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+Completed in 6ms (View: 1, DB: 0) | 200 OK [http://localhost/posts/1.xml]
+WARNING: Can't mass-assign these protected attributes: id
+
+
+Processing PostsController#show to xml (for 127.0.0.1 at 2009-10-28 14:47:35) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mPost Load (0.2ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+Completed in 8ms (View: 1, DB: 0) | 200 OK [http://localhost/posts/1.xml]
+WARNING: Can't mass-assign these protected attributes: id
+
+
+Processing PostsController#show to xml (for 127.0.0.1 at 2009-10-28 14:48:29) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mPost Load (0.2ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+Completed in 7ms (View: 1, DB: 0) | 200 OK [http://localhost/posts/1.xml]
+WARNING: Can't mass-assign these protected attributes: id
+
+
+Processing PostsController#show to xml (for 127.0.0.1 at 2009-10-28 14:50:01) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mPost Load (0.2ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+Completed in 7ms (View: 1, DB: 0) | 200 OK [http://localhost/posts/1.xml]
+WARNING: Can't mass-assign these protected attributes: id
+
+
+Processing PostsController#show to xml (for 127.0.0.1 at 2009-10-28 14:50:48) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mPost Load (0.2ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+Completed in 7ms (View: 1, DB: 0) | 200 OK [http://localhost/posts/1.xml]
+WARNING: Can't mass-assign these protected attributes: id
+
+
+Processing PostsController#show to xml (for 127.0.0.1 at 2009-10-28 14:52:22) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mPost Load (0.2ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+Completed in 7ms (View: 1, DB: 0) | 200 OK [http://localhost/posts/1.xml]
+WARNING: Can't mass-assign these protected attributes: id
+
+
+Processing PostsController#show to xml (for 127.0.0.1 at 2009-10-28 14:53:07) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mPost Load (0.2ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+Completed in 7ms (View: 1, DB: 0) | 200 OK [http://localhost/posts/1.xml]
+WARNING: Can't mass-assign these protected attributes: id
+
+
+Processing PostsController#show to xml (for 127.0.0.1 at 2009-10-28 14:56:01) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mPost Load (0.2ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+Completed in 8ms (View: 1, DB: 0) | 200 OK [http://localhost/posts/1.xml]
+WARNING: Can't mass-assign these protected attributes: id
+
+
+Processing PostsController#show to xml (for 127.0.0.1 at 2009-10-28 14:56:11) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mPost Load (0.2ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+Completed in 6ms (View: 1, DB: 0) | 200 OK [http://localhost/posts/1.xml]
+WARNING: Can't mass-assign these protected attributes: id
+
+
+Processing PostsController#show to xml (for 127.0.0.1 at 2009-10-28 14:57:16) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mPost Load (0.2ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+Completed in 7ms (View: 1, DB: 0) | 200 OK [http://localhost/posts/1.xml]
+WARNING: Can't mass-assign these protected attributes: id
+
+
+Processing PostsController#show to xml (for 127.0.0.1 at 2009-10-28 14:58:58) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mPost Load (0.2ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+Completed in 7ms (View: 1, DB: 0) | 200 OK [http://localhost/posts/1.xml]
+WARNING: Can't mass-assign these protected attributes: id
+
+
+Processing PostsController#show to xml (for 127.0.0.1 at 2009-10-28 15:00:21) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mPost Load (0.2ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+Completed in 7ms (View: 1, DB: 0) | 200 OK [http://localhost/posts/1.xml]
+WARNING: Can't mass-assign these protected attributes: id
+
+
+Processing PostsController#show to xml (for 127.0.0.1 at 2009-10-28 15:01:46) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mPost Load (0.2ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+Completed in 9ms (View: 1, DB: 0) | 200 OK [http://localhost/posts/1.xml]
+WARNING: Can't mass-assign these protected attributes: id
+
+
+Processing PostsController#show to xml (for 127.0.0.1 at 2009-10-28 15:02:12) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mPost Load (0.2ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+Completed in 8ms (View: 1, DB: 0) | 200 OK [http://localhost/posts/1.xml]
+WARNING: Can't mass-assign these protected attributes: id
