@@ -62,24 +62,18 @@ module ActiveRecord
         puts "State eh um safadO: #{state}\n"
         result._possible_states[state["rel"]] = state
       end
-      #old_method_missing = result.method_missing
       def result.respond_to?(sym)
         has_state(sym.to_s) || super(sym)
-        #puts "Buscando o safado #{sym.to_s} dentro de #{statesMap}\n"
-        #pass_sym_to_foo?(sym) || super(sym)
       end
       def result.has_state(name)
         return false if @_possible_states[name].nil?
         return true
       end
-      #def pass_sym_to_foo?(sym)
-      #  sym.to_s == "show"
-      #end
       
-      #def result.method_missing(name, *args, &block)
-      #  return (puts "malandro...") if pass_sym_to_foo(name)
-      #  super(name, *args, &block)
-      #end
+      def result.method_missing(name, *args, &block)
+        return (puts "executei #{name}...") if has_state(name.to_s)
+        super(name, *args, &block)
+      end
       result
     end
 
