@@ -1358,3 +1358,482 @@ ActionController::RoutingError (No route matches "/stylesheets/scaffold.css" wit
   
 
 Rendering rescues/layout (not_found)
+
+
+Processing TrainingsController#index (for 127.0.0.1 at 2009-10-28 16:19:41) [GET]
+  [4;36;1mTraining Load (0.0ms)[0m   [0;1mSQLite3::SQLException: no such table: trainings: SELECT * FROM "trainings" [0m
+
+ActiveRecord::StatementInvalid (SQLite3::SQLException: no such table: trainings: SELECT * FROM "trainings" ):
+  app/controllers/trainings_controller.rb:5:in `index'
+
+Rendered rescues/_trace (33.0ms)
+Rendered rescues/_request_and_response (1.2ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateOrders (20091028180602)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCREATE TABLE "orders" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "customer_name" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20091028180602')[0m
+Migrating to CreateTrainings (20091028180753)
+  [4;35;1mSQL (0.5ms)[0m   [0mCREATE TABLE "trainings" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20091028180753')[0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("orders")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("posts")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("trainings")[0m
+
+
+Processing TrainingsController#index (for 127.0.0.1 at 2009-10-28 16:19:58) [GET]
+  [4;36;1mTraining Load (0.4ms)[0m   [0;1mSELECT * FROM "trainings" [0m
+Rendering template within layouts/application
+Rendering trainings/index
+Completed in 35ms (View: 27, DB: 0) | 200 OK [http://localhost/trainings]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-10-28 16:19:58) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/scaffold.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-10-28 16:19:58) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/scaffold.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing TrainingsController#new (for 127.0.0.1 at 2009-10-28 16:20:01) [GET]
+Rendering template within layouts/application
+Rendering trainings/new
+
+ActionView::TemplateError (undefined method `price' for #<Training id: nil, name: nil, created_at: nil, updated_at: nil>) on line #12 of app/views/trainings/new.html.erb:
+9:   </p>
+10:   <p>
+11:     <%= f.label :price %><br />
+12:     <%= f.text_field :price %>
+13:   </p>
+14:   <p>
+15:     <%= f.submit 'Create' %>
+
+    app/views/trainings/new.html.erb:12
+    app/views/trainings/new.html.erb:3
+    app/controllers/trainings_controller.rb:29:in `new'
+
+Rendered rescues/_trace (98.0ms)
+Rendered rescues/_request_and_response (1.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateOrders (20091028180602)
+Migrating to CreateTrainings (20091028180753)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("orders")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("posts")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("trainings")[0m
+
+
+Processing TrainingsController#new (for 127.0.0.1 at 2009-10-28 16:20:37) [GET]
+Rendering template within layouts/application
+Rendering trainings/new
+
+ActionView::TemplateError (undefined method `price' for #<Training id: nil, name: nil, created_at: nil, updated_at: nil>) on line #12 of app/views/trainings/new.html.erb:
+9:   </p>
+10:   <p>
+11:     <%= f.label :price %><br />
+12:     <%= f.text_field :price %>
+13:   </p>
+14:   <p>
+15:     <%= f.submit 'Create' %>
+
+    app/views/trainings/new.html.erb:12
+    app/views/trainings/new.html.erb:3
+    app/controllers/trainings_controller.rb:29:in `new'
+
+Rendered rescues/_trace (44.5ms)
+Rendered rescues/_request_and_response (1.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mselect sqlite_version(*)[0m
+  [4;36;1mSQL (2.4ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (1.9ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateOrders (20091028180602)
+  [4;36;1mSQL (0.4ms)[0m   [0;1mCREATE TABLE "orders" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "customer_name" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20091028180602')[0m
+Migrating to CreateTrainings (20091028180753)
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCREATE TABLE "trainings" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20091028180753')[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("orders")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("trainings")[0m
+
+
+Processing TrainingsController#new (for 127.0.0.1 at 2009-10-28 16:21:36) [GET]
+Rendering template within layouts/application
+Rendering trainings/new
+
+ActionView::TemplateError (undefined method `price' for #<Training id: nil, name: nil, created_at: nil, updated_at: nil>) on line #12 of app/views/trainings/new.html.erb:
+9:   </p>
+10:   <p>
+11:     <%= f.label :price %><br />
+12:     <%= f.text_field :price %>
+13:   </p>
+14:   <p>
+15:     <%= f.submit 'Create' %>
+
+    app/views/trainings/new.html.erb:12
+    app/views/trainings/new.html.erb:3
+    app/controllers/trainings_controller.rb:29:in `new'
+
+Rendered rescues/_trace (43.7ms)
+Rendered rescues/_request_and_response (1.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateOrders (20091028180602)
+Migrating to CreateTrainings (20091028180753)
+Migrating to CreatePriceField (20091028182228)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mALTER TABLE "trainings" ADD "price" double[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20091028182228')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("orders")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("trainings")[0m
+
+
+Processing TrainingsController#new (for 127.0.0.1 at 2009-10-28 16:23:03) [GET]
+Rendering template within layouts/application
+Rendering trainings/new
+Completed in 37ms (View: 29, DB: 0) | 200 OK [http://localhost/trainings/new]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-10-28 16:23:04) [GET]
+
+ActionController::RoutingError (No route matches "/trainings/javascripts/prototype.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-10-28 16:23:04) [GET]
+
+ActionController::RoutingError (No route matches "/trainings/javascripts/effects.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-10-28 16:23:04) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/scaffold.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-10-28 16:23:04) [GET]
+
+ActionController::RoutingError (No route matches "/trainings/images/rails.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing TrainingsController#create (for 127.0.0.1 at 2009-10-28 16:23:09) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"iOrBXl9PCpApp/7DdIsZRVvkUcZNlFaQcfFwuBcZfW0=", "training"=>{"name"=>"fj11", "price"=>"100"}}
+  [4;36;1mTraining Create (0.4ms)[0m   [0;1mINSERT INTO "trainings" ("name", "updated_at", "price", "created_at") VALUES('fj11', '2009-10-28 18:23:09', 100.0, '2009-10-28 18:23:09')[0m
+Redirected to http://localhost:3000/trainings/1
+Completed in 9ms (DB: 0) | 302 Found [http://localhost/trainings]
+
+
+Processing TrainingsController#show (for 127.0.0.1 at 2009-10-28 16:23:09) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mTraining Load (0.2ms)[0m   [0mSELECT * FROM "trainings" WHERE ("trainings"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering trainings/show
+Completed in 12ms (View: 8, DB: 0) | 200 OK [http://localhost/trainings/1]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-10-28 16:23:09) [GET]
+
+ActionController::RoutingError (No route matches "/trainings/javascripts/prototype.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-10-28 16:23:09) [GET]
+
+ActionController::RoutingError (No route matches "/trainings/javascripts/effects.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-10-28 16:23:09) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/scaffold.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-10-28 16:23:09) [GET]
+
+ActionController::RoutingError (No route matches "/trainings/images/rails.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing TrainingsController#index (for 127.0.0.1 at 2009-10-28 16:23:11) [GET]
+  [4;36;1mTraining Load (0.4ms)[0m   [0;1mSELECT * FROM "trainings" [0m
+Rendering template within layouts/application
+Rendering trainings/index
+Completed in 15ms (View: 11, DB: 0) | 200 OK [http://localhost/trainings]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-10-28 16:23:11) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/scaffold.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-10-28 16:23:11) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/scaffold.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing TrainingsController#new (for 127.0.0.1 at 2009-10-28 16:23:13) [GET]
+Rendering template within layouts/application
+Rendering trainings/new
+Completed in 9ms (View: 5, DB: 0) | 200 OK [http://localhost/trainings/new]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-10-28 16:23:13) [GET]
+
+ActionController::RoutingError (No route matches "/trainings/javascripts/prototype.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-10-28 16:23:13) [GET]
+
+ActionController::RoutingError (No route matches "/trainings/javascripts/effects.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-10-28 16:23:13) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/scaffold.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-10-28 16:23:13) [GET]
+
+ActionController::RoutingError (No route matches "/trainings/images/rails.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing TrainingsController#create (for 127.0.0.1 at 2009-10-28 16:23:15) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"iOrBXl9PCpApp/7DdIsZRVvkUcZNlFaQcfFwuBcZfW0=", "training"=>{"name"=>"fj21", "price"=>"200"}}
+  [4;35;1mTraining Create (0.3ms)[0m   [0mINSERT INTO "trainings" ("name", "updated_at", "price", "created_at") VALUES('fj21', '2009-10-28 18:23:15', 200.0, '2009-10-28 18:23:15')[0m
+Redirected to http://localhost:3000/trainings/2
+Completed in 8ms (DB: 0) | 302 Found [http://localhost/trainings]
+
+
+Processing TrainingsController#show (for 127.0.0.1 at 2009-10-28 16:23:15) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mTraining Load (0.2ms)[0m   [0;1mSELECT * FROM "trainings" WHERE ("trainings"."id" = 2) [0m
+Rendering template within layouts/application
+Rendering trainings/show
+Completed in 7ms (View: 3, DB: 0) | 200 OK [http://localhost/trainings/2]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-10-28 16:23:15) [GET]
+
+ActionController::RoutingError (No route matches "/trainings/javascripts/prototype.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-10-28 16:23:15) [GET]
+
+ActionController::RoutingError (No route matches "/trainings/javascripts/effects.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-10-28 16:23:15) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/scaffold.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-10-28 16:23:15) [GET]
+
+ActionController::RoutingError (No route matches "/trainings/images/rails.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing TrainingsController#index (for 127.0.0.1 at 2009-10-28 16:23:41) [GET]
+  [4;35;1mTraining Load (0.4ms)[0m   [0mSELECT * FROM "trainings" [0m
+Rendering template within layouts/application
+Rendering trainings/index
+Completed in 14ms (View: 10, DB: 0) | 200 OK [http://localhost/trainings]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-10-28 16:23:41) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/scaffold.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-10-28 16:23:41) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/scaffold.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing TrainingsController#new (for 127.0.0.1 at 2009-10-28 16:23:42) [GET]
+Rendering template within layouts/application
+Rendering trainings/new
+Completed in 9ms (View: 4, DB: 0) | 200 OK [http://localhost/trainings/new]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-10-28 16:23:42) [GET]
+
+ActionController::RoutingError (No route matches "/trainings/javascripts/prototype.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-10-28 16:23:42) [GET]
+
+ActionController::RoutingError (No route matches "/trainings/javascripts/effects.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-10-28 16:23:42) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/scaffold.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-10-28 16:23:42) [GET]
+
+ActionController::RoutingError (No route matches "/trainings/images/rails.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing TrainingsController#create (for 127.0.0.1 at 2009-10-28 16:23:45) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"iOrBXl9PCpApp/7DdIsZRVvkUcZNlFaQcfFwuBcZfW0=", "training"=>{"name"=>"fj31", "price"=>"300"}}
+  [4;36;1mTraining Create (0.4ms)[0m   [0;1mINSERT INTO "trainings" ("name", "updated_at", "price", "created_at") VALUES('fj31', '2009-10-28 18:23:45', 300.0, '2009-10-28 18:23:45')[0m
+Redirected to http://localhost:3000/trainings
+Completed in 9ms (DB: 0) | 302 Found [http://localhost/trainings]
+
+
+Processing TrainingsController#index (for 127.0.0.1 at 2009-10-28 16:23:45) [GET]
+  [4;35;1mTraining Load (0.5ms)[0m   [0mSELECT * FROM "trainings" [0m
+Rendering template within layouts/application
+Rendering trainings/index
+Completed in 17ms (View: 12, DB: 0) | 200 OK [http://localhost/trainings]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-10-28 16:23:45) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/scaffold.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-10-28 16:23:45) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/scaffold.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)

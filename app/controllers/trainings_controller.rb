@@ -45,7 +45,7 @@ class TrainingsController < ApplicationController
     respond_to do |format|
       if @training.save
         flash[:notice] = 'Training was successfully created.'
-        format.html { redirect_to(@training) }
+        format.html { redirect_to(:action=>:index) }
         format.xml  { render :xml => @training, :status => :created, :location => @training }
       else
         format.html { render :action => "new" }
@@ -71,15 +71,4 @@ class TrainingsController < ApplicationController
     end
   end
 
-  # DELETE /trainings/1
-  # DELETE /trainings/1.xml
-  def destroy
-    @training = Training.find(params[:id])
-    @training.destroy
-
-    respond_to do |format|
-      format.html { redirect_to(trainings_url) }
-      format.xml  { head :ok }
-    end
-  end
 end
