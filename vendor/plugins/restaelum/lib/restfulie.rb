@@ -32,14 +32,15 @@ module ActiveRecord
     
     attr_accessor :_possible_states
 
+    # basic code from Matt Pulver
+    # found at http://www.xcombinator.com/2008/07/06/activerecord-from_json-and-from_xml/
+    # addapted to support links
     def self.from_hash( hash )
-      puts "Chamando o metodo para o hash: #{hash}\n"
       h = hash.dup
       links = nil
       h.each do |key,value|
           case value.class.to_s
           when 'Array'
-            puts "Encontrei uma array #{key} com #{value}\n"
             if key=="link"
               links = h[key]
               h.delete("link")
@@ -48,7 +49,6 @@ module ActiveRecord
                 Object.const_get(key.camelize.singularize).from_hash e }
             end
            when 'Hash'
-            puts "Encontrei um hash #{key} com valores #{value}\n"
             h[key] = Object.const_get(key.camelize).from_hash value
           end
       end
@@ -59,7 +59,6 @@ module ActiveRecord
     def self.add_states(result, states)
       result._possible_states = {}
       states.each do |state|
-        puts "State eh um safadO: #{state}\n"
         result._possible_states[state["rel"]] = state
       end
       def result.respond_to?(sym)
