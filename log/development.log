@@ -1166,3 +1166,195 @@ Processing PostsController#show to xml (for 127.0.0.1 at 2009-10-28 15:02:12) [G
   [4;35;1mPost Load (0.2ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
 Completed in 8ms (View: 1, DB: 0) | 200 OK [http://localhost/posts/1.xml]
 WARNING: Can't mass-assign these protected attributes: id
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-10-28 16:11:36) [GET]
+
+ActionController::RoutingError (No route matches "/" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-10-28 16:11:55) [GET]
+
+ActionController::RoutingError (No route matches "/" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-10-28 16:11:57) [GET]
+
+ActionController::RoutingError (No route matches "/" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#welcome (for 127.0.0.1 at 2009-10-28 16:13:16) [GET]
+
+LoadError (Expected /Users/guilherme/Documents/ruby/restfulie-test/app/controllers/welcome_controller.rb to define WelcomeController):
+  
+
+Rendered rescues/_trace (23.0ms)
+Rendered rescues/_request_and_response (1.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ApplicationController#welcome (for 127.0.0.1 at 2009-10-28 16:13:20) [GET]
+
+LoadError (Expected /Users/guilherme/Documents/ruby/restfulie-test/app/controllers/welcome_controller.rb to define WelcomeController):
+  
+
+Rendered rescues/_trace (22.3ms)
+Rendered rescues/_request_and_response (1.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ApplicationController#welcome (for 127.0.0.1 at 2009-10-28 16:13:20) [GET]
+
+LoadError (Expected /Users/guilherme/Documents/ruby/restfulie-test/app/controllers/welcome_controller.rb to define WelcomeController):
+  
+
+Rendered rescues/_trace (21.6ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing WelcomeController#welcome (for 127.0.0.1 at 2009-10-28 16:13:29) [GET]
+
+ActionView::MissingTemplate (Missing template welcome/welcome.erb in view path app/views):
+  
+
+Rendering rescues/layout (internal_server_error)
+
+
+Processing WelcomeController#welcome (for 127.0.0.1 at 2009-10-28 16:13:40) [GET]
+Rendering welcome/welcome
+
+ActionView::TemplateError (No route matches {:action=>"index", :controller=>"training"}) on line #213 of app/views/welcome/welcome.html.erb:
+210:           <li>
+211:             <h3>Navigation</h3>
+212:             <ul class="links">
+213:               <li><%= link_to "Training system", :controller=>:training %></li>
+214:               <li><a href="http://www.rubyonrails.org/">Order system</a></li>
+215:             </ul>
+216:           </li>
+
+    app/views/welcome/welcome.html.erb:213
+
+Rendered rescues/_trace (34.6ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing WelcomeController#welcome (for 127.0.0.1 at 2009-10-28 16:14:08) [GET]
+Rendering welcome/welcome
+Completed in 46ms (View: 45, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing WelcomeController#welcome (for 127.0.0.1 at 2009-10-28 16:14:17) [GET]
+Rendering welcome/welcome
+Completed in 12ms (View: 11, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing WelcomeController#welcome (for 127.0.0.1 at 2009-10-28 16:15:15) [GET]
+Rendering welcome/welcome
+Completed in 12ms (View: 10, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing WelcomeController#welcome (for 127.0.0.1 at 2009-10-28 16:17:15) [GET]
+Rendering template within layouts/application
+Rendering welcome/welcome
+Completed in 19ms (View: 18, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-10-28 16:17:15) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/scaffold.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-10-28 16:17:16) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/scaffold.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing WelcomeController#welcome (for 127.0.0.1 at 2009-10-28 16:18:54) [GET]
+Rendering template within layouts/application
+Rendering welcome/welcome
+Completed in 7ms (View: 5, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-10-28 16:18:54) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/scaffold.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-10-28 16:18:54) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/scaffold.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing WelcomeController#welcome (for 127.0.0.1 at 2009-10-28 16:19:08) [GET]
+Rendering template within layouts/application
+Rendering welcome/welcome
+Completed in 12ms (View: 11, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-10-28 16:19:08) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/scaffold.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-10-28 16:19:08) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/scaffold.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-10-28 16:19:17) [GET]
+
+ActionController::RoutingError (No route matches "/rails/info/properties" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing WelcomeController#welcome (for 127.0.0.1 at 2009-10-28 16:19:22) [GET]
+Rendering template within layouts/application
+Rendering welcome/welcome
+Completed in 12ms (View: 11, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-10-28 16:19:22) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/scaffold.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-10-28 16:19:22) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/scaffold.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
