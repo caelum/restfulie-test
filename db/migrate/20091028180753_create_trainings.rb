@@ -1,6 +1,6 @@
-class CreateProducts < ActiveRecord::Migration
+class CreateTrainings < ActiveRecord::Migration
   def self.up
-    create_table :products do |t|
+    create_table :trainings do |t|
       t.string :name
       t.double :price
 
@@ -9,6 +9,6 @@ class CreateProducts < ActiveRecord::Migration
   end
 
   def self.down
-    drop_table :products
+    drop_table :trainings
   end
 end
