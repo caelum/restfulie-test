@@ -3721,3 +3721,24 @@ Processing OrdersController#show to xml (for 127.0.0.1 at 2009-10-28 16:59:24) [
   Parameters: {"id"=>"11"}
   [4;35;1mOrder Load (0.2ms)[0m   [0mSELECT * FROM "orders" WHERE ("orders"."id" = 11) [0m
 Completed in 152ms (View: 78, DB: 0) | 200 OK [http://localhost/orders/11.xml]
+
+
+Processing OrdersController#show to xml (for 127.0.0.1 at 2009-10-28 17:00:22) [GET]
+  Parameters: {"id"=>"11"}
+  [4;36;1mOrder Load (0.4ms)[0m   [0;1mSELECT * FROM "orders" WHERE ("orders"."id" = 11) [0m
+
+ActionController::RoutingError (No route matches {:action=>"destroy", :controller=>"posts"}):
+  builder (2.1.2) lib/builder/xmlbase.rb:134:in `call'
+  builder (2.1.2) lib/builder/xmlbase.rb:134:in `_nested_structures'
+  builder (2.1.2) lib/builder/xmlbase.rb:58:in `method_missing'
+  builder (2.1.2) lib/builder/xmlbase.rb:31:in `tag!'
+  app/controllers/orders_controller.rb:20:in `show'
+  app/controllers/orders_controller.rb:18:in `show'
+
+Rendering rescues/layout (not_found)
+
+
+Processing OrdersController#show to xml (for 127.0.0.1 at 2009-10-28 17:00:50) [GET]
+  Parameters: {"id"=>"11"}
+  [4;35;1mOrder Load (0.2ms)[0m   [0mSELECT * FROM "orders" WHERE ("orders"."id" = 11) [0m
+Completed in 9ms (View: 3, DB: 0) | 200 OK [http://localhost/orders/11.xml]

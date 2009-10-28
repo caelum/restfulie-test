@@ -2,8 +2,8 @@ class Order < ActiveRecord::Base
   has_and_belongs_to_many :trainings
   def following_states
     [
-      {:controller => :posts, :action => :destroy},
-      {:controller => :posts, :action => :show}
+      {:controller => :orders, :action => :destroy},
+      {:controller => :orders, :action => :show}
     ]
   end
   
