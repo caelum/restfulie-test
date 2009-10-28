@@ -1,10 +1,9 @@
 class Order < ActiveRecord::Base
   has_and_belongs_to_many :trainings
   def following_states
-    [
-      {:controller => :orders, :action => :destroy},
-      {:controller => :orders, :action => :show}
-    ]
+    states = [ {:controller => :orders, :action => :show} ]
+    states << {:controller => :orders, :action => :destroy} if can_cancel?
+    states
   end
   
   def total_price

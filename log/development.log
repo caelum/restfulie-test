@@ -3881,3 +3881,156 @@ Processing OrdersController#index (for 127.0.0.1 at 2009-10-28 17:05:24) [GET]
 Rendering template within layouts/application
 Rendering orders/index
 Completed in 50ms (View: 45, DB: 1) | 200 OK [http://localhost/orders]
+
+
+Processing WelcomeController#welcome (for 127.0.0.1 at 2009-10-28 17:09:23) [GET]
+Rendering template within layouts/application
+Rendering welcome/welcome
+Completed in 26ms (View: 25, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing TrainingsController#index (for 127.0.0.1 at 2009-10-28 17:09:35) [GET]
+  [4;36;1mTraining Load (0.7ms)[0m   [0;1mSELECT * FROM "trainings" [0m
+Rendering template within layouts/application
+Rendering trainings/index
+Completed in 24ms (View: 13, DB: 1) | 200 OK [http://localhost/trainings]
+
+
+Processing TrainingsController#new (for 127.0.0.1 at 2009-10-28 17:09:37) [GET]
+Rendering template within layouts/application
+Rendering trainings/new
+Completed in 13ms (View: 9, DB: 0) | 200 OK [http://localhost/trainings/new]
+
+
+Processing TrainingsController#create (for 127.0.0.1 at 2009-10-28 17:09:41) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"iOrBXl9PCpApp/7DdIsZRVvkUcZNlFaQcfFwuBcZfW0=", "training"=>{"name"=>"fj41", "price"=>"300"}}
+  [4;35;1mTraining Create (0.4ms)[0m   [0mINSERT INTO "trainings" ("name", "updated_at", "price", "created_at") VALUES('fj41', '2009-10-28 19:09:41', 300.0, '2009-10-28 19:09:41')[0m
+Redirected to http://localhost:3000/trainings
+Completed in 9ms (DB: 0) | 302 Found [http://localhost/trainings]
+
+
+Processing TrainingsController#index (for 127.0.0.1 at 2009-10-28 17:09:41) [GET]
+  [4;36;1mTraining Load (0.6ms)[0m   [0;1mSELECT * FROM "trainings" [0m
+Rendering template within layouts/application
+Rendering trainings/index
+Completed in 10ms (View: 5, DB: 1) | 200 OK [http://localhost/trainings]
+
+
+Processing OrdersController#index (for 127.0.0.1 at 2009-10-28 17:09:44) [GET]
+  [4;35;1mOrder Load (0.9ms)[0m   [0mSELECT * FROM "orders" [0m
+Rendering template within layouts/application
+Rendering orders/index
+Completed in 54ms (View: 49, DB: 1) | 200 OK [http://localhost/orders]
+
+
+Processing OrdersController#new (for 127.0.0.1 at 2009-10-28 17:09:46) [GET]
+Rendering template within layouts/application
+Rendering orders/new
+  [4;36;1mTraining Load (0.6ms)[0m   [0;1mSELECT * FROM "trainings" [0m
+Completed in 18ms (View: 13, DB: 1) | 200 OK [http://localhost/orders/new]
+
+
+Processing OrdersController#create (for 127.0.0.1 at 2009-10-28 17:09:50) [POST]
+  Parameters: {"commit"=>"Create", "order"=>{"customer_name"=>"propria"}, "authenticity_token"=>"iOrBXl9PCpApp/7DdIsZRVvkUcZNlFaQcfFwuBcZfW0=", "products"=>{"2"=>"true", "3"=>"true"}}
+  [4;35;1mTraining Load (0.2ms)[0m   [0mSELECT * FROM "trainings" WHERE ("trainings"."id" = '2') LIMIT 1[0m
+  [4;36;1mTraining Load (0.2ms)[0m   [0;1mSELECT * FROM "trainings" WHERE ("trainings"."id" = '3') LIMIT 1[0m
+  [4;35;1mOrder Create (0.4ms)[0m   [0mINSERT INTO "orders" ("status", "customer_name", "updated_at", "created_at") VALUES(NULL, 'propria', '2009-10-28 19:09:50', '2009-10-28 19:09:50')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO "orders_trainings" ("order_id", "training_id") VALUES (14, 2)[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mINSERT INTO "orders_trainings" ("order_id", "training_id") VALUES (14, 3)[0m
+Redirected to http://localhost:3000/orders/14
+Completed in 16ms (DB: 1) | 302 Found [http://localhost/orders]
+
+
+Processing OrdersController#show (for 127.0.0.1 at 2009-10-28 17:09:50) [GET]
+  Parameters: {"id"=>"14"}
+  [4;36;1mOrder Load (0.2ms)[0m   [0;1mSELECT * FROM "orders" WHERE ("orders"."id" = 14) [0m
+Rendering template within layouts/application
+Rendering orders/show
+  [4;35;1mTraining Load (0.3ms)[0m   [0mSELECT * FROM "trainings" INNER JOIN "orders_trainings" ON "trainings".id = "orders_trainings".training_id WHERE ("orders_trainings".order_id = 14 ) [0m
+Completed in 16ms (View: 10, DB: 1) | 200 OK [http://localhost/orders/14]
+
+
+Processing OrdersController#index (for 127.0.0.1 at 2009-10-28 17:09:52) [GET]
+  [4;36;1mOrder Load (1.0ms)[0m   [0;1mSELECT * FROM "orders" [0m
+Rendering template within layouts/application
+Rendering orders/index
+Completed in 49ms (View: 44, DB: 1) | 200 OK [http://localhost/orders]
+
+
+Processing OrdersController#destroy (for 127.0.0.1 at 2009-10-28 17:09:58) [DELETE]
+  Parameters: {"authenticity_token"=>"iOrBXl9PCpApp/7DdIsZRVvkUcZNlFaQcfFwuBcZfW0=", "id"=>"14"}
+  [4;35;1mOrder Load (0.2ms)[0m   [0mSELECT * FROM "orders" WHERE ("orders"."id" = 14) [0m
+  [4;36;1mOrder Update (0.3ms)[0m   [0;1mUPDATE "orders" SET "status" = 'CANCELLED', "updated_at" = '2009-10-28 19:09:58' WHERE "id" = 14[0m
+Redirected to http://localhost:3000/orders/14
+Completed in 11ms (DB: 1) | 302 Found [http://localhost/orders/14]
+
+
+Processing OrdersController#show (for 127.0.0.1 at 2009-10-28 17:09:58) [GET]
+  Parameters: {"id"=>"14"}
+  [4;35;1mOrder Load (0.2ms)[0m   [0mSELECT * FROM "orders" WHERE ("orders"."id" = 14) [0m
+Rendering template within layouts/application
+Rendering orders/show
+  [4;36;1mTraining Load (0.4ms)[0m   [0;1mSELECT * FROM "trainings" INNER JOIN "orders_trainings" ON "trainings".id = "orders_trainings".training_id WHERE ("orders_trainings".order_id = 14 ) [0m
+Completed in 13ms (View: 7, DB: 1) | 200 OK [http://localhost/orders/14]
+
+
+Processing OrdersController#show to xml (for 127.0.0.1 at 2009-10-28 17:11:55) [GET]
+  Parameters: {"id"=>"11"}
+  [4;35;1mOrder Load (0.2ms)[0m   [0mSELECT * FROM "orders" WHERE ("orders"."id" = 11) [0m
+
+NoMethodError (You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occurred while evaluating nil.each):
+  builder (2.1.2) lib/builder/xmlbase.rb:134:in `call'
+  builder (2.1.2) lib/builder/xmlbase.rb:134:in `_nested_structures'
+  builder (2.1.2) lib/builder/xmlbase.rb:58:in `method_missing'
+  builder (2.1.2) lib/builder/xmlbase.rb:31:in `tag!'
+  app/controllers/orders_controller.rb:20:in `show'
+  app/controllers/orders_controller.rb:18:in `show'
+
+Rendered rescues/_trace (34.1ms)
+Rendered rescues/_request_and_response (1.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing OrdersController#show to xml (for 127.0.0.1 at 2009-10-28 17:12:16) [GET]
+  Parameters: {"id"=>"14"}
+  [4;36;1mOrder Load (0.2ms)[0m   [0;1mSELECT * FROM "orders" WHERE ("orders"."id" = 14) [0m
+
+NoMethodError (You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occurred while evaluating nil.each):
+  builder (2.1.2) lib/builder/xmlbase.rb:134:in `call'
+  builder (2.1.2) lib/builder/xmlbase.rb:134:in `_nested_structures'
+  builder (2.1.2) lib/builder/xmlbase.rb:58:in `method_missing'
+  builder (2.1.2) lib/builder/xmlbase.rb:31:in `tag!'
+  app/controllers/orders_controller.rb:20:in `show'
+  app/controllers/orders_controller.rb:18:in `show'
+
+Rendered rescues/_trace (32.7ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing OrdersController#show to xml (for 127.0.0.1 at 2009-10-28 17:12:30) [GET]
+  Parameters: {"id"=>"14"}
+  [4;35;1mOrder Load (0.2ms)[0m   [0mSELECT * FROM "orders" WHERE ("orders"."id" = 14) [0m
+Completed in 7ms (View: 1, DB: 0) | 200 OK [http://localhost/orders/14.xml]
+
+
+Processing OrdersController#show to xml (for 127.0.0.1 at 2009-10-28 17:12:36) [GET]
+  Parameters: {"id"=>"14"}
+  [4;36;1mOrder Load (0.2ms)[0m   [0;1mSELECT * FROM "orders" WHERE ("orders"."id" = 14) [0m
+Completed in 8ms (View: 1, DB: 0) | 200 OK [http://localhost/orders/14.xml]
+
+
+Processing OrdersController#show to xml (for 127.0.0.1 at 2009-10-28 17:12:38) [GET]
+  Parameters: {"id"=>"14"}
+  [4;35;1mOrder Load (0.2ms)[0m   [0mSELECT * FROM "orders" WHERE ("orders"."id" = 14) [0m
+Completed in 8ms (View: 1, DB: 0) | 200 OK [http://localhost/orders/14.xml]
+
+
+Processing OrdersController#show to xml (for 127.0.0.1 at 2009-10-28 17:12:42) [GET]
+  Parameters: {"id"=>"11"}
+  [4;36;1mOrder Load (0.2ms)[0m   [0;1mSELECT * FROM "orders" WHERE ("orders"."id" = 11) [0m
+Completed in 65ms (View: 1, DB: 0) | 200 OK [http://localhost/orders/11.xml]

@@ -20,6 +20,9 @@ class OrdersController < ApplicationController
       format.xml  { render :xml => @order.to_xml(:controller=>self) }
     end
   end
+  
+  1. render -> se eh xml, chama o xml com controller => self
+  
 
   # GET /orders/new
   # GET /orders/new.xml
