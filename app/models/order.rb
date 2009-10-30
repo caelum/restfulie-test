@@ -1,7 +1,7 @@
 class Order < ActiveRecord::Base
   has_and_belongs_to_many :trainings
   def following_states
-    states = [ {:controller => :orders, :action => :show} ]
+    states = [ {:controller => :orders, :action => :refresh} ]
     states << {:controller => :orders, :action => :destroy} if can_cancel?
     states
   end
