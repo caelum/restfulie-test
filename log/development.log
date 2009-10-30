@@ -4131,3 +4131,438 @@ Processing OrdersController#show to xml (for 127.0.0.1 at 2009-10-30 15:16:15) [
   Parameters: {"id"=>"13"}
   [4;35;1mOrder Load (0.2ms)[0m   [0mSELECT * FROM "orders" WHERE ("orders"."id" = 13) [0m
 Completed in 12ms (View: 1, DB: 0) | 200 OK [http://localhost/orders/13.xml]
+
+
+Processing OrdersController#show to xml (for 127.0.0.1 at 2009-10-30 15:18:04) [GET]
+  Parameters: {"id"=>"13"}
+  [4;36;1mOrder Load (0.2ms)[0m   [0;1mSELECT * FROM "orders" WHERE ("orders"."id" = 13) [0m
+Completed in 57ms (View: 3, DB: 0) | 200 OK [http://localhost/orders/13.xml]
+
+
+Processing OrdersController#show to xml (for 127.0.0.1 at 2009-10-30 15:20:25) [GET]
+  Parameters: {"id"=>"13"}
+  [4;35;1mOrder Load (0.2ms)[0m   [0mSELECT * FROM "orders" WHERE ("orders"."id" = 13) [0m
+Completed in 7ms (View: 1, DB: 0) | 200 OK [http://localhost/orders/13.xml]
+
+
+Processing OrdersController#show (for 127.0.0.1 at 2009-10-30 15:20:25) [GET]
+  Parameters: {"rel"=>"refresh", "id"=>"13"}
+  [4;36;1mOrder Load (0.2ms)[0m   [0;1mSELECT * FROM "orders" WHERE ("orders"."id" = 13) [0m
+Rendering template within layouts/application
+Rendering orders/show
+  [4;35;1mTraining Load (11.0ms)[0m   [0mSELECT * FROM "trainings" INNER JOIN "orders_trainings" ON "trainings".id = "orders_trainings".training_id WHERE ("orders_trainings".order_id = 13 ) [0m
+Completed in 68ms (View: 52, DB: 11) | 200 OK [http://localhost/orders/13?rel=refresh]
+
+
+Processing OrdersController#show (for 127.0.0.1 at 2009-10-30 15:20:25) [GET]
+  Parameters: {"rel"=>"refresh", "id"=>"13"}
+  [4;36;1mOrder Load (0.2ms)[0m   [0;1mSELECT * FROM "orders" WHERE ("orders"."id" = 13) [0m
+Rendering template within layouts/application
+Rendering orders/show
+  [4;35;1mTraining Load (0.2ms)[0m   [0mSELECT * FROM "trainings" INNER JOIN "orders_trainings" ON "trainings".id = "orders_trainings".training_id WHERE ("orders_trainings".order_id = 13 ) [0m
+Completed in 12ms (View: 7, DB: 0) | 200 OK [http://localhost/orders/13?rel=refresh]
+
+
+Processing OrdersController#show (for 127.0.0.1 at 2009-10-30 15:20:25) [GET]
+  Parameters: {"rel"=>"refresh", "id"=>"13"}
+  [4;36;1mOrder Load (0.2ms)[0m   [0;1mSELECT * FROM "orders" WHERE ("orders"."id" = 13) [0m
+Rendering template within layouts/application
+Rendering orders/show
+  [4;35;1mTraining Load (0.3ms)[0m   [0mSELECT * FROM "trainings" INNER JOIN "orders_trainings" ON "trainings".id = "orders_trainings".training_id WHERE ("orders_trainings".order_id = 13 ) [0m
+Completed in 13ms (View: 8, DB: 0) | 200 OK [http://localhost/orders/13?rel=refresh]
+
+
+Processing OrdersController#show (for 127.0.0.1 at 2009-10-30 15:20:25) [GET]
+  Parameters: {"rel"=>"refresh", "id"=>"13"}
+  [4;36;1mOrder Load (0.2ms)[0m   [0;1mSELECT * FROM "orders" WHERE ("orders"."id" = 13) [0m
+Rendering template within layouts/application
+Rendering orders/show
+  [4;35;1mTraining Load (0.3ms)[0m   [0mSELECT * FROM "trainings" INNER JOIN "orders_trainings" ON "trainings".id = "orders_trainings".training_id WHERE ("orders_trainings".order_id = 13 ) [0m
+Completed in 12ms (View: 6, DB: 0) | 200 OK [http://localhost/orders/13?rel=refresh]
+
+
+Processing OrdersController#show (for 127.0.0.1 at 2009-10-30 15:20:25) [GET]
+  Parameters: {"rel"=>"refresh", "id"=>"13"}
+  [4;36;1mOrder Load (0.2ms)[0m   [0;1mSELECT * FROM "orders" WHERE ("orders"."id" = 13) [0m
+Rendering template within layouts/application
+Rendering orders/show
+  [4;35;1mTraining Load (0.3ms)[0m   [0mSELECT * FROM "trainings" INNER JOIN "orders_trainings" ON "trainings".id = "orders_trainings".training_id WHERE ("orders_trainings".order_id = 13 ) [0m
+Completed in 12ms (View: 7, DB: 0) | 200 OK [http://localhost/orders/13?rel=refresh]
+
+
+Processing OrdersController#show to xml (for 127.0.0.1 at 2009-10-30 15:23:13) [GET]
+  Parameters: {"id"=>"13"}
+  [4;36;1mOrder Load (0.2ms)[0m   [0;1mSELECT * FROM "orders" WHERE ("orders"."id" = 13) [0m
+Completed in 8ms (View: 1, DB: 0) | 200 OK [http://localhost/orders/13.xml]
+
+
+Processing OrdersController#show (for 127.0.0.1 at 2009-10-30 15:23:13) [GET]
+  Parameters: {"rel"=>"refresh", "id"=>"13"}
+  [4;35;1mOrder Load (0.2ms)[0m   [0mSELECT * FROM "orders" WHERE ("orders"."id" = 13) [0m
+Rendering template within layouts/application
+Rendering orders/show
+  [4;36;1mTraining Load (0.2ms)[0m   [0;1mSELECT * FROM "trainings" INNER JOIN "orders_trainings" ON "trainings".id = "orders_trainings".training_id WHERE ("orders_trainings".order_id = 13 ) [0m
+Completed in 11ms (View: 6, DB: 0) | 200 OK [http://localhost/orders/13?rel=refresh]
+
+
+Processing OrdersController#show (for 127.0.0.1 at 2009-10-30 15:23:13) [GET]
+  Parameters: {"rel"=>"refresh", "id"=>"13"}
+  [4;35;1mOrder Load (0.2ms)[0m   [0mSELECT * FROM "orders" WHERE ("orders"."id" = 13) [0m
+Rendering template within layouts/application
+Rendering orders/show
+  [4;36;1mTraining Load (0.2ms)[0m   [0;1mSELECT * FROM "trainings" INNER JOIN "orders_trainings" ON "trainings".id = "orders_trainings".training_id WHERE ("orders_trainings".order_id = 13 ) [0m
+Completed in 11ms (View: 6, DB: 0) | 200 OK [http://localhost/orders/13?rel=refresh]
+
+
+Processing OrdersController#show (for 127.0.0.1 at 2009-10-30 15:23:13) [GET]
+  Parameters: {"rel"=>"refresh", "id"=>"13"}
+  [4;35;1mOrder Load (0.2ms)[0m   [0mSELECT * FROM "orders" WHERE ("orders"."id" = 13) [0m
+Rendering template within layouts/application
+Rendering orders/show
+  [4;36;1mTraining Load (0.2ms)[0m   [0;1mSELECT * FROM "trainings" INNER JOIN "orders_trainings" ON "trainings".id = "orders_trainings".training_id WHERE ("orders_trainings".order_id = 13 ) [0m
+Completed in 11ms (View: 6, DB: 0) | 200 OK [http://localhost/orders/13?rel=refresh]
+
+
+Processing OrdersController#show (for 127.0.0.1 at 2009-10-30 15:23:13) [GET]
+  Parameters: {"rel"=>"refresh", "id"=>"13"}
+  [4;35;1mOrder Load (0.2ms)[0m   [0mSELECT * FROM "orders" WHERE ("orders"."id" = 13) [0m
+Rendering template within layouts/application
+Rendering orders/show
+  [4;36;1mTraining Load (0.3ms)[0m   [0;1mSELECT * FROM "trainings" INNER JOIN "orders_trainings" ON "trainings".id = "orders_trainings".training_id WHERE ("orders_trainings".order_id = 13 ) [0m
+Completed in 11ms (View: 6, DB: 0) | 200 OK [http://localhost/orders/13?rel=refresh]
+
+
+Processing OrdersController#show (for 127.0.0.1 at 2009-10-30 15:23:13) [GET]
+  Parameters: {"rel"=>"refresh", "id"=>"13"}
+  [4;35;1mOrder Load (0.2ms)[0m   [0mSELECT * FROM "orders" WHERE ("orders"."id" = 13) [0m
+Rendering template within layouts/application
+Rendering orders/show
+  [4;36;1mTraining Load (0.2ms)[0m   [0;1mSELECT * FROM "trainings" INNER JOIN "orders_trainings" ON "trainings".id = "orders_trainings".training_id WHERE ("orders_trainings".order_id = 13 ) [0m
+Completed in 11ms (View: 6, DB: 0) | 200 OK [http://localhost/orders/13?rel=refresh]
+
+
+Processing OrdersController#show to xml (for 127.0.0.1 at 2009-10-30 15:23:29) [GET]
+  Parameters: {"id"=>"13"}
+  [4;35;1mOrder Load (0.5ms)[0m   [0mSELECT * FROM "orders" WHERE ("orders"."id" = 13) [0m
+Completed in 12ms (View: 1, DB: 0) | 200 OK [http://localhost/orders/13.xml]
+
+
+Processing OrdersController#show (for 127.0.0.1 at 2009-10-30 15:23:29) [GET]
+  Parameters: {"rel"=>"refresh", "id"=>"13"}
+  [4;36;1mOrder Load (0.2ms)[0m   [0;1mSELECT * FROM "orders" WHERE ("orders"."id" = 13) [0m
+Rendering template within layouts/application
+Rendering orders/show
+  [4;35;1mTraining Load (0.3ms)[0m   [0mSELECT * FROM "trainings" INNER JOIN "orders_trainings" ON "trainings".id = "orders_trainings".training_id WHERE ("orders_trainings".order_id = 13 ) [0m
+Completed in 12ms (View: 7, DB: 0) | 200 OK [http://localhost/orders/13?rel=refresh]
+
+
+Processing OrdersController#show to xml (for 127.0.0.1 at 2009-10-30 15:24:01) [GET]
+  Parameters: {"id"=>"13"}
+  [4;36;1mOrder Load (0.2ms)[0m   [0;1mSELECT * FROM "orders" WHERE ("orders"."id" = 13) [0m
+Completed in 13ms (View: 1, DB: 0) | 200 OK [http://localhost/orders/13.xml]
+
+
+Processing OrdersController#show (for 127.0.0.1 at 2009-10-30 15:24:01) [GET]
+  Parameters: {"rel"=>"refresh", "id"=>"13"}
+  [4;35;1mOrder Load (0.2ms)[0m   [0mSELECT * FROM "orders" WHERE ("orders"."id" = 13) [0m
+Rendering template within layouts/application
+Rendering orders/show
+  [4;36;1mTraining Load (0.3ms)[0m   [0;1mSELECT * FROM "trainings" INNER JOIN "orders_trainings" ON "trainings".id = "orders_trainings".training_id WHERE ("orders_trainings".order_id = 13 ) [0m
+Completed in 12ms (View: 6, DB: 0) | 200 OK [http://localhost/orders/13?rel=refresh]
+
+
+Processing OrdersController#show (for 127.0.0.1 at 2009-10-30 15:24:01) [GET]
+  Parameters: {"rel"=>"refresh", "id"=>"13"}
+  [4;35;1mOrder Load (0.2ms)[0m   [0mSELECT * FROM "orders" WHERE ("orders"."id" = 13) [0m
+Rendering template within layouts/application
+Rendering orders/show
+  [4;36;1mTraining Load (0.2ms)[0m   [0;1mSELECT * FROM "trainings" INNER JOIN "orders_trainings" ON "trainings".id = "orders_trainings".training_id WHERE ("orders_trainings".order_id = 13 ) [0m
+Completed in 12ms (View: 6, DB: 0) | 200 OK [http://localhost/orders/13?rel=refresh]
+
+
+Processing OrdersController#show (for 127.0.0.1 at 2009-10-30 15:24:01) [GET]
+  Parameters: {"rel"=>"refresh", "id"=>"13"}
+  [4;35;1mOrder Load (0.2ms)[0m   [0mSELECT * FROM "orders" WHERE ("orders"."id" = 13) [0m
+Rendering template within layouts/application
+Rendering orders/show
+  [4;36;1mTraining Load (0.3ms)[0m   [0;1mSELECT * FROM "trainings" INNER JOIN "orders_trainings" ON "trainings".id = "orders_trainings".training_id WHERE ("orders_trainings".order_id = 13 ) [0m
+Completed in 12ms (View: 6, DB: 0) | 200 OK [http://localhost/orders/13?rel=refresh]
+
+
+Processing OrdersController#show (for 127.0.0.1 at 2009-10-30 15:24:02) [GET]
+  Parameters: {"rel"=>"refresh", "id"=>"13"}
+  [4;35;1mOrder Load (0.2ms)[0m   [0mSELECT * FROM "orders" WHERE ("orders"."id" = 13) [0m
+Rendering template within layouts/application
+Rendering orders/show
+  [4;36;1mTraining Load (0.3ms)[0m   [0;1mSELECT * FROM "trainings" INNER JOIN "orders_trainings" ON "trainings".id = "orders_trainings".training_id WHERE ("orders_trainings".order_id = 13 ) [0m
+Completed in 12ms (View: 6, DB: 0) | 200 OK [http://localhost/orders/13?rel=refresh]
+
+
+Processing OrdersController#show (for 127.0.0.1 at 2009-10-30 15:24:02) [GET]
+  Parameters: {"rel"=>"refresh", "id"=>"13"}
+  [4;35;1mOrder Load (0.2ms)[0m   [0mSELECT * FROM "orders" WHERE ("orders"."id" = 13) [0m
+Rendering template within layouts/application
+Rendering orders/show
+  [4;36;1mTraining Load (0.3ms)[0m   [0;1mSELECT * FROM "trainings" INNER JOIN "orders_trainings" ON "trainings".id = "orders_trainings".training_id WHERE ("orders_trainings".order_id = 13 ) [0m
+Completed in 13ms (View: 8, DB: 0) | 200 OK [http://localhost/orders/13?rel=refresh]
+
+
+Processing OrdersController#show to xml (for 127.0.0.1 at 2009-10-30 15:24:38) [GET]
+  Parameters: {"id"=>"13"}
+  [4;35;1mOrder Load (2.9ms)[0m   [0mSELECT * FROM "orders" WHERE ("orders"."id" = 13) [0m
+Completed in 12ms (View: 1, DB: 3) | 200 OK [http://localhost/orders/13.xml]
+
+
+Processing OrdersController#show (for 127.0.0.1 at 2009-10-30 15:24:38) [GET]
+  Parameters: {"rel"=>"refresh", "id"=>"13"}
+  [4;36;1mOrder Load (0.2ms)[0m   [0;1mSELECT * FROM "orders" WHERE ("orders"."id" = 13) [0m
+Rendering template within layouts/application
+Rendering orders/show
+  [4;35;1mTraining Load (0.2ms)[0m   [0mSELECT * FROM "trainings" INNER JOIN "orders_trainings" ON "trainings".id = "orders_trainings".training_id WHERE ("orders_trainings".order_id = 13 ) [0m
+Completed in 11ms (View: 6, DB: 0) | 200 OK [http://localhost/orders/13?rel=refresh]
+
+
+Processing OrdersController#show (for 127.0.0.1 at 2009-10-30 15:24:38) [GET]
+  Parameters: {"rel"=>"refresh", "id"=>"13"}
+  [4;36;1mOrder Load (0.2ms)[0m   [0;1mSELECT * FROM "orders" WHERE ("orders"."id" = 13) [0m
+Rendering template within layouts/application
+Rendering orders/show
+  [4;35;1mTraining Load (0.2ms)[0m   [0mSELECT * FROM "trainings" INNER JOIN "orders_trainings" ON "trainings".id = "orders_trainings".training_id WHERE ("orders_trainings".order_id = 13 ) [0m
+Completed in 12ms (View: 6, DB: 0) | 200 OK [http://localhost/orders/13?rel=refresh]
+
+
+Processing OrdersController#show (for 127.0.0.1 at 2009-10-30 15:24:38) [GET]
+  Parameters: {"rel"=>"refresh", "id"=>"13"}
+  [4;36;1mOrder Load (0.2ms)[0m   [0;1mSELECT * FROM "orders" WHERE ("orders"."id" = 13) [0m
+Rendering template within layouts/application
+Rendering orders/show
+  [4;35;1mTraining Load (0.3ms)[0m   [0mSELECT * FROM "trainings" INNER JOIN "orders_trainings" ON "trainings".id = "orders_trainings".training_id WHERE ("orders_trainings".order_id = 13 ) [0m
+Completed in 72ms (View: 7, DB: 0) | 200 OK [http://localhost/orders/13?rel=refresh]
+
+
+Processing OrdersController#show (for 127.0.0.1 at 2009-10-30 15:24:38) [GET]
+  Parameters: {"rel"=>"refresh", "id"=>"13"}
+  [4;36;1mOrder Load (0.2ms)[0m   [0;1mSELECT * FROM "orders" WHERE ("orders"."id" = 13) [0m
+Rendering template within layouts/application
+Rendering orders/show
+  [4;35;1mTraining Load (0.3ms)[0m   [0mSELECT * FROM "trainings" INNER JOIN "orders_trainings" ON "trainings".id = "orders_trainings".training_id WHERE ("orders_trainings".order_id = 13 ) [0m
+Completed in 12ms (View: 6, DB: 0) | 200 OK [http://localhost/orders/13?rel=refresh]
+
+
+Processing OrdersController#show (for 127.0.0.1 at 2009-10-30 15:24:38) [GET]
+  Parameters: {"rel"=>"refresh", "id"=>"13"}
+  [4;36;1mOrder Load (0.2ms)[0m   [0;1mSELECT * FROM "orders" WHERE ("orders"."id" = 13) [0m
+Rendering template within layouts/application
+Rendering orders/show
+  [4;35;1mTraining Load (0.3ms)[0m   [0mSELECT * FROM "trainings" INNER JOIN "orders_trainings" ON "trainings".id = "orders_trainings".training_id WHERE ("orders_trainings".order_id = 13 ) [0m
+Completed in 12ms (View: 6, DB: 0) | 200 OK [http://localhost/orders/13?rel=refresh]
+
+
+Processing OrdersController#show to xml (for 127.0.0.1 at 2009-10-30 15:24:45) [GET]
+  Parameters: {"id"=>"13"}
+  [4;36;1mOrder Load (0.2ms)[0m   [0;1mSELECT * FROM "orders" WHERE ("orders"."id" = 13) [0m
+Completed in 13ms (View: 1, DB: 0) | 200 OK [http://localhost/orders/13.xml]
+
+
+Processing OrdersController#show (for 127.0.0.1 at 2009-10-30 15:24:45) [GET]
+  Parameters: {"rel"=>"refresh", "id"=>"13"}
+  [4;35;1mOrder Load (0.2ms)[0m   [0mSELECT * FROM "orders" WHERE ("orders"."id" = 13) [0m
+Rendering template within layouts/application
+Rendering orders/show
+  [4;36;1mTraining Load (0.3ms)[0m   [0;1mSELECT * FROM "trainings" INNER JOIN "orders_trainings" ON "trainings".id = "orders_trainings".training_id WHERE ("orders_trainings".order_id = 13 ) [0m
+Completed in 12ms (View: 6, DB: 0) | 200 OK [http://localhost/orders/13?rel=refresh]
+
+
+Processing OrdersController#show (for 127.0.0.1 at 2009-10-30 15:24:45) [GET]
+  Parameters: {"rel"=>"refresh", "id"=>"13"}
+  [4;35;1mOrder Load (0.2ms)[0m   [0mSELECT * FROM "orders" WHERE ("orders"."id" = 13) [0m
+Rendering template within layouts/application
+Rendering orders/show
+  [4;36;1mTraining Load (0.3ms)[0m   [0;1mSELECT * FROM "trainings" INNER JOIN "orders_trainings" ON "trainings".id = "orders_trainings".training_id WHERE ("orders_trainings".order_id = 13 ) [0m
+Completed in 12ms (View: 6, DB: 0) | 200 OK [http://localhost/orders/13?rel=refresh]
+
+
+Processing OrdersController#show (for 127.0.0.1 at 2009-10-30 15:24:45) [GET]
+  Parameters: {"rel"=>"refresh", "id"=>"13"}
+  [4;35;1mOrder Load (0.2ms)[0m   [0mSELECT * FROM "orders" WHERE ("orders"."id" = 13) [0m
+Rendering template within layouts/application
+Rendering orders/show
+  [4;36;1mTraining Load (0.2ms)[0m   [0;1mSELECT * FROM "trainings" INNER JOIN "orders_trainings" ON "trainings".id = "orders_trainings".training_id WHERE ("orders_trainings".order_id = 13 ) [0m
+Completed in 11ms (View: 6, DB: 0) | 200 OK [http://localhost/orders/13?rel=refresh]
+
+
+Processing OrdersController#show (for 127.0.0.1 at 2009-10-30 15:24:45) [GET]
+  Parameters: {"rel"=>"refresh", "id"=>"13"}
+  [4;35;1mOrder Load (0.2ms)[0m   [0mSELECT * FROM "orders" WHERE ("orders"."id" = 13) [0m
+Rendering template within layouts/application
+Rendering orders/show
+  [4;36;1mTraining Load (0.3ms)[0m   [0;1mSELECT * FROM "trainings" INNER JOIN "orders_trainings" ON "trainings".id = "orders_trainings".training_id WHERE ("orders_trainings".order_id = 13 ) [0m
+Completed in 12ms (View: 6, DB: 0) | 200 OK [http://localhost/orders/13?rel=refresh]
+
+
+Processing OrdersController#show (for 127.0.0.1 at 2009-10-30 15:24:45) [GET]
+  Parameters: {"rel"=>"refresh", "id"=>"13"}
+  [4;35;1mOrder Load (0.2ms)[0m   [0mSELECT * FROM "orders" WHERE ("orders"."id" = 13) [0m
+Rendering template within layouts/application
+Rendering orders/show
+  [4;36;1mTraining Load (0.2ms)[0m   [0;1mSELECT * FROM "trainings" INNER JOIN "orders_trainings" ON "trainings".id = "orders_trainings".training_id WHERE ("orders_trainings".order_id = 13 ) [0m
+Completed in 11ms (View: 6, DB: 0) | 200 OK [http://localhost/orders/13?rel=refresh]
+
+
+Processing OrdersController#show to xml (for 127.0.0.1 at 2009-10-30 15:24:49) [GET]
+  Parameters: {"id"=>"13"}
+  [4;35;1mOrder Load (1.8ms)[0m   [0mSELECT * FROM "orders" WHERE ("orders"."id" = 13) [0m
+Completed in 12ms (View: 1, DB: 2) | 200 OK [http://localhost/orders/13.xml]
+
+
+Processing OrdersController#show (for 127.0.0.1 at 2009-10-30 15:24:49) [GET]
+  Parameters: {"rel"=>"refresh", "id"=>"13"}
+  [4;36;1mOrder Load (0.2ms)[0m   [0;1mSELECT * FROM "orders" WHERE ("orders"."id" = 13) [0m
+Rendering template within layouts/application
+Rendering orders/show
+  [4;35;1mTraining Load (0.3ms)[0m   [0mSELECT * FROM "trainings" INNER JOIN "orders_trainings" ON "trainings".id = "orders_trainings".training_id WHERE ("orders_trainings".order_id = 13 ) [0m
+Completed in 73ms (View: 67, DB: 0) | 200 OK [http://localhost/orders/13?rel=refresh]
+
+
+Processing OrdersController#show (for 127.0.0.1 at 2009-10-30 15:24:49) [GET]
+  Parameters: {"rel"=>"refresh", "id"=>"13"}
+  [4;36;1mOrder Load (0.2ms)[0m   [0;1mSELECT * FROM "orders" WHERE ("orders"."id" = 13) [0m
+Rendering template within layouts/application
+Rendering orders/show
+  [4;35;1mTraining Load (0.5ms)[0m   [0mSELECT * FROM "trainings" INNER JOIN "orders_trainings" ON "trainings".id = "orders_trainings".training_id WHERE ("orders_trainings".order_id = 13 ) [0m
+Completed in 18ms (View: 11, DB: 1) | 200 OK [http://localhost/orders/13?rel=refresh]
+
+
+Processing OrdersController#show (for 127.0.0.1 at 2009-10-30 15:24:49) [GET]
+  Parameters: {"rel"=>"refresh", "id"=>"13"}
+  [4;36;1mOrder Load (0.2ms)[0m   [0;1mSELECT * FROM "orders" WHERE ("orders"."id" = 13) [0m
+Rendering template within layouts/application
+Rendering orders/show
+  [4;35;1mTraining Load (0.3ms)[0m   [0mSELECT * FROM "trainings" INNER JOIN "orders_trainings" ON "trainings".id = "orders_trainings".training_id WHERE ("orders_trainings".order_id = 13 ) [0m
+Completed in 15ms (View: 8, DB: 0) | 200 OK [http://localhost/orders/13?rel=refresh]
+
+
+Processing OrdersController#show (for 127.0.0.1 at 2009-10-30 15:24:49) [GET]
+  Parameters: {"rel"=>"refresh", "id"=>"13"}
+  [4;36;1mOrder Load (0.2ms)[0m   [0;1mSELECT * FROM "orders" WHERE ("orders"."id" = 13) [0m
+Rendering template within layouts/application
+Rendering orders/show
+  [4;35;1mTraining Load (0.3ms)[0m   [0mSELECT * FROM "trainings" INNER JOIN "orders_trainings" ON "trainings".id = "orders_trainings".training_id WHERE ("orders_trainings".order_id = 13 ) [0m
+Completed in 12ms (View: 6, DB: 0) | 200 OK [http://localhost/orders/13?rel=refresh]
+
+
+Processing OrdersController#show (for 127.0.0.1 at 2009-10-30 15:24:49) [GET]
+  Parameters: {"rel"=>"refresh", "id"=>"13"}
+  [4;36;1mOrder Load (0.2ms)[0m   [0;1mSELECT * FROM "orders" WHERE ("orders"."id" = 13) [0m
+Rendering template within layouts/application
+Rendering orders/show
+  [4;35;1mTraining Load (0.3ms)[0m   [0mSELECT * FROM "trainings" INNER JOIN "orders_trainings" ON "trainings".id = "orders_trainings".training_id WHERE ("orders_trainings".order_id = 13 ) [0m
+Completed in 12ms (View: 7, DB: 0) | 200 OK [http://localhost/orders/13?rel=refresh]
+
+
+Processing OrdersController#show to xml (for 127.0.0.1 at 2009-10-30 15:24:59) [GET]
+  Parameters: {"id"=>"13"}
+  [4;36;1mOrder Load (0.2ms)[0m   [0;1mSELECT * FROM "orders" WHERE ("orders"."id" = 13) [0m
+Completed in 8ms (View: 1, DB: 0) | 200 OK [http://localhost/orders/13.xml]
+
+
+Processing OrdersController#show (for 127.0.0.1 at 2009-10-30 15:24:59) [GET]
+  Parameters: {"rel"=>"refresh", "id"=>"13"}
+  [4;35;1mOrder Load (0.2ms)[0m   [0mSELECT * FROM "orders" WHERE ("orders"."id" = 13) [0m
+Rendering template within layouts/application
+Rendering orders/show
+  [4;36;1mTraining Load (0.3ms)[0m   [0;1mSELECT * FROM "trainings" INNER JOIN "orders_trainings" ON "trainings".id = "orders_trainings".training_id WHERE ("orders_trainings".order_id = 13 ) [0m
+Completed in 12ms (View: 7, DB: 0) | 200 OK [http://localhost/orders/13?rel=refresh]
+
+
+Processing OrdersController#show (for 127.0.0.1 at 2009-10-30 15:24:59) [GET]
+  Parameters: {"rel"=>"refresh", "id"=>"13"}
+  [4;35;1mOrder Load (0.2ms)[0m   [0mSELECT * FROM "orders" WHERE ("orders"."id" = 13) [0m
+Rendering template within layouts/application
+Rendering orders/show
+  [4;36;1mTraining Load (0.2ms)[0m   [0;1mSELECT * FROM "trainings" INNER JOIN "orders_trainings" ON "trainings".id = "orders_trainings".training_id WHERE ("orders_trainings".order_id = 13 ) [0m
+Completed in 11ms (View: 6, DB: 0) | 200 OK [http://localhost/orders/13?rel=refresh]
+
+
+Processing OrdersController#show (for 127.0.0.1 at 2009-10-30 15:24:59) [GET]
+  Parameters: {"rel"=>"refresh", "id"=>"13"}
+  [4;35;1mOrder Load (0.2ms)[0m   [0mSELECT * FROM "orders" WHERE ("orders"."id" = 13) [0m
+Rendering template within layouts/application
+Rendering orders/show
+  [4;36;1mTraining Load (0.3ms)[0m   [0;1mSELECT * FROM "trainings" INNER JOIN "orders_trainings" ON "trainings".id = "orders_trainings".training_id WHERE ("orders_trainings".order_id = 13 ) [0m
+Completed in 12ms (View: 6, DB: 0) | 200 OK [http://localhost/orders/13?rel=refresh]
+
+
+Processing OrdersController#show (for 127.0.0.1 at 2009-10-30 15:24:59) [GET]
+  Parameters: {"rel"=>"refresh", "id"=>"13"}
+  [4;35;1mOrder Load (0.2ms)[0m   [0mSELECT * FROM "orders" WHERE ("orders"."id" = 13) [0m
+Rendering template within layouts/application
+Rendering orders/show
+  [4;36;1mTraining Load (0.2ms)[0m   [0;1mSELECT * FROM "trainings" INNER JOIN "orders_trainings" ON "trainings".id = "orders_trainings".training_id WHERE ("orders_trainings".order_id = 13 ) [0m
+Completed in 12ms (View: 6, DB: 0) | 200 OK [http://localhost/orders/13?rel=refresh]
+
+
+Processing OrdersController#show (for 127.0.0.1 at 2009-10-30 15:24:59) [GET]
+  Parameters: {"rel"=>"refresh", "id"=>"13"}
+  [4;35;1mOrder Load (0.2ms)[0m   [0mSELECT * FROM "orders" WHERE ("orders"."id" = 13) [0m
+Rendering template within layouts/application
+Rendering orders/show
+  [4;36;1mTraining Load (0.3ms)[0m   [0;1mSELECT * FROM "trainings" INNER JOIN "orders_trainings" ON "trainings".id = "orders_trainings".training_id WHERE ("orders_trainings".order_id = 13 ) [0m
+Completed in 69ms (View: 63, DB: 0) | 200 OK [http://localhost/orders/13?rel=refresh]
+
+
+Processing OrdersController#show to xml (for 127.0.0.1 at 2009-10-30 15:26:29) [GET]
+  Parameters: {"id"=>"13"}
+  [4;35;1mOrder Load (0.2ms)[0m   [0mSELECT * FROM "orders" WHERE ("orders"."id" = 13) [0m
+Completed in 8ms (View: 1, DB: 0) | 200 OK [http://localhost/orders/13.xml]
+
+
+Processing OrdersController#show (for 127.0.0.1 at 2009-10-30 15:26:29) [GET]
+  Parameters: {"rel"=>"refresh", "id"=>"13"}
+  [4;36;1mOrder Load (0.2ms)[0m   [0;1mSELECT * FROM "orders" WHERE ("orders"."id" = 13) [0m
+Rendering template within layouts/application
+Rendering orders/show
+  [4;35;1mTraining Load (0.3ms)[0m   [0mSELECT * FROM "trainings" INNER JOIN "orders_trainings" ON "trainings".id = "orders_trainings".training_id WHERE ("orders_trainings".order_id = 13 ) [0m
+Completed in 12ms (View: 7, DB: 0) | 200 OK [http://localhost/orders/13?rel=refresh]
+
+
+Processing OrdersController#show to xml (for 127.0.0.1 at 2009-10-30 15:27:18) [GET]
+  Parameters: {"id"=>"13"}
+  [4;36;1mOrder Load (0.2ms)[0m   [0;1mSELECT * FROM "orders" WHERE ("orders"."id" = 13) [0m
+Completed in 8ms (View: 1, DB: 0) | 200 OK [http://localhost/orders/13.xml]
+
+
+Processing OrdersController#show (for 127.0.0.1 at 2009-10-30 15:27:18) [GET]
+  Parameters: {"rel"=>"refresh", "_format"=>"xml", "id"=>"13"}
+  [4;35;1mOrder Load (0.2ms)[0m   [0mSELECT * FROM "orders" WHERE ("orders"."id" = 13) [0m
+Rendering template within layouts/application
+Rendering orders/show
+  [4;36;1mTraining Load (0.3ms)[0m   [0;1mSELECT * FROM "trainings" INNER JOIN "orders_trainings" ON "trainings".id = "orders_trainings".training_id WHERE ("orders_trainings".order_id = 13 ) [0m
+Completed in 12ms (View: 7, DB: 0) | 200 OK [http://localhost/orders/13?_format=xml&rel=refresh]
+
+
+Processing OrdersController#show to xml (for 127.0.0.1 at 2009-10-30 15:27:25) [GET]
+  Parameters: {"id"=>"13"}
+  [4;35;1mOrder Load (0.2ms)[0m   [0mSELECT * FROM "orders" WHERE ("orders"."id" = 13) [0m
+Completed in 10ms (View: 1, DB: 0) | 200 OK [http://localhost/orders/13.xml]
+
+
+Processing OrdersController#show (for 127.0.0.1 at 2009-10-30 15:27:30) [GET]
+  Parameters: {"_format"=>"xml", "id"=>"13"}
+  [4;36;1mOrder Load (0.3ms)[0m   [0;1mSELECT * FROM "orders" WHERE ("orders"."id" = 13) [0m
+Rendering template within layouts/application
+Rendering orders/show
+  [4;35;1mTraining Load (0.3ms)[0m   [0mSELECT * FROM "trainings" INNER JOIN "orders_trainings" ON "trainings".id = "orders_trainings".training_id WHERE ("orders_trainings".order_id = 13 ) [0m
+Completed in 15ms (View: 7, DB: 1) | 200 OK [http://localhost/orders/13?_format=xml]
+
+
+Processing OrdersController#show to xml (for 127.0.0.1 at 2009-10-30 15:27:37) [GET]
+  Parameters: {"id"=>"13"}
+  [4;36;1mOrder Load (0.2ms)[0m   [0;1mSELECT * FROM "orders" WHERE ("orders"."id" = 13) [0m
+Completed in 8ms (View: 1, DB: 0) | 200 OK [http://localhost/orders/13.xml]
+
+
+Processing OrdersController#show to xml (for 127.0.0.1 at 2009-10-30 15:27:38) [GET]
+  Parameters: {"id"=>"13"}
+  [4;35;1mOrder Load (0.2ms)[0m   [0mSELECT * FROM "orders" WHERE ("orders"."id" = 13) [0m
+Completed in 7ms (View: 1, DB: 0) | 200 OK [http://localhost/orders/13.xml]
