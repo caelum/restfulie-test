@@ -21,7 +21,7 @@ class OrdersController < ApplicationController
     end
   end
   
-  1. render -> se eh xml, chama o xml com controller => self
+  # 1. render -> se eh xml, chama o xml com controller => self
   
 
   # GET /orders/new
