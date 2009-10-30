@@ -21,7 +21,6 @@ class OrdersController < ApplicationController
     end
   end
   
-
   # GET /orders/new
   # GET /orders/new.xml
   def new
