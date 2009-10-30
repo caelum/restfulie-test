@@ -4698,3 +4698,25 @@ ActionController::RoutingError (No route matches {:action=>"refresh", :controlle
 
 Rendering rescues/layout (not_found)
 >>>>>>> 245df69b7d5e10b1c8df8cb45114dffadc9fbd80:log/development.log
+
+
+Processing OrdersController#index (for 127.0.0.1 at 2009-10-30 16:02:39) [GET]
+  [4;36;1mOrder Load (1.1ms)[0m   [0;1mSELECT * FROM "orders" [0m
+Rendering template within layouts/application
+Rendering orders/index
+Completed in 81ms (View: 68, DB: 1) | 200 OK [http://localhost/orders]
+
+
+Processing OrdersController#show to xml (for 127.0.0.1 at 2009-10-30 16:02:43) [GET]
+  Parameters: {"id"=>"13"}
+  [4;35;1mOrder Load (0.2ms)[0m   [0mSELECT * FROM "orders" WHERE ("orders"."id" = 13) [0m
+Completed in 47ms (View: 1, DB: 0) | 200 OK [http://localhost/orders/13.xml]
+
+
+Processing OrdersController#show (for 127.0.0.1 at 2009-10-30 16:02:43) [GET]
+  Parameters: {"rel"=>"refresh", "id"=>"13"}
+  [4;36;1mOrder Load (0.2ms)[0m   [0;1mSELECT * FROM "orders" WHERE ("orders"."id" = 13) [0m
+Rendering template within layouts/application
+Rendering orders/show
+  [4;35;1mTraining Load (0.3ms)[0m   [0mSELECT * FROM "trainings" INNER JOIN "orders_trainings" ON "trainings".id = "orders_trainings".training_id WHERE ("orders_trainings".order_id = 13 ) [0m
+Completed in 106ms (View: 100, DB: 0) | 200 OK [http://localhost/orders/13?rel=refresh]

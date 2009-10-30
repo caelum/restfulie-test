@@ -1,0 +1,90 @@
+Restfulie
+=========
+
+This is a small cute plugin to show how to implement hypermedia based services in a easy way using rails.
+
+
+Typical Restful Example
+=======================
+
+Trying to follow the definition of a restful application supporting resources with hypermedia content, a typical restful resource would be:
+
+<pre>
+<order>
+	<product>basic rails course</product>
+	<product>restful training</product>
+	<atom:link rel="refresh" href="http://www.caelum.com.br/orders/1" xmlns:atom="http://www.w3.org/2005/Atom"/>
+	<atom:link rel="update" href="http://www.caelum.com.br/orders/1" xmlns:atom="http://www.w3.org/2005/Atom"/>
+	<atom:link rel="pay" href="http://www.caelum.com.br/orders/1" xmlns:atom="http://www.w3.org/2005/Atom"/>
+	<atom:link rel="destroy" href="http://www.caelum.com.br/orders/1" xmlns:atom="http://www.w3.org/2005/Atom"/>
+</order>
+</pre>
+
+Client Usage
+============
+
+One should first acquire the representation from the server through your common GET process and process it through the usual from_* methods:
+<pre>
+xml = Net::HTTP.get(URI.parse('http://www.caelum.com.br/orders/1'))
+order = Order.from_xml(xml)
+</pre>
+
+And now you can invoke all those actions in order to change your resource's state:
+
+<pre>
+order.refresh
+order.update
+order.destroy
+order.pay(payment)
+</pre>
+
+Note that:
+1. refresh is get
+2. update is put (and you have to put everything back)
+3. destroy is delete
+4. pay (unknown methods) is post
+
+Resource format support
+=======================
+
+Restfulie currently supports xml+atom and will soon expand its support to xml+rel links and json+links supports. Those new formats will also support automatic http verb detection - if possible and reasonable.
+
+
+Help
+====
+
+If you are looking for or want to help, let us know at the mailing list: http://groups.google.com/group/restfulie
+
+
+How to customize your request
+=============================
+
+By default, restfulie uses the following table:
+
+1. destroy, cancel and delete send a DELETE request
+2. update sends a POST request
+3. refresh, reload sends a GET request
+4. other methods sends a POST request
+
+If you want to use a custom http verb in order to send your request, you can do it by setting the optional string 'method':
+
+<pre>
+order.update(:method=>"post")
+</pre>
+
+/***
+ * Copyright (c) 2009 Caelum - www.caelum.com.br/opensource
+ * All rights reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * 	http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
