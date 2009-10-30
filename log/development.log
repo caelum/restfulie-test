@@ -4034,3 +4034,100 @@ Processing OrdersController#show to xml (for 127.0.0.1 at 2009-10-28 17:12:42) [
   Parameters: {"id"=>"11"}
   [4;36;1mOrder Load (0.2ms)[0m   [0;1mSELECT * FROM "orders" WHERE ("orders"."id" = 11) [0m
 Completed in 65ms (View: 1, DB: 0) | 200 OK [http://localhost/orders/11.xml]
+
+
+Processing WelcomeController#welcome (for 127.0.0.1 at 2009-10-30 14:47:21) [GET]
+Rendering template within layouts/application
+Rendering welcome/welcome
+Completed in 103ms (View: 101, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-10-30 15:06:33) [GET]
+
+SyntaxError (/Users/guilherme/Documents/ruby/restfulie-test/app/controllers/orders_controller.rb:24: syntax error, unexpected '>'
+  1. render -> se eh xml, chama o xml com controller => self
+              ^
+/Users/guilherme/Documents/ruby/restfulie-test/app/controllers/orders_controller.rb:24: syntax error, unexpected tIDENTIFIER, expecting kDO or '{' or '('
+  1. render -> se eh xml, chama o xml com controller => self
+                                 ^):
+  
+
+Rendered rescues/_trace (26.2ms)
+Rendered rescues/_request_and_response (1.5ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing OrdersController#index (for 127.0.0.1 at 2009-10-30 15:06:57) [GET]
+  [4;36;1mOrder Load (1.1ms)[0m   [0;1mSELECT * FROM "orders" [0m
+Rendering template within layouts/application
+Rendering orders/index
+Completed in 146ms (View: 107, DB: 1) | 200 OK [http://localhost/orders]
+
+
+Processing OrdersController#show to xml (for 127.0.0.1 at 2009-10-30 15:07:55) [GET]
+  Parameters: {"id"=>"13"}
+  [4;35;1mOrder Load (0.2ms)[0m   [0mSELECT * FROM "orders" WHERE ("orders"."id" = 13) [0m
+Completed in 169ms (View: 1, DB: 0) | 200 OK [http://localhost/orders/13.xml]
+
+
+Processing OrdersController#show to xml (for 127.0.0.1 at 2009-10-30 15:09:39) [GET]
+  Parameters: {"id"=>"13"}
+  [4;36;1mOrder Load (0.2ms)[0m   [0;1mSELECT * FROM "orders" WHERE ("orders"."id" = 13) [0m
+Completed in 7ms (View: 1, DB: 0) | 200 OK [http://localhost/orders/13.xml]
+
+
+Processing OrdersController#show to xml (for 127.0.0.1 at 2009-10-30 15:14:34) [GET]
+  Parameters: {"id"=>"13"}
+  [4;35;1mOrder Load (0.2ms)[0m   [0mSELECT * FROM "orders" WHERE ("orders"."id" = 13) [0m
+Completed in 8ms (View: 1, DB: 0) | 200 OK [http://localhost/orders/13.xml]
+
+
+Processing OrdersController#show to xml (for 127.0.0.1 at 2009-10-30 15:14:59) [GET]
+  Parameters: {"id"=>"13"}
+  [4;36;1mOrder Load (0.2ms)[0m   [0;1mSELECT * FROM "orders" WHERE ("orders"."id" = 13) [0m
+
+ActionController::RoutingError (No route matches {:action=>"refresh", :controller=>"orders"}):
+  builder (2.1.2) lib/builder/xmlbase.rb:134:in `call'
+  builder (2.1.2) lib/builder/xmlbase.rb:134:in `_nested_structures'
+  builder (2.1.2) lib/builder/xmlbase.rb:58:in `method_missing'
+  builder (2.1.2) lib/builder/xmlbase.rb:31:in `tag!'
+  app/controllers/orders_controller.rb:20:in `show'
+  app/controllers/orders_controller.rb:18:in `show'
+
+Rendering rescues/layout (not_found)
+
+
+Processing OrdersController#show to xml (for 127.0.0.1 at 2009-10-30 15:15:42) [GET]
+  Parameters: {"id"=>"13"}
+  [4;35;1mOrder Load (0.4ms)[0m   [0mSELECT * FROM "orders" WHERE ("orders"."id" = 13) [0m
+
+ActionController::RoutingError (No route matches {:action=>"refresh", :controller=>"orders"}):
+  builder (2.1.2) lib/builder/xmlbase.rb:134:in `call'
+  builder (2.1.2) lib/builder/xmlbase.rb:134:in `_nested_structures'
+  builder (2.1.2) lib/builder/xmlbase.rb:58:in `method_missing'
+  builder (2.1.2) lib/builder/xmlbase.rb:31:in `tag!'
+  app/controllers/orders_controller.rb:20:in `show'
+  app/controllers/orders_controller.rb:18:in `show'
+
+Rendering rescues/layout (not_found)
+
+
+Processing OrdersController#show to xml (for 127.0.0.1 at 2009-10-30 15:15:53) [GET]
+  Parameters: {"id"=>"13"}
+  [4;36;1mOrder Load (0.2ms)[0m   [0;1mSELECT * FROM "orders" WHERE ("orders"."id" = 13) [0m
+
+ActionController::RoutingError (No route matches {:action=>"refresh", :controller=>"orders"}):
+  builder (2.1.2) lib/builder/xmlbase.rb:134:in `call'
+  builder (2.1.2) lib/builder/xmlbase.rb:134:in `_nested_structures'
+  builder (2.1.2) lib/builder/xmlbase.rb:58:in `method_missing'
+  builder (2.1.2) lib/builder/xmlbase.rb:31:in `tag!'
+  app/controllers/orders_controller.rb:20:in `show'
+  app/controllers/orders_controller.rb:18:in `show'
+
+Rendering rescues/layout (not_found)
+
+
+Processing OrdersController#show to xml (for 127.0.0.1 at 2009-10-30 15:16:15) [GET]
+  Parameters: {"id"=>"13"}
+  [4;35;1mOrder Load (0.2ms)[0m   [0mSELECT * FROM "orders" WHERE ("orders"."id" = 13) [0m
+Completed in 12ms (View: 1, DB: 0) | 200 OK [http://localhost/orders/13.xml]

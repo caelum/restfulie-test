@@ -1,22 +1,22 @@
 module Restfulie  
-  alias :to_json_old :to_json
   def to_json
-    to_json_old :methods => :following_states
+    super :methods => :following_states
   end
   
   def to_xml(options = {})
     controller = options[:controller]
-    return to_xml_old if controller.nil?
+    return super if controller.nil?
     
-    use_name_based_link = options[:use_name_based_link]==true
     options[:skip_types] = true
-    to_xml_old options do |xml|
+    super options do |xml|
       following_states.each do |action|
-        rel = action[:rel]
-        rel = action[:action] if rel.nil?
+        rel = action[:rel] || action[:action]
         translate_href = controller.url_for(action)
-        xml.tag!('atom:link', 'xmlns:atom' => 'http://www.w3.org/2005/Atom', :rel => rel, :href => translate_href) unless use_name_based_link
-        xml.tag!(rel, translate_href) if use_name_based_link
+        if options[:use_name_based_link]
+          xml.tag!(rel, translate_href)
+        else
+          xml.tag!('atom:link', 'xmlns:atom' => 'http://www.w3.org/2005/Atom', :rel => rel, :href => translate_href)
+        end
       end if respond_to?(:following_states)
     end
   end
@@ -88,8 +88,4 @@ module ActiveRecord
       self.from_hash hash[self.to_s.underscore]
     end
   end
-end
-
-module ActiveRecord::Serialization
-  alias :to_xml_old :to_xml
 end
