@@ -5017,3 +5017,112 @@ Processing OrdersController#show to xml (for 127.0.0.1 at 2009-10-30 16:51:42) [
   Parameters: {"id"=>"13"}
   [4;35;1mOrder Load (0.2ms)[0m   [0mSELECT * FROM "orders" WHERE ("orders"."id" = 13) [0m
 Completed in 7ms (View: 1, DB: 0) | 200 OK [http://localhost/orders/13.xml]
+
+
+Processing OrdersController#show to xml (for 127.0.0.1 at 2009-10-31 11:57:46) [GET]
+  Parameters: {"id"=>"13"}
+  [4;36;1mOrder Load (0.2ms)[0m   [0;1mSELECT * FROM "orders" WHERE ("orders"."id" = 13) [0m
+Completed in 298ms (View: 13, DB: 0) | 200 OK [http://localhost/orders/13.xml]
+
+
+Processing OrdersController#show to xml (for 127.0.0.1 at 2009-10-31 11:57:54) [GET]
+  Parameters: {"id"=>"13"}
+  [4;35;1mOrder Load (0.2ms)[0m   [0mSELECT * FROM "orders" WHERE ("orders"."id" = 13) [0m
+Completed in 7ms (View: 1, DB: 0) | 200 OK [http://localhost/orders/13.xml]
+
+
+Processing OrdersController#show (for 127.0.0.1 at 2009-10-31 11:57:54) [GET]
+  Parameters: {"id"=>"13"}
+  [4;36;1mOrder Load (0.2ms)[0m   [0;1mSELECT * FROM "orders" WHERE ("orders"."id" = 13) [0m
+Completed in 7ms (View: 1, DB: 0) | 200 OK [http://localhost/orders/13]
+
+
+Processing OrdersController#show to xml (for 127.0.0.1 at 2009-10-31 11:57:54) [GET]
+  Parameters: {"id"=>"13"}
+  [4;35;1mOrder Load (0.2ms)[0m   [0mSELECT * FROM "orders" WHERE ("orders"."id" = 13) [0m
+Completed in 7ms (View: 1, DB: 0) | 200 OK [http://localhost/orders/13.xml]
+
+
+Processing OrdersController#show to xml (for 127.0.0.1 at 2009-10-31 12:01:29) [GET]
+  Parameters: {"id"=>"13"}
+  [4;36;1mOrder Load (0.2ms)[0m   [0;1mSELECT * FROM "orders" WHERE ("orders"."id" = 13) [0m
+Completed in 13ms (View: 1, DB: 0) | 200 OK [http://localhost/orders/13.xml]
+
+
+Processing OrdersController#show (for 127.0.0.1 at 2009-10-31 12:01:29) [GET]
+  Parameters: {"id"=>"13"}
+  [4;35;1mOrder Load (0.2ms)[0m   [0mSELECT * FROM "orders" WHERE ("orders"."id" = 13) [0m
+Completed in 8ms (View: 1, DB: 0) | 200 OK [http://localhost/orders/13]
+
+
+Processing OrdersController#show to xml (for 127.0.0.1 at 2009-10-31 12:01:29) [GET]
+  Parameters: {"id"=>"13"}
+  [4;36;1mOrder Load (0.2ms)[0m   [0;1mSELECT * FROM "orders" WHERE ("orders"."id" = 13) [0m
+Completed in 8ms (View: 1, DB: 0) | 200 OK [http://localhost/orders/13.xml]
+
+
+Processing OrdersController#show to xml (for 127.0.0.1 at 2009-10-31 12:01:38) [GET]
+  Parameters: {"id"=>"10"}
+  [4;35;1mOrder Load (0.2ms)[0m   [0mSELECT * FROM "orders" WHERE ("orders"."id" = 10) [0m
+Completed in 8ms (View: 1, DB: 0) | 200 OK [http://localhost/orders/10.xml]
+
+
+Processing OrdersController#show to xml (for 127.0.0.1 at 2009-10-31 12:01:45) [GET]
+  Parameters: {"id"=>"10"}
+  [4;36;1mOrder Load (0.2ms)[0m   [0;1mSELECT * FROM "orders" WHERE ("orders"."id" = 10) [0m
+Completed in 7ms (View: 1, DB: 0) | 200 OK [http://localhost/orders/10.xml]
+
+
+Processing OrdersController#destroy (for 127.0.0.1 at 2009-10-31 12:01:45) [DELETE]
+  Parameters: {"id"=>"10"}
+  [4;35;1mOrder Load (0.2ms)[0m   [0mSELECT * FROM "orders" WHERE ("orders"."id" = 10) [0m
+  [4;36;1mOrder Update (0.4ms)[0m   [0;1mUPDATE "orders" SET "status" = 'CANCELLED', "updated_at" = '2009-10-31 14:01:45' WHERE "id" = 10[0m
+Completed in 9ms (View: 1, DB: 1) | 200 OK [http://localhost/orders/10]
+
+
+Processing OrdersController#show to xml (for 127.0.0.1 at 2009-10-31 12:01:45) [GET]
+  Parameters: {"id"=>"10"}
+  [4;35;1mOrder Load (0.2ms)[0m   [0mSELECT * FROM "orders" WHERE ("orders"."id" = 10) [0m
+Completed in 9ms (View: 1, DB: 0) | 200 OK [http://localhost/orders/10.xml]
+
+
+Processing OrdersController#show to xml (for 127.0.0.1 at 2009-10-31 12:01:48) [GET]
+  Parameters: {"id"=>"10"}
+  [4;36;1mOrder Load (0.2ms)[0m   [0;1mSELECT * FROM "orders" WHERE ("orders"."id" = 10) [0m
+Completed in 10ms (View: 1, DB: 0) | 200 OK [http://localhost/orders/10.xml]
+
+
+Processing OrdersController#show (for 127.0.0.1 at 2009-10-31 12:01:49) [GET]
+  Parameters: {"id"=>"10"}
+  [4;35;1mOrder Load (0.2ms)[0m   [0mSELECT * FROM "orders" WHERE ("orders"."id" = 10) [0m
+Completed in 8ms (View: 1, DB: 0) | 200 OK [http://localhost/orders/10]
+
+
+Processing OrdersController#show to xml (for 127.0.0.1 at 2009-10-31 12:01:49) [GET]
+  Parameters: {"id"=>"10"}
+  [4;36;1mOrder Load (0.2ms)[0m   [0;1mSELECT * FROM "orders" WHERE ("orders"."id" = 10) [0m
+Completed in 9ms (View: 1, DB: 0) | 200 OK [http://localhost/orders/10.xml]
+
+
+Processing OrdersController#show to xml (for 127.0.0.1 at 2009-10-31 12:01:59) [GET]
+  Parameters: {"id"=>"10"}
+  [4;35;1mOrder Load (0.2ms)[0m   [0mSELECT * FROM "orders" WHERE ("orders"."id" = 10) [0m
+Completed in 7ms (View: 1, DB: 0) | 200 OK [http://localhost/orders/10.xml]
+
+
+Processing OrdersController#show to xml (for 127.0.0.1 at 2009-10-31 12:03:02) [GET]
+  Parameters: {"id"=>"10"}
+  [4;36;1mOrder Load (0.3ms)[0m   [0;1mSELECT * FROM "orders" WHERE ("orders"."id" = 10) [0m
+Completed in 13ms (View: 1, DB: 0) | 200 OK [http://localhost/orders/10.xml]
+
+
+Processing OrdersController#show to xml (for 127.0.0.1 at 2009-10-31 12:03:08) [GET]
+  Parameters: {"id"=>"10"}
+  [4;35;1mOrder Load (0.2ms)[0m   [0mSELECT * FROM "orders" WHERE ("orders"."id" = 10) [0m
+Completed in 12ms (View: 3, DB: 0) | 200 OK [http://localhost/orders/10.xml]
+
+
+Processing OrdersController#show to xml (for 127.0.0.1 at 2009-10-31 12:03:18) [GET]
+  Parameters: {"id"=>"10"}
+  [4;36;1mOrder Load (0.2ms)[0m   [0;1mSELECT * FROM "orders" WHERE ("orders"."id" = 10) [0m
+Completed in 9ms (View: 1, DB: 0) | 200 OK [http://localhost/orders/10.xml]
