@@ -5126,3 +5126,197 @@ Processing OrdersController#show to xml (for 127.0.0.1 at 2009-10-31 12:03:18) [
   Parameters: {"id"=>"10"}
   [4;36;1mOrder Load (0.2ms)[0m   [0;1mSELECT * FROM "orders" WHERE ("orders"."id" = 10) [0m
 Completed in 9ms (View: 1, DB: 0) | 200 OK [http://localhost/orders/10.xml]
+
+
+Processing WelcomeController#welcome (for 127.0.0.1 at 2009-11-01 17:28:43) [GET]
+Rendering template within layouts/application
+Rendering welcome/welcome
+Completed in 107ms (View: 106, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing OrdersController#index (for 127.0.0.1 at 2009-11-01 17:28:44) [GET]
+  [4;36;1mOrder Load (1.1ms)[0m   [0;1mSELECT * FROM "orders" [0m
+Rendering template within layouts/application
+Rendering orders/index
+Completed in 101ms (View: 62, DB: 1) | 200 OK [http://localhost/orders]
+
+
+Processing OrdersController#show to xml (for 127.0.0.1 at 2009-11-01 17:28:52) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mOrder Load (0.2ms)[0m   [0mSELECT * FROM "orders" WHERE ("orders"."id" = 2) [0m
+Completed in 110ms (View: 1, DB: 0) | 200 OK [http://localhost/orders/2.xml]
+
+
+Processing OrdersController#show to xml (for 127.0.0.1 at 2009-11-01 17:29:20) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mOrder Load (0.2ms)[0m   [0;1mSELECT * FROM "orders" WHERE ("orders"."id" = 2) [0m
+Completed in 7ms (View: 1, DB: 0) | 200 OK [http://localhost/orders/2.xml]
+
+
+Processing OrdersController#show to xml (for 127.0.0.1 at 2009-11-01 18:15:07) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mOrder Load (0.2ms)[0m   [0mSELECT * FROM "orders" WHERE ("orders"."id" = 2) [0m
+Completed in 8ms (View: 1, DB: 0) | 200 OK [http://localhost/orders/2.xml]
+
+
+Processing OrdersController#show to xml (for 127.0.0.1 at 2009-11-01 18:16:51) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mOrder Load (0.2ms)[0m   [0;1mSELECT * FROM "orders" WHERE ("orders"."id" = 2) [0m
+Completed in 8ms (View: 1, DB: 0) | 200 OK [http://localhost/orders/2.xml]
+
+
+Processing OrdersController#show to xml (for 127.0.0.1 at 2009-11-01 18:16:54) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mOrder Load (0.2ms)[0m   [0mSELECT * FROM "orders" WHERE ("orders"."id" = 2) [0m
+Completed in 8ms (View: 1, DB: 0) | 200 OK [http://localhost/orders/2.xml]
+
+
+Processing OrdersController#show to xml (for 127.0.0.1 at 2009-11-01 18:17:26) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mOrder Load (0.2ms)[0m   [0;1mSELECT * FROM "orders" WHERE ("orders"."id" = 2) [0m
+Completed in 8ms (View: 1, DB: 0) | 200 OK [http://localhost/orders/2.xml]
+
+
+Processing OrdersController#show to xml (for 127.0.0.1 at 2009-11-01 18:17:29) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mOrder Load (0.2ms)[0m   [0mSELECT * FROM "orders" WHERE ("orders"."id" = 2) [0m
+Completed in 8ms (View: 1, DB: 0) | 200 OK [http://localhost/orders/2.xml]
+
+
+Processing OrdersController#show to xml (for 127.0.0.1 at 2009-11-01 18:18:17) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mOrder Load (0.2ms)[0m   [0;1mSELECT * FROM "orders" WHERE ("orders"."id" = 2) [0m
+Completed in 8ms (View: 1, DB: 0) | 200 OK [http://localhost/orders/2.xml]
+
+
+Processing OrdersController#show to xml (for 127.0.0.1 at 2009-11-01 18:18:28) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mOrder Load (0.2ms)[0m   [0mSELECT * FROM "orders" WHERE ("orders"."id" = 2) [0m
+Completed in 7ms (View: 1, DB: 0) | 200 OK [http://localhost/orders/2.xml]
+
+
+Processing OrdersController#show to xml (for 127.0.0.1 at 2009-11-01 18:18:40) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mOrder Load (0.2ms)[0m   [0;1mSELECT * FROM "orders" WHERE ("orders"."id" = 2) [0m
+Completed in 8ms (View: 1, DB: 0) | 200 OK [http://localhost/orders/2.xml]
+
+
+Processing OrdersController#show (for 127.0.0.1 at 2009-11-01 18:18:40) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mOrder Load (0.2ms)[0m   [0mSELECT * FROM "orders" WHERE ("orders"."id" = 2) [0m
+Completed in 8ms (View: 1, DB: 0) | 200 OK [http://localhost/orders/2]
+
+
+Processing OrdersController#show to xml (for 127.0.0.1 at 2009-11-01 18:18:40) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mOrder Load (0.2ms)[0m   [0;1mSELECT * FROM "orders" WHERE ("orders"."id" = 2) [0m
+Completed in 7ms (View: 1, DB: 0) | 200 OK [http://localhost/orders/2.xml]
+
+
+Processing OrdersController#show to xml (for 127.0.0.1 at 2009-11-01 18:19:23) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mOrder Load (0.2ms)[0m   [0mSELECT * FROM "orders" WHERE ("orders"."id" = 2) [0m
+Completed in 7ms (View: 1, DB: 0) | 200 OK [http://localhost/orders/2.xml]
+
+
+Processing OrdersController#destroy (for 127.0.0.1 at 2009-11-01 18:19:23) [DELETE]
+  Parameters: {"id"=>"2"}
+  [4;36;1mOrder Load (0.2ms)[0m   [0;1mSELECT * FROM "orders" WHERE ("orders"."id" = 2) [0m
+  [4;35;1mOrder Update (0.4ms)[0m   [0mUPDATE "orders" SET "status" = 'CANCELLED', "updated_at" = '2009-11-01 20:19:23' WHERE "id" = 2[0m
+Completed in 11ms (View: 2, DB: 1) | 200 OK [http://localhost/orders/2]
+
+
+Processing OrdersController#show to xml (for 127.0.0.1 at 2009-11-01 18:19:23) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mOrder Load (0.2ms)[0m   [0;1mSELECT * FROM "orders" WHERE ("orders"."id" = 2) [0m
+Completed in 8ms (View: 1, DB: 0) | 200 OK [http://localhost/orders/2.xml]
+
+
+Processing OrdersController#show to xml (for 127.0.0.1 at 2009-11-01 18:19:26) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mOrder Load (0.2ms)[0m   [0mSELECT * FROM "orders" WHERE ("orders"."id" = 2) [0m
+Completed in 7ms (View: 1, DB: 0) | 200 OK [http://localhost/orders/2.xml]
+
+
+Processing OrdersController#show (for 127.0.0.1 at 2009-11-01 18:19:26) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mOrder Load (0.2ms)[0m   [0;1mSELECT * FROM "orders" WHERE ("orders"."id" = 2) [0m
+Completed in 7ms (View: 1, DB: 0) | 200 OK [http://localhost/orders/2]
+
+
+Processing OrdersController#show to xml (for 127.0.0.1 at 2009-11-01 18:19:26) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mOrder Load (0.2ms)[0m   [0mSELECT * FROM "orders" WHERE ("orders"."id" = 2) [0m
+Completed in 7ms (View: 1, DB: 0) | 200 OK [http://localhost/orders/2.xml]
+
+
+Processing OrdersController#show to xml (for 127.0.0.1 at 2009-11-01 18:20:17) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mOrder Load (0.2ms)[0m   [0;1mSELECT * FROM "orders" WHERE ("orders"."id" = 2) [0m
+Completed in 9ms (View: 1, DB: 0) | 200 OK [http://localhost/orders/2.xml]
+
+
+Processing OrdersController#show to xml (for 127.0.0.1 at 2009-11-01 18:21:23) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mOrder Load (0.2ms)[0m   [0mSELECT * FROM "orders" WHERE ("orders"."id" = 2) [0m
+Completed in 7ms (View: 1, DB: 0) | 200 OK [http://localhost/orders/2.xml]
+
+
+Processing OrdersController#show to xml (for 127.0.0.1 at 2009-11-01 18:22:05) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mOrder Load (0.2ms)[0m   [0;1mSELECT * FROM "orders" WHERE ("orders"."id" = 2) [0m
+Completed in 8ms (View: 1, DB: 0) | 200 OK [http://localhost/orders/2.xml]
+
+
+Processing OrdersController#show to xml (for 127.0.0.1 at 2009-11-01 18:22:07) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mOrder Load (0.2ms)[0m   [0mSELECT * FROM "orders" WHERE ("orders"."id" = 2) [0m
+Completed in 7ms (View: 1, DB: 0) | 200 OK [http://localhost/orders/2.xml]
+
+
+Processing OrdersController#show (for 127.0.0.1 at 2009-11-01 18:22:07) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mOrder Load (0.2ms)[0m   [0;1mSELECT * FROM "orders" WHERE ("orders"."id" = 2) [0m
+Completed in 7ms (View: 1, DB: 0) | 200 OK [http://localhost/orders/2]
+
+
+Processing OrdersController#show to xml (for 127.0.0.1 at 2009-11-01 18:22:07) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mOrder Load (0.5ms)[0m   [0mSELECT * FROM "orders" WHERE ("orders"."id" = 2) [0m
+Completed in 11ms (View: 1, DB: 0) | 200 OK [http://localhost/orders/2.xml]
+
+
+Processing OrdersController#show to xml (for 127.0.0.1 at 2009-11-01 18:22:53) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mOrder Load (0.2ms)[0m   [0;1mSELECT * FROM "orders" WHERE ("orders"."id" = 2) [0m
+Completed in 7ms (View: 1, DB: 0) | 200 OK [http://localhost/orders/2.xml]
+
+
+Processing OrdersController#show (for 127.0.0.1 at 2009-11-01 18:22:53) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mOrder Load (0.2ms)[0m   [0mSELECT * FROM "orders" WHERE ("orders"."id" = 2) [0m
+Completed in 7ms (View: 1, DB: 0) | 200 OK [http://localhost/orders/2]
+
+
+Processing OrdersController#show to xml (for 127.0.0.1 at 2009-11-01 18:22:53) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mOrder Load (0.3ms)[0m   [0;1mSELECT * FROM "orders" WHERE ("orders"."id" = 2) [0m
+Completed in 68ms (View: 1, DB: 0) | 200 OK [http://localhost/orders/2.xml]
+
+
+Processing OrdersController#show to xml (for 127.0.0.1 at 2009-11-01 18:23:13) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mOrder Load (0.2ms)[0m   [0mSELECT * FROM "orders" WHERE ("orders"."id" = 2) [0m
+Completed in 8ms (View: 1, DB: 0) | 200 OK [http://localhost/orders/2.xml]
+
+
+Processing OrdersController#show (for 127.0.0.1 at 2009-11-01 18:23:14) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mOrder Load (0.2ms)[0m   [0;1mSELECT * FROM "orders" WHERE ("orders"."id" = 2) [0m
+Completed in 8ms (View: 1, DB: 0) | 200 OK [http://localhost/orders/2]
+
+
+Processing OrdersController#show to xml (for 127.0.0.1 at 2009-11-01 18:23:14) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mOrder Load (0.2ms)[0m   [0mSELECT * FROM "orders" WHERE ("orders"."id" = 2) [0m
+Completed in 9ms (View: 1, DB: 0) | 200 OK [http://localhost/orders/2.xml]
