@@ -21,21 +21,15 @@ class OrdersController < ApplicationController
     end
   end
   
-  # GET /orders/new
-  # GET /orders/new.xml
   def new
     @order = Order.new
-
-    respond_to do |format|
-      format.html # new.html.erb
-      format.xml  { render :xml => @order }
-    end
   end
 
   # POST /orders
   # POST /orders.xml
   def create
     @order = Order.new(params[:order])
+    @order.status = "payment-expected"
     params[:products].each do |p|
       id = p[0]
       @order.trainings << Training.find_by_id(id)
@@ -54,7 +48,6 @@ class OrdersController < ApplicationController
   end
 
   # DELETE /orders/1
-  # DELETE /orders/1.xml
   def destroy
     @order = Order.find(params[:id])
     @order.status = 'CANCELLED'
@@ -65,4 +58,6 @@ class OrdersController < ApplicationController
       format.xml  { head :ok }
     end
   end
+
+  
 end
