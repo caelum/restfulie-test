@@ -49,8 +49,11 @@ class OrdersController < ApplicationController
   
   def pay
     @order = Order.find(params[:id])
-    raise :can_not_pay if !order.can_pay?
-    @order.status = 'preparing'
+    raise :can_not_pay if !@order.can_pay?
+
+    # payment = Payment.from_xml params[:payment]
+    
+    # @order.pay(payment)
     @order.save
     
     respond_to do |format|

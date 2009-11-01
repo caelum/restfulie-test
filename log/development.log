@@ -5439,3 +5439,237 @@ Processing OrdersController#show to xml (for 127.0.0.1 at 2009-11-01 21:27:30) [
   Parameters: {"id"=>"15"}
   [4;36;1mOrder Load (0.2ms)[0m   [0;1mSELECT * FROM "orders" WHERE ("orders"."id" = 15) [0m
 Completed in 58ms (View: 3, DB: 0) | 200 OK [http://localhost/orders/15.xml]
+
+
+Processing OrdersController#show to xml (for 127.0.0.1 at 2009-11-01 21:27:57) [GET]
+  Parameters: {"id"=>"15"}
+  [4;36;1mOrder Load (0.2ms)[0m   [0;1mSELECT * FROM "orders" WHERE ("orders"."id" = 15) [0m
+Completed in 61ms (View: 3, DB: 0) | 200 OK [http://localhost/orders/15.xml]
+
+
+Processing OrdersController#show to xml (for 127.0.0.1 at 2009-11-01 21:28:01) [GET]
+  Parameters: {"id"=>"15"}
+  [4;35;1mOrder Load (0.2ms)[0m   [0mSELECT * FROM "orders" WHERE ("orders"."id" = 15) [0m
+Completed in 8ms (View: 1, DB: 0) | 200 OK [http://localhost/orders/15.xml]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-11-01 21:28:01) [POST]
+
+ActionController::MethodNotAllowed (Only get, put, and delete requests are allowed.):
+  
+
+Rendered rescues/_trace (23.5ms)
+Rendered rescues/_request_and_response (1.4ms)
+Rendering rescues/layout (method_not_allowed)
+
+
+Processing OrdersController#show to xml (for 127.0.0.1 at 2009-11-01 21:28:01) [GET]
+  Parameters: {"id"=>"15"}
+  [4;36;1mOrder Load (0.2ms)[0m   [0;1mSELECT * FROM "orders" WHERE ("orders"."id" = 15) [0m
+Completed in 8ms (View: 1, DB: 0) | 200 OK [http://localhost/orders/15.xml]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-11-01 21:28:37) [GET]
+
+ActionController::MethodNotAllowed (Only post requests are allowed.):
+  
+
+Rendered rescues/_trace (19.8ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (method_not_allowed)
+
+
+Processing OrdersController#show to xml (for 127.0.0.1 at 2009-11-01 21:30:04) [GET]
+  Parameters: {"id"=>"15"}
+  [4;36;1mOrder Load (0.2ms)[0m   [0;1mSELECT * FROM "orders" WHERE ("orders"."id" = 15) [0m
+Completed in 59ms (View: 3, DB: 0) | 200 OK [http://localhost/orders/15.xml]
+
+
+Processing OrdersController#show (for 127.0.0.1 at 2009-11-01 21:30:04) [GET]
+  Parameters: {"id"=>"15"}
+  [4;35;1mOrder Load (0.2ms)[0m   [0mSELECT * FROM "orders" WHERE ("orders"."id" = 15) [0m
+Completed in 8ms (View: 1, DB: 0) | 200 OK [http://localhost/orders/15]
+
+
+Processing OrdersController#show to xml (for 127.0.0.1 at 2009-11-01 21:30:04) [GET]
+  Parameters: {"id"=>"15"}
+  [4;36;1mOrder Load (0.2ms)[0m   [0;1mSELECT * FROM "orders" WHERE ("orders"."id" = 15) [0m
+Completed in 8ms (View: 1, DB: 0) | 200 OK [http://localhost/orders/15.xml]
+
+
+Processing OrdersController#show to xml (for 127.0.0.1 at 2009-11-01 21:30:11) [GET]
+  Parameters: {"id"=>"15"}
+  [4;35;1mOrder Load (0.2ms)[0m   [0mSELECT * FROM "orders" WHERE ("orders"."id" = 15) [0m
+Completed in 8ms (View: 1, DB: 0) | 200 OK [http://localhost/orders/15.xml]
+
+
+Processing OrdersController#pay (for 127.0.0.1 at 2009-11-01 21:30:11) [POST]
+  Parameters: {"id"=>"15"}
+  [4;36;1mOrder Load (0.2ms)[0m   [0;1mSELECT * FROM "orders" WHERE ("orders"."id" = 15) [0m
+
+NameError (undefined local variable or method `order' for #<OrdersController:0x230c440>):
+  app/controllers/orders_controller.rb:52:in `pay'
+
+Rendered rescues/_trace (27.8ms)
+Rendered rescues/_request_and_response (1.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing OrdersController#show to xml (for 127.0.0.1 at 2009-11-01 21:30:11) [GET]
+  Parameters: {"id"=>"15"}
+  [4;35;1mOrder Load (0.2ms)[0m   [0mSELECT * FROM "orders" WHERE ("orders"."id" = 15) [0m
+Completed in 8ms (View: 1, DB: 0) | 200 OK [http://localhost/orders/15.xml]
+
+
+Processing OrdersController#show to xml (for 127.0.0.1 at 2009-11-01 21:30:48) [GET]
+  Parameters: {"id"=>"15"}
+  [4;36;1mOrder Load (0.2ms)[0m   [0;1mSELECT * FROM "orders" WHERE ("orders"."id" = 15) [0m
+Completed in 8ms (View: 1, DB: 0) | 200 OK [http://localhost/orders/15.xml]
+
+
+Processing OrdersController#pay (for 127.0.0.1 at 2009-11-01 21:30:48) [POST]
+  Parameters: {"id"=>"15"}
+  [4;35;1mOrder Load (0.2ms)[0m   [0mSELECT * FROM "orders" WHERE ("orders"."id" = 15) [0m
+  [4;36;1mOrder Update (0.4ms)[0m   [0;1mUPDATE "orders" SET "status" = 'preparing', "updated_at" = '2009-11-01 23:30:48' WHERE "id" = 15[0m
+Completed in 9ms (View: 1, DB: 1) | 200 OK [http://localhost/orders/15/pay]
+
+
+Processing OrdersController#show to xml (for 127.0.0.1 at 2009-11-01 21:30:48) [GET]
+  Parameters: {"id"=>"15"}
+  [4;35;1mOrder Load (0.2ms)[0m   [0mSELECT * FROM "orders" WHERE ("orders"."id" = 15) [0m
+Completed in 8ms (View: 1, DB: 0) | 200 OK [http://localhost/orders/15.xml]
+
+
+Processing OrdersController#show to xml (for 127.0.0.1 at 2009-11-01 21:30:51) [GET]
+  Parameters: {"id"=>"15"}
+  [4;36;1mOrder Load (0.2ms)[0m   [0;1mSELECT * FROM "orders" WHERE ("orders"."id" = 15) [0m
+Completed in 8ms (View: 1, DB: 0) | 200 OK [http://localhost/orders/15.xml]
+
+
+Processing OrdersController#show (for 127.0.0.1 at 2009-11-01 21:30:51) [GET]
+  Parameters: {"id"=>"15"}
+  [4;35;1mOrder Load (0.2ms)[0m   [0mSELECT * FROM "orders" WHERE ("orders"."id" = 15) [0m
+Completed in 8ms (View: 1, DB: 0) | 200 OK [http://localhost/orders/15]
+
+
+Processing OrdersController#show to xml (for 127.0.0.1 at 2009-11-01 21:30:51) [GET]
+  Parameters: {"id"=>"15"}
+  [4;36;1mOrder Load (0.2ms)[0m   [0;1mSELECT * FROM "orders" WHERE ("orders"."id" = 15) [0m
+Completed in 10ms (View: 1, DB: 0) | 200 OK [http://localhost/orders/15.xml]
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateOrders (20091028180602)
+Migrating to CreateTrainings (20091028180753)
+Migrating to CreatePriceField (20091028182228)
+Migrating to OrderTrainingConnection (20091028184127)
+Migrating to OrderStatus (20091028190140)
+Migrating to CreatePayments (20091101231337)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCREATE TABLE "payments" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "card_number" varchar(255), "cardholder_name" varchar(255), "expiry_month" integer, "expiry_year" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20091101231337')[0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("orders")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("orders_trainings")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("payments")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("trainings")[0m
+
+
+Processing OrdersController#show to xml (for 127.0.0.1 at 2009-11-01 21:40:44) [GET]
+  Parameters: {"id"=>"15"}
+  [4;36;1mOrder Load (0.2ms)[0m   [0;1mSELECT * FROM "orders" WHERE ("orders"."id" = 15) [0m
+Completed in 59ms (View: 3, DB: 0) | 200 OK [http://localhost/orders/15.xml]
+
+
+Processing OrdersController#show (for 127.0.0.1 at 2009-11-01 21:40:44) [GET]
+  Parameters: {"id"=>"15"}
+  [4;35;1mOrder Load (0.2ms)[0m   [0mSELECT * FROM "orders" WHERE ("orders"."id" = 15) [0m
+Completed in 8ms (View: 1, DB: 0) | 200 OK [http://localhost/orders/15]
+
+
+Processing OrdersController#show to xml (for 127.0.0.1 at 2009-11-01 21:40:44) [GET]
+  Parameters: {"id"=>"15"}
+  [4;36;1mOrder Load (0.2ms)[0m   [0;1mSELECT * FROM "orders" WHERE ("orders"."id" = 15) [0m
+Completed in 8ms (View: 1, DB: 0) | 200 OK [http://localhost/orders/15.xml]
+
+
+Processing OrdersController#show to xml (for 127.0.0.1 at 2009-11-01 21:40:48) [GET]
+  Parameters: {"id"=>"15"}
+  [4;35;1mOrder Load (0.2ms)[0m   [0mSELECT * FROM "orders" WHERE ("orders"."id" = 15) [0m
+Completed in 8ms (View: 1, DB: 0) | 200 OK [http://localhost/orders/15.xml]
+
+
+Processing OrdersController#show to xml (for 127.0.0.1 at 2009-11-01 21:41:10) [GET]
+  Parameters: {"id"=>"15"}
+  [4;36;1mOrder Load (0.2ms)[0m   [0;1mSELECT * FROM "orders" WHERE ("orders"."id" = 15) [0m
+Completed in 8ms (View: 1, DB: 0) | 200 OK [http://localhost/orders/15.xml]
+
+
+Processing OrdersController#show to xml (for 127.0.0.1 at 2009-11-01 21:41:15) [GET]
+  Parameters: {"id"=>"15"}
+  [4;35;1mOrder Load (0.2ms)[0m   [0mSELECT * FROM "orders" WHERE ("orders"."id" = 15) [0m
+Completed in 8ms (View: 1, DB: 0) | 200 OK [http://localhost/orders/15.xml]
+
+
+Processing OrdersController#show to xml (for 127.0.0.1 at 2009-11-01 21:41:20) [GET]
+  Parameters: {"id"=>"15"}
+  [4;36;1mOrder Load (0.2ms)[0m   [0;1mSELECT * FROM "orders" WHERE ("orders"."id" = 15) [0m
+Completed in 8ms (View: 1, DB: 0) | 200 OK [http://localhost/orders/15.xml]
+
+
+Processing OrdersController#show to xml (for 127.0.0.1 at 2009-11-01 21:41:40) [GET]
+  Parameters: {"id"=>"15"}
+  [4;35;1mOrder Load (0.2ms)[0m   [0mSELECT * FROM "orders" WHERE ("orders"."id" = 15) [0m
+Completed in 8ms (View: 1, DB: 0) | 200 OK [http://localhost/orders/15.xml]
+
+
+Processing OrdersController#show to xml (for 127.0.0.1 at 2009-11-01 21:42:54) [GET]
+  Parameters: {"id"=>"15"}
+  [4;36;1mOrder Load (0.2ms)[0m   [0;1mSELECT * FROM "orders" WHERE ("orders"."id" = 15) [0m
+Completed in 8ms (View: 1, DB: 0) | 200 OK [http://localhost/orders/15.xml]
+
+
+Processing OrdersController#show to xml (for 127.0.0.1 at 2009-11-01 21:43:04) [GET]
+  Parameters: {"id"=>"15"}
+  [4;35;1mOrder Load (0.2ms)[0m   [0mSELECT * FROM "orders" WHERE ("orders"."id" = 15) [0m
+Completed in 8ms (View: 1, DB: 0) | 200 OK [http://localhost/orders/15.xml]
+
+
+Processing OrdersController#show to xml (for 127.0.0.1 at 2009-11-01 21:43:19) [GET]
+  Parameters: {"id"=>"15"}
+  [4;36;1mOrder Load (0.2ms)[0m   [0;1mSELECT * FROM "orders" WHERE ("orders"."id" = 15) [0m
+Completed in 8ms (View: 1, DB: 0) | 200 OK [http://localhost/orders/15.xml]
+
+
+Processing OrdersController#show to xml (for 127.0.0.1 at 2009-11-01 21:44:32) [GET]
+  Parameters: {"id"=>"15"}
+  [4;35;1mOrder Load (0.2ms)[0m   [0mSELECT * FROM "orders" WHERE ("orders"."id" = 15) [0m
+Completed in 8ms (View: 1, DB: 0) | 200 OK [http://localhost/orders/15.xml]
+
+
+Processing OrdersController#show to xml (for 127.0.0.1 at 2009-11-01 21:44:52) [GET]
+  Parameters: {"id"=>"15"}
+  [4;36;1mOrder Load (0.2ms)[0m   [0;1mSELECT * FROM "orders" WHERE ("orders"."id" = 15) [0m
+Completed in 8ms (View: 1, DB: 0) | 200 OK [http://localhost/orders/15.xml]
+
+
+Processing OrdersController#show (for 127.0.0.1 at 2009-11-01 21:44:52) [GET]
+  Parameters: {"id"=>"15"}
+  [4;35;1mOrder Load (0.2ms)[0m   [0mSELECT * FROM "orders" WHERE ("orders"."id" = 15) [0m
+Completed in 8ms (View: 1, DB: 0) | 200 OK [http://localhost/orders/15]
+
+
+Processing OrdersController#show to xml (for 127.0.0.1 at 2009-11-01 21:44:52) [GET]
+  Parameters: {"id"=>"15"}
+  [4;36;1mOrder Load (0.2ms)[0m   [0;1mSELECT * FROM "orders" WHERE ("orders"."id" = 15) [0m
+Completed in 8ms (View: 1, DB: 0) | 200 OK [http://localhost/orders/15.xml]

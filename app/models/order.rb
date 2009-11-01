@@ -9,7 +9,7 @@ class Order < ActiveRecord::Base
   end
   
   def pay(payment)
-    status = "PAYED"
+    #status = 'preparing'
     @payment = payment
   end
   
@@ -28,4 +28,5 @@ class Order < ActiveRecord::Base
   def can_pay?
     status=='payment-expected'
   end
+
 end
