@@ -5320,3 +5320,122 @@ Processing OrdersController#show to xml (for 127.0.0.1 at 2009-11-01 18:23:14) [
   Parameters: {"id"=>"2"}
   [4;35;1mOrder Load (0.2ms)[0m   [0mSELECT * FROM "orders" WHERE ("orders"."id" = 2) [0m
 Completed in 9ms (View: 1, DB: 0) | 200 OK [http://localhost/orders/2.xml]
+
+
+Processing OrdersController#index (for 127.0.0.1 at 2009-11-01 21:24:21) [GET]
+  [4;36;1mOrder Load (1.1ms)[0m   [0;1mSELECT * FROM "orders" [0m
+Rendering template within layouts/application
+Rendering orders/index
+Completed in 80ms (View: 47, DB: 1) | 200 OK [http://localhost/orders]
+
+
+Processing OrdersController#index (for 127.0.0.1 at 2009-11-01 21:24:24) [GET]
+  [4;35;1mOrder Load (1.2ms)[0m   [0mSELECT * FROM "orders" [0m
+Rendering template within layouts/application
+Rendering orders/index
+Completed in 20ms (View: 12, DB: 1) | 200 OK [http://localhost/orders]
+
+
+Processing OrdersController#show to xml (for 127.0.0.1 at 2009-11-01 21:24:37) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mOrder Load (0.2ms)[0m   [0;1mSELECT * FROM "orders" WHERE ("orders"."id" = 2) [0m
+Completed in 122ms (View: 1, DB: 0) | 200 OK [http://localhost/orders/2.xml]
+
+
+Processing OrdersController#show to xml (for 127.0.0.1 at 2009-11-01 21:24:48) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mOrder Load (0.2ms)[0m   [0mSELECT * FROM "orders" WHERE ("orders"."id" = 2) [0m
+Completed in 8ms (View: 1, DB: 0) | 200 OK [http://localhost/orders/2.xml]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-11-01 21:24:48) [POST]
+
+ActionController::MethodNotAllowed (Only get, put, and delete requests are allowed.):
+  
+
+Rendered rescues/_trace (22.9ms)
+Rendered rescues/_request_and_response (1.3ms)
+Rendering rescues/layout (method_not_allowed)
+
+
+Processing OrdersController#show to xml (for 127.0.0.1 at 2009-11-01 21:24:48) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mOrder Load (0.2ms)[0m   [0;1mSELECT * FROM "orders" WHERE ("orders"."id" = 2) [0m
+Completed in 8ms (View: 1, DB: 0) | 200 OK [http://localhost/orders/2.xml]
+
+
+Processing OrdersController#index (for 127.0.0.1 at 2009-11-01 21:24:54) [GET]
+  [4;35;1mOrder Load (1.0ms)[0m   [0mSELECT * FROM "orders" [0m
+Rendering template within layouts/application
+Rendering orders/index
+Completed in 15ms (View: 10, DB: 1) | 200 OK [http://localhost/orders]
+
+
+Processing OrdersController#new (for 127.0.0.1 at 2009-11-01 21:25:00) [GET]
+Rendering template within layouts/application
+Rendering orders/new
+  [4;36;1mTraining Load (0.4ms)[0m   [0;1mSELECT * FROM "trainings" [0m
+Completed in 39ms (View: 34, DB: 0) | 200 OK [http://localhost/orders/new]
+
+
+Processing OrdersController#create (for 127.0.0.1 at 2009-11-01 21:25:06) [POST]
+  Parameters: {"commit"=>"Create", "order"=>{"customer_name"=>"nova simples"}, "authenticity_token"=>"Vv0hjgCSaUNRZpP2e6WdifQJ3cT1TAzI3jnzCo6Koyk=", "products"=>{"1"=>"true", "2"=>"true"}}
+  [4;35;1mTraining Load (0.2ms)[0m   [0mSELECT * FROM "trainings" WHERE ("trainings"."id" = '1') LIMIT 1[0m
+  [4;36;1mTraining Load (0.2ms)[0m   [0;1mSELECT * FROM "trainings" WHERE ("trainings"."id" = '2') LIMIT 1[0m
+  [4;35;1mOrder Create (0.5ms)[0m   [0mINSERT INTO "orders" ("status", "customer_name", "updated_at", "created_at") VALUES('payment-expected', 'nova simples', '2009-11-01 23:25:06', '2009-11-01 23:25:06')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO "orders_trainings" ("order_id", "training_id") VALUES (15, 1)[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mINSERT INTO "orders_trainings" ("order_id", "training_id") VALUES (15, 2)[0m
+Redirected to http://localhost:3000/orders/15
+Completed in 17ms (DB: 1) | 302 Found [http://localhost/orders]
+
+
+Processing OrdersController#show (for 127.0.0.1 at 2009-11-01 21:25:06) [GET]
+  Parameters: {"id"=>"15"}
+  [4;36;1mOrder Load (0.2ms)[0m   [0;1mSELECT * FROM "orders" WHERE ("orders"."id" = 15) [0m
+Rendering template within layouts/application
+Rendering orders/show
+  [4;35;1mTraining Load (0.3ms)[0m   [0mSELECT * FROM "trainings" INNER JOIN "orders_trainings" ON "trainings".id = "orders_trainings".training_id WHERE ("orders_trainings".order_id = 15 ) [0m
+Completed in 30ms (View: 24, DB: 1) | 200 OK [http://localhost/orders/15]
+
+
+Processing OrdersController#show to xml (for 127.0.0.1 at 2009-11-01 21:25:12) [GET]
+  Parameters: {"id"=>"15"}
+  [4;36;1mOrder Load (0.2ms)[0m   [0;1mSELECT * FROM "orders" WHERE ("orders"."id" = 15) [0m
+
+ActionController::RoutingError (No route matches {:action=>"pay", :controller=>"orders"}):
+  builder (2.1.2) lib/builder/xmlbase.rb:134:in `call'
+  builder (2.1.2) lib/builder/xmlbase.rb:134:in `_nested_structures'
+  builder (2.1.2) lib/builder/xmlbase.rb:58:in `method_missing'
+  builder (2.1.2) lib/builder/xmlbase.rb:31:in `tag!'
+  app/controllers/orders_controller.rb:20:in `show'
+  app/controllers/orders_controller.rb:18:in `show'
+
+Rendering rescues/layout (not_found)
+
+
+Processing OrdersController#index (for 127.0.0.1 at 2009-11-01 21:25:23) [GET]
+  [4;35;1mOrder Load (1.1ms)[0m   [0mSELECT * FROM "orders" [0m
+Rendering template within layouts/application
+Rendering orders/index
+Completed in 19ms (View: 13, DB: 1) | 200 OK [http://localhost/orders]
+
+
+Processing OrdersController#show to xml (for 127.0.0.1 at 2009-11-01 21:25:32) [GET]
+  Parameters: {"id"=>"15"}
+  [4;36;1mOrder Load (0.2ms)[0m   [0;1mSELECT * FROM "orders" WHERE ("orders"."id" = 15) [0m
+
+ActionController::RoutingError (No route matches {:action=>"pay", :controller=>"orders"}):
+  builder (2.1.2) lib/builder/xmlbase.rb:134:in `call'
+  builder (2.1.2) lib/builder/xmlbase.rb:134:in `_nested_structures'
+  builder (2.1.2) lib/builder/xmlbase.rb:58:in `method_missing'
+  builder (2.1.2) lib/builder/xmlbase.rb:31:in `tag!'
+  app/controllers/orders_controller.rb:20:in `show'
+  app/controllers/orders_controller.rb:18:in `show'
+
+Rendering rescues/layout (not_found)
+
+
+Processing OrdersController#show to xml (for 127.0.0.1 at 2009-11-01 21:27:30) [GET]
+  Parameters: {"id"=>"15"}
+  [4;36;1mOrder Load (0.2ms)[0m   [0;1mSELECT * FROM "orders" WHERE ("orders"."id" = 15) [0m
+Completed in 58ms (View: 3, DB: 0) | 200 OK [http://localhost/orders/15.xml]

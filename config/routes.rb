@@ -1,13 +1,11 @@
 ActionController::Routing::Routes.draw do |map|
-  map.resources :payments
 
-  
   map.root :controller => :welcome, :action => :welcome
   
   map.resources :trainings
 
-  map.resources :orders
-
+  map.resources :orders, :member => {:pay => :post}
+  
   # The priority is based upon order of creation: first created -> highest priority.
 
   # Sample of regular route:

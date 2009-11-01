@@ -4,6 +4,7 @@ class Order < ActiveRecord::Base
   def following_states
     states = [ {:controller => :orders, :action => :show, :rel => "latest" } ]
     states << {:controller => :orders, :action => :destroy} if can_cancel?
+    states << {:controller => :orders, :action => :pay} if can_pay?
     states
   end
   
@@ -21,6 +22,10 @@ class Order < ActiveRecord::Base
   end
   
   def can_cancel?
-    status!='CANCELLED'
+    status=="payment-expected"
+  end
+
+  def can_pay?
+    status=='payment-expected'
   end
 end

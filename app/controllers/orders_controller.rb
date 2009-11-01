@@ -46,11 +46,24 @@ class OrdersController < ApplicationController
       end
     end
   end
+  
+  def pay
+    @order = Order.find(params[:id])
+    raise :can_not_pay if !order.can_pay?
+    @order.status = 'preparing'
+    @order.save
+    
+    respond_to do |format|
+      format.html { redirect_to(@order) }
+      format.xml  { head :ok }
+    end
+  end
 
   # DELETE /orders/1
   def destroy
     @order = Order.find(params[:id])
-    @order.status = 'CANCELLED'
+    raise :can_not_cancel if !order.can_cancel?
+    @order.status = 'cancelled'
     @order.save
 
     respond_to do |format|
