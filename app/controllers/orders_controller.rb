@@ -51,11 +51,9 @@ class OrdersController < ApplicationController
     @order = Order.find(params[:id])
     raise :can_not_pay if !@order.can_pay?
 
-    puts "Reading from #{params[:payment]}"
     payment = Payment.from_xml params[:payment]
-    puts "Paymento to put #{payment}"
     
-    # @order.pay(payment)
+    @order.pay(payment)
     @order.save
     
     respond_to do |format|
