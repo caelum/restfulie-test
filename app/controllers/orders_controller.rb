@@ -52,9 +52,9 @@ class OrdersController < ApplicationController
     raise :can_not_pay if !@order.can_pay?
 
     payment = Payment.from_xml params[:payment]
-    
     @order.pay(payment)
-    @order.save
+    payment.save
+    saved = @order.save
     
     respond_to do |format|
       format.html { redirect_to(@order) }

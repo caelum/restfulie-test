@@ -9,8 +9,9 @@ class Order < ActiveRecord::Base
   end
   
   def pay(payment)
-    #status = 'preparing'
+    self.status = "preparing"
     @payment = payment
+    @payment.order = self
   end
   
   def total_price

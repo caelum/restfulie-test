@@ -11,8 +11,11 @@
 	<td><%= order_url(order) %>.xml</td>
 	<% if order.can_cancel? %>
 		<td><%= link_to 'cancel', order, :confirm => 'Are you sure?', :method => :delete %></td>
-	<% else %>
+	<% elsif order.status =="cancelled" %>
 		<td>cancelled</td>
+	<% end %>
+	<% if order.can_pay? %>
+		<td><a href="javascript:alert('use our restful api to pay'); return false;">pay</a></td>
 	<% end %>
   </tr>
 <% end %>
