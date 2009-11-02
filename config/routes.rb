@@ -2,9 +2,11 @@ ActionController::Routing::Routes.draw do |map|
 
   map.root :controller => :welcome, :action => :welcome
   
+  map.pay 'orders/:id/pay/:payment_id', :controller => :payments, :action => :show
+  
   map.resources :trainings
 
-  map.resources :orders, :member => {:pay => :post}
+  map.resources :orders
   
   # The priority is based upon order of creation: first created -> highest priority.
 
