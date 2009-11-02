@@ -51,7 +51,9 @@ class OrdersController < ApplicationController
     @order = Order.find(params[:id])
     raise :can_not_pay if !@order.can_pay?
 
-    # payment = Payment.from_xml params[:payment]
+    puts "Reading from #{params[:payment]}"
+    payment = Payment.from_xml params[:payment]
+    puts "Paymento to put #{payment}"
     
     # @order.pay(payment)
     @order.save
@@ -61,6 +63,15 @@ class OrdersController < ApplicationController
       format.xml  { head :ok }
     end
   end
+
+  # payment example  
+  # <payment>
+  #   <amount>15</amount>
+  #   <cardholder_name>Guilherme Silveira</cardholder_name>
+  #   <card_number>123456789012</card_number>
+  #   <expiry_month>12</expiry_month>
+  #   <expiry_year>12</expiry_year>
+  # </payment>
 
   # DELETE /orders/1
   def destroy
