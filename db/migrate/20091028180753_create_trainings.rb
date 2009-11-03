@@ -2,7 +2,7 @@ class CreateTrainings < ActiveRecord::Migration
   def self.up
     create_table :trainings do |t|
       t.string :name
-      t.double :price
+      t.float :price
 
       t.timestamps
     end
