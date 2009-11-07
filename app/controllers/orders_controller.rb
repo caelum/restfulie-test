@@ -54,7 +54,7 @@ class OrdersController < ApplicationController
     @order = Order.find(params[:id])
     raise :can_not_pay if !@order.can_pay?
     
-    begin
+    # begin
       payment = Payment.from_xml params[:payment]
       @order.pay(payment)
       payment.save
@@ -64,20 +64,20 @@ class OrdersController < ApplicationController
         format.html { redirect_to(@order) }
         format.xml  { head :ok }
       end
-    rescue
-      render :text => """
-        You should have passed a payment as:
-        parameter name: 'payment'
-        parameter value: 
-        <payment>
-          <amount>15</amount>
-          <cardholder_name>Guilherme Silveira</cardholder_name>
-          <card_number>123456789012</card_number>
-          <expiry_month>12</expiry_month>
-          <expiry_year>12</expiry_year>
-        </payment>
-        """, :status => 409
-    end
+    # rescue
+    #   render :text => """
+    #     You should have passed a payment as:
+    #     parameter name: 'payment'
+    #     parameter value: 
+    #     <payment>
+    #       <amount>15</amount>
+    #       <cardholder_name>Guilherme Silveira</cardholder_name>
+    #       <card_number>123456789012</card_number>
+    #       <expiry_month>12</expiry_month>
+    #       <expiry_year>12</expiry_year>
+    #     </payment>
+    #     """, :status => 409
+    # end
   end
 
   def receive
