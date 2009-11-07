@@ -89,8 +89,8 @@ class OrdersController < ApplicationController
   # DELETE /orders/1
   def destroy
     @order = Order.find(params[:id])
-    raise :can_not_cancel if !order.can_cancel?
-    @order.status = 'cancelled'
+    raise :can_not_cancel unless @order.can_cancel?
+    @order.cancel
     @order.save
 
     respond_to do |format|
