@@ -77,26 +77,12 @@ class OrdersController < ApplicationController
     end
   end
 
-  # payment example  
-  # <payment>
-  #   <amount>15</amount>
-  #   <cardholder_name>Guilherme Silveira</cardholder_name>
-  #   <card_number>123456789012</card_number>
-  #   <expiry_month>12</expiry_month>
-  #   <expiry_year>12</expiry_year>
-  # </payment>
-
   # DELETE /orders/1
   def destroy
     @order = Order.find(params[:id])
-#    @order.customer_name = "oi"
     #raise :can_not_cancel if !order.can_cancel?
     @order.cancel
-#    @order.status = 'cancelled'
-    result = @order.save
-puts "cancelando mesmo"
-#    @order.delete
-#    render :text => "cancelado #{result} #{@order.id}"
+    @order.save
 
      respond_to do |format|
        format.html { redirect_to(@order) }
