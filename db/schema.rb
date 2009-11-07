@@ -9,13 +9,14 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20091102134805) do
+ActiveRecord::Schema.define(:version => 20091107143010) do
 
   create_table "orders", :force => true do |t|
     t.string   "customer_name"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "status"
+    t.datetime "payed_at"
   end
 
   create_table "orders_trainings", :id => false, :force => true do |t|
@@ -36,9 +37,9 @@ ActiveRecord::Schema.define(:version => 20091102134805) do
 
   create_table "trainings", :force => true do |t|
     t.string   "name"
+    t.float    "price"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.float    "price"
   end
 
 end
