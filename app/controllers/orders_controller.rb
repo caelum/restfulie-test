@@ -21,6 +21,9 @@ class OrdersController < ApplicationController
     end
   end
   
+  def check_payment_info
+  end
+  
   def new
     @order = Order.new
   end
@@ -75,6 +78,20 @@ class OrdersController < ApplicationController
         </payment>
         """, :status => 409
     end
+  end
+
+  def receive
+    @order = Order.find(params[:id])
+    @order.receive
+    @order.save
+    head :ok
+  end
+  
+  def execute_it
+    @order = Order.find(params[:id])
+    @order.execute_it
+    @order.save
+    head :ok
   end
 
   # DELETE /orders/1

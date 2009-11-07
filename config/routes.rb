@@ -6,7 +6,7 @@ ActionController::Routing::Routes.draw do |map|
   
   map.resources :trainings
 
-  map.resources :orders, :member => {:pay => :post}
+  map.resources :orders, :member => {:pay => :post, :receive => :post, :execute_it => :post, :check_payment_info => :post}
   
   # The priority is based upon order of creation: first created -> highest priority.
 
