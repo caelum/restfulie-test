@@ -5,7 +5,7 @@ class Order < ActiveRecord::Base
   state :unpaid, :allow => [:latest, :pay, :cancel]#, :update]
 	state :cancelled, :allow => :latest
 	state :received, :allow => [:latest, :receive, :check_payment_info]
-	state :preparing, :allow => [:latest, :execute_it]#, :check_payment_info]
+	state :preparing, :allow => [:latest, :execute_it, :check_payment_info]
 	state :ready, :allow => [:latest, :receive, :check_payment_info]
 	
 	transition :check_payment_info do |order|
