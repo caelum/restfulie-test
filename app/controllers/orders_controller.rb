@@ -89,14 +89,19 @@ class OrdersController < ApplicationController
   # DELETE /orders/1
   def destroy
     @order = Order.find(params[:id])
-    raise :can_not_cancel unless @order.can_cancel?
+#    @order.customer_name = "oi"
+    #raise :can_not_cancel if !order.can_cancel?
     @order.cancel
-    @order.save
+#    @order.status = 'cancelled'
+    result = @order.save
+puts "cancelando mesmo"
+#    @order.delete
+#    render :text => "cancelado #{result} #{@order.id}"
 
-    respond_to do |format|
-      format.html { redirect_to(@order) }
-      format.xml  { head :ok }
-    end
+     respond_to do |format|
+       format.html { redirect_to(@order) }
+       format.xml  { head :ok }
+     end
   end
 
   

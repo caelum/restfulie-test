@@ -10,7 +10,7 @@
     <td><%= link_to order.customer_name, order %></td>
 	<td><a href="<%= order_url(order) %>.xml"><%= order_url(order) %>.xml</a></td>
 	<% if order.can_cancel? %>
-		<td><%= link_to 'cancel', order, :confirm => 'Are you sure?', :method => :delete %></td>
+		<td><%= link_to 'cancel', order, :confirm => 'Are you sure?', :action => :cancel, :method=>:delete %></td>
 	<% elsif order.status =="cancelled" %>
 		<td>cancelled</td>
 	<% end %>
