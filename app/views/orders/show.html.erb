@@ -17,4 +17,8 @@
 Total price: <%= @order.total_price %>
 </p>
 
+<p>Resource representation:
+	<a href="<%= order_url(@order, "xml") %>"><%= order_url(@order, "xml") %></a>
+</p>
+
 <%= link_to 'Back', orders_path %>

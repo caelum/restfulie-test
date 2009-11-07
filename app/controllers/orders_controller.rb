@@ -17,7 +17,7 @@ class OrdersController < ApplicationController
 
     respond_to do |format|
       format.html # show.html.erb
-      format.xml  { render :xml => @order.to_xml(:controller=>self) }
+      format.xml  { render :xml => @order.to_xml(:controller => self) }
     end
   end
   
@@ -29,7 +29,7 @@ class OrdersController < ApplicationController
   # POST /orders.xml
   def create
     @order = Order.new(params[:order])
-    @order.status = "payment-expected"
+    @order.status = "unpaid"
     params[:products].each do |p|
       id = p[0]
       @order.trainings << Training.find_by_id(id)
