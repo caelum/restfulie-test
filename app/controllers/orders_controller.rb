@@ -21,7 +21,9 @@ class OrdersController < ApplicationController
     end
   end
   
-  def check_payment_info
+  def thanks
+    @order = Order.find(params[:id])
+    render :text => "thanks for buying... you bought order ##{@order.id}"
   end
   
   def new

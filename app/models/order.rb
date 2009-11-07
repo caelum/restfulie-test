@@ -8,7 +8,7 @@ class Order < ActiveRecord::Base
 
   state :unpaid, :allow => [:latest, :pay, :cancel]#, :update]
 	state :cancelled, :allow => :latest
-	state :received, :allow => [:latest, :receive, :check_payment_info]
+	state :received, :allow => [:latest, :check_payment_info]
 	state :preparing, :allow => [:latest, :check_payment_info]
 	state :ready, :allow => [:latest, :receive, :check_payment_info] # do |order|
 	#    [:] if paid_one_minute_ago
@@ -40,7 +40,7 @@ class Order < ActiveRecord::Base
   def following_transitions
      transitions = []
      transitions << :execute_it if (self.status == "preparing") && self.paid_one_minute_ago?
-     transitions << [:thanks, { :action => :thanks }] if self.status == "ready"
+     transitions << [:thanks, { :action => :thanks }] if self.status == "received"
      transitions
   end
   
