@@ -27,12 +27,12 @@ class Order < ActiveRecord::Base
 
   def paid_one_minute_ago?
     # takes one minute to be prepared
-    self.payed_at < (Time.now - 1.minute)
+    self.paid_at < (Time.now - 1.minute)
   end
 	
    def pay(payment)
      move_to :pay
-     self.payed_at = Time.now
+     self.paid_at = Time.now
      @payment = payment
      @payment.order = self
    end
@@ -52,7 +52,7 @@ class Order < ActiveRecord::Base
     total
   end
   
-  def paied?
+  def paid?
     payments.size > 0
   end
   

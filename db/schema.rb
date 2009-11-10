@@ -16,7 +16,7 @@ ActiveRecord::Schema.define(:version => 20091107143010) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "status"
-    t.datetime "payed_at"
+    t.datetime "paid_at"
   end
 
   create_table "orders_trainings", :id => false, :force => true do |t|
