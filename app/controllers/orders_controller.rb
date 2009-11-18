@@ -34,6 +34,7 @@ class OrdersController < ApplicationController
   # POST /orders.xml
   def create
     @order = Order.new(params[:order])
+    
     @order.status = "unpaid"
     params[:products].each do |p|
       id = p[0]
@@ -53,24 +54,15 @@ class OrdersController < ApplicationController
   end
   
   def pay
-    @order = Order.find(params[:id])
-    raise :can_not_pay if !@order.can_pay?
     
-    begin
-      payment = Payment.from_xml params[:payment]
-      @order.pay(payment)
-      payment.save
-      saved = @order.save
-      
-      respond_to do |format|
-        format.html { redirect_to(@order) }
-        format.xml  { head :ok }
-      end
-    rescue
+    @order = Order.find(params[:id])
+    raise "can not pay" if !@order.can_pay?
+    
+    post_data = request.body.string
+    puts "and there we go: #{post_data}"
+    if post_data.nil?
       render :text => """
         You should have passed a payment as:
-        parameter name: 'payment'
-        parameter value: 
         <payment>
           <amount>15</amount>
           <cardholder_name>Guilherme Silveira</cardholder_name>
@@ -79,6 +71,17 @@ class OrdersController < ApplicationController
           <expiry_year>12</expiry_year>
         </payment>
         """, :status => 409
+        return
+    end
+    
+    payment = Payment.from_xml post_data
+    @order.pay(payment)
+    payment.save
+    saved = @order.save
+    
+    respond_to do |format|
+      format.html { redirect_to(@order) }
+      format.xml  { head :ok }
     end
   end
 

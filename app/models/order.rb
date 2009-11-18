@@ -31,6 +31,7 @@ class Order < ActiveRecord::Base
   end
 	
    def pay(payment)
+     debugger
      move_to :pay
      self.paid_at = Time.now
      @payment = payment
