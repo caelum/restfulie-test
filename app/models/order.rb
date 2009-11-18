@@ -55,13 +55,13 @@ class Order < ActiveRecord::Base
   def paid?
     payments.size > 0
   end
-  
-  def can_cancel?
-    status=="unpaid"
-  end
-
-  def can_pay?
-    status=='unpaid'
-  end
+  # 
+  # def can_cancel?
+  #   status=="unpaid"
+  # end
+  # 
+  # def can_pay?
+  #   status=='unpaid'
+  # end
   
 end
