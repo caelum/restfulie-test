@@ -56,11 +56,10 @@ class OrdersController < ApplicationController
   def pay
     
     @order = Order.find(params[:id])
-    raise "can not pay" if !@order.can_pay?
+    raise "can not pay" unless @order.can_pay?
     
     post_data = request.body.string
-    puts "and there we go: #{post_data}"
-    if post_data.nil?
+    if post_data.nil? || post_data.empty?
       render :text => """
         You should have passed a payment as:
         <payment>
