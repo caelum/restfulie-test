@@ -1,10 +1,8 @@
 class Order < ActiveRecord::Base
   
-  acts_as_restfulie do
-    transitions = []
+  acts_as_restfulie do |transitions|
     transitions << :execute_it if (self.status == "preparing") && self.paid_one_minute_ago?
     transitions << [:thanks, { :action => :thanks }] if self.status == "received"
-    transitions
   end
   
   has_and_belongs_to_many :trainings
