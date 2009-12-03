@@ -1,4 +1,7 @@
 class OrdersController < ApplicationController
+  
+  extend Restfulie::Server::Controller
+  
   # GET /orders
   # GET /orders.xml
   def index
@@ -10,11 +13,10 @@ class OrdersController < ApplicationController
     end
   end
 
-  # GET /orders/1
-  # GET /orders/1.xml
+  # GET /orders/1 or  /orders/1.xml
   def show
+    debugger
     @order = Order.find(params[:id])
-
     respond_to do |format|
       format.html # show.html.erb
       format.xml  { render_resource @order, :except => [:paid_at] }
