@@ -1,9 +1,6 @@
 class OrdersController < ApplicationController
   
-  extend Restfulie::Server::Controller
-  
-  # GET /orders
-  # GET /orders.xml
+  # GET /orders or /orders.xml
   def index
     @orders = Order.all
 
@@ -13,9 +10,8 @@ class OrdersController < ApplicationController
     end
   end
 
-  # GET /orders/1 or  /orders/1.xml
+  # GET /orders/1 or /orders/1.xml
   def show
-    debugger
     @order = Order.find(params[:id])
     respond_to do |format|
       format.html # show.html.erb
@@ -32,8 +28,7 @@ class OrdersController < ApplicationController
     @order = Order.new
   end
 
-  # POST /orders
-  # POST /orders.xml
+  # POST /orders e /orders.xml
   def create
     @order = Order.new(params[:order])
     
