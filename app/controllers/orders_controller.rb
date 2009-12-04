@@ -1,5 +1,14 @@
 class OrdersController < ApplicationController
   
+#  before_filter :resource_preload , :only => :destroy
+  
+  def resource_preload
+    loaded_value = 
+    self.instance_variable_set :name_plurarized, loaded_value
+    @order = Order.find(params[:id])
+    
+  end
+  
   # GET /orders or /orders.xml
   def index
     @orders = Order.all
@@ -50,9 +59,29 @@ class OrdersController < ApplicationController
     end
   end
   
+  def http_date_from(value)
+    return nil if value.nil?
+    return nil if value.invalid?
+    value
+  end
+  
+  # http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html
+  # if the date is invalid or not given, goes on
+  # if the date is given and it has been modified AND the return code would be 2** or 412, return 412
+  # if the result was going to be 304 (due to If-None-Match, If-Modified-Since, it will give 412: unspecified in the http server
+  def check_resource_modification_state(resource)
+    date = http_date_from(request['If-Unmodified-Since'])
+    if date.nil? && Time.now.after(date)
+      head :code => 412
+    end
+  end
+
   def pay
     
     @order = Order.find(params[:id])
+    
+    #check_resource_modification_state(@order)
+    
     raise "can not pay" unless @order.can_pay?
     
     post_data = request.body.string
