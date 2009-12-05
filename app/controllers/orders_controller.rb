@@ -39,23 +39,34 @@ class OrdersController < ApplicationController
 
   # POST /orders e /orders.xml
   def create
+    respond_to do |format|
+      format.html { 
+        @order = read_order_from_request 
+        if @order.save
+          flash[:notice] = 'Order was successfully created.'
+          redirect_to(@order)
+        else
+          render :action => "new"
+        end
+      }
+      format.xml {
+        @order = Order.from_xml(request.body.string)
+        if @order.save
+          render :text => "", :status => :created, :location => @order
+        else
+          render :xml => @order.errors, :status => :unprocessable_entity
+        end
+      }
+
+    end
+  end
+  
+  def read_order_from_request
     @order = Order.new(params[:order])
-    
     @order.status = "unpaid"
     params[:products].each do |p|
       id = p[0]
       @order.trainings << Training.find_by_id(id)
-    end
-
-    respond_to do |format|
-      if @order.save
-        flash[:notice] = 'Order was successfully created.'
-        format.html { redirect_to(@order) }
-        format.xml  { render :xml => @order, :status => :created, :location => @order }
-      else
-        format.html { render :action => "new" }
-        format.xml  { render :xml => @order.errors, :status => :unprocessable_entity }
-      end
     end
   end
   
