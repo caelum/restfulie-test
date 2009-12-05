@@ -30,8 +30,6 @@ class Order < ActiveRecord::Base
 	transition :receive, {}, :received
 	transition :execute_it, {}, :ready
 
-
-
   def paid_one_minute_ago?
     # takes one minute to be prepared
     self.paid_at < (Time.now - 1.minute)
@@ -56,15 +54,6 @@ class Order < ActiveRecord::Base
   def paid?
     payments.size > 0
   end
-  # 
-  # def can_cancel?
-  #   status=="unpaid"
-  # end
-  # 
-  # def can_pay?
-  #   status=='unpaid'
-  # end
-  #	transition :update, {}
 
     # def can_cancel?
     #   raise 405 if @status == :cancelled

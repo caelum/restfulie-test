@@ -22,6 +22,7 @@ class OrdersController < ApplicationController
   # GET /orders/1 or /orders/1.xml
   def show
     @order = Order.find(params[:id])
+    @order.updated_at = Time.now
     respond_to do |format|
       format.html # show.html.erb
       format.xml  { render_resource @order, :except => [:paid_at] }
@@ -51,6 +52,7 @@ class OrdersController < ApplicationController
       }
       format.xml {
         @order = Order.from_xml(request.body.string)
+        @order.status = "unpaid"
         if @order.save
           render :text => "", :status => :created, :location => @order
         else
