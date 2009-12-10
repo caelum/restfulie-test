@@ -71,6 +71,7 @@ class OrdersController < ApplicationController
       id = p[0]
       @order.trainings << Training.find_by_id(id)
     end
+    @order
   end
   
   def http_date_from(value)
