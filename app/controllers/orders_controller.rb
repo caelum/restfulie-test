@@ -25,8 +25,8 @@ class OrdersController < ApplicationController
     # @order.updated_at = Time.now
     respond_to do |format|
       format.html # show.html.erb
-      format.xml  { render_resource @order, :except => [:paid_at] }
-      format.json  { render_resource @order, :except => [:paid_at] }
+      format.xml { render_resource @order, :except => [:paid_at] }
+      format.json { render_resource @order, :except => [:paid_at] }
     end
   end
   
