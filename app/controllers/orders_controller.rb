@@ -26,6 +26,7 @@ class OrdersController < ApplicationController
     respond_to do |format|
       format.html # show.html.erb
       format.xml  { render_resource @order, :except => [:paid_at] }
+      format.json  { render_resource @order, :except => [:paid_at] }
     end
   end
   

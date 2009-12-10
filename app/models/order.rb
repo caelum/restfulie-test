@@ -20,13 +20,13 @@ class Order < ActiveRecord::Base
 	   {:controller => :payments, :action => :show, :order_id => order.id, :payment_id => order.payments[0].id, :rel => "check_payment_info"}
 	end
 	transition :latest, {:action => :show}, {:not_found => 404, :no_change => 304}
-	transition :cancel, {:action => :destroy}, :cancelled
+  transition :cancel, {:action => :destroy}, :cancelled
 	  # 405 ==> (dont do it)
 	  # 409 ==> (try again)
 	  # order.status=="cancelled".... trying to cancel ==> 405
 	  # order.status=="preparing".... trying to update it ==> 409
 	  # order.status=="unpaid".... invalid data supplied ==> 400?
-	transition :pay, {}, :preparing
+  transition :pay, {}, :preparing
 	transition :receive, {}, :received
 	transition :execute_it, {}, :ready
 
