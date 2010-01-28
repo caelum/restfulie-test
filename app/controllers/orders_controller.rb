@@ -13,14 +13,25 @@ class OrdersController < ApplicationController
   # GET /orders/1 or /orders/1.xml
   def show
     @order = Order.find(params[:id])
-    # @order.updated_at = Time.now
-    respond_to do |format|
-      format.html # show.html.erb
-      format.xml { render_resource @order, :except => [:paid_at] }
-      format.json { render_resource @order, :except => [:paid_at] }
-    end
+    render_resource @order
   end
   
+  
+  def add_media_responses(format, resource, options, render_options)
+    types = Restfulie::MediaType.default_types
+    types = resource.class.media_types if resource.class.respond_to? :media_types
+    types.each do |media_type|
+      add_media_response(format, resource, media_type, options, render_options)
+    end
+  end
+
+  def add_media_response(format, resource, media_type, options, render_options)
+    controller = self
+    format.send media_type.short_name.to_sym do
+      media_type.execute_for(controller, resource, options, render_options)
+    end
+  end
+
   def thanks
     @order = Order.find(params[:id])
     render :text => "thanks for buying... you bought order ##{@order.id}"
